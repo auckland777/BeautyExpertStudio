@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Studio — Beauty Expert Studio</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* ── Gallery page styles ─────────────────────────────────── */
+    .gallery-hero {
+      padding: 120px 0 48px;
+      text-align: center;
+      background:
+        linear-gradient(135deg, rgba(155,92,114,.07) 0%, rgba(201,169,110,.05) 100%),
+        var(--light);
+    }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      padding: 0 0 80px;
+    }
+    .gallery-item {
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--white);
+      box-shadow: 0 2px 16px rgba(44,26,34,.07);
+      transition: transform var(--trans), box-shadow var(--trans);
+    }
+    .gallery-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 36px rgba(44,26,34,.13);
+    }
+    .gallery-item img {
+      width: 100%; display: block;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+    .gallery-item.tall img {
+      aspect-ratio: 3 / 4;
+    }
+    .gallery-caption {
+      padding: 18px 22px;
+    }
+    .gallery-caption h3 {
+      font-size: 1.05rem; font-weight: 800;
+      color: var(--dark); margin-bottom: 4px;
+    }
+    .gallery-caption p {
+      font-size: .88rem; color: var(--grey); line-height: 1.55;
+    }
+    .gallery-back {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: .9rem; font-weight: 700; color: var(--rose);
+      margin-bottom: 18px;
+      transition: color var(--trans);
+    }
+    .gallery-back:hover { color: var(--rose-dk); }
+
+    /* ── Lightbox ─────────────────────────────────────────────── */
+    .lightbox {
+      display: none; position: fixed; inset: 0; z-index: 2000;
+      background: rgba(44,26,34,.85); backdrop-filter: blur(6px);
+      align-items: center; justify-content: center;
+      cursor: zoom-out;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img {
+      max-width: 92vw; max-height: 88vh;
+      border-radius: 12px;
+      box-shadow: 0 12px 48px rgba(0,0,0,.4);
+      object-fit: contain;
+    }
+    .lightbox-close {
+      position: absolute; top: 20px; right: 24px;
+      background: none; border: none;
+      color: #fff; font-size: 2rem; cursor: pointer;
+      line-height: 1;
+    }
+
+    @media (max-width: 680px) {
+      .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-hero { padding: 100px 0 32px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Navigation (same as main site) ─────────────────────────── -->
+<nav id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">
+      <div class="logo-mark">B</div>
+      <div class="logo-text">
+        Beauty Expert Studio
+        <span>Glen Innes · Auckland</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#why-us" data-i18n="nav.why">Why Us</a></li>
+      <li><a href="index.html#services" data-i18n="nav.services">Services</a></li>
+      <li><a href="studio.html" style="color:var(--rose)" data-i18n="nav.studio">Studio</a></li>
+      <li><a href="index.html#concerns" data-i18n="nav.concerns">Concerns</a></li>
+      <li><a href="index.html#booking" data-i18n="nav.book">Book</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a class="nav-phone" href="tel:021901118">📞 021 901 118</a>
+      <div class="lang-switch">
+        <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+        <span class="lang-sep">|</span>
+        <button class="lang-btn" id="btn-zh" onclick="setLang('zh')">中文</button>
+      </div>
+      <a href="index.html#booking" class="btn btn-primary" data-i18n="nav.book-now">Book Now</a>
+    </div>
+    <div class="hamburger" id="menuBtn">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ── Mobile Nav ─────────────────────────────────────────────── -->
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-drawer">
+    <button class="mobile-nav-close" id="closeNav">✕</button>
+    <ul>
+      <li><a href="index.html#why-us" class="mobile-link" data-i18n="nav.why">Why Us</a></li>
+      <li><a href="index.html#services" class="mobile-link" data-i18n="nav.services">Services</a></li>
+      <li><a href="studio.html" class="mobile-link" data-i18n="nav.studio">Studio</a></li>
+      <li><a href="index.html#concerns" class="mobile-link" data-i18n="nav.concerns">Concerns</a></li>
+      <li><a href="index.html#booking" class="mobile-link" data-i18n="mob.book">Book Appointment</a></li>
+    </ul>
+    <div class="lang-switch" style="margin-top:24px;justify-content:center;gap:8px;">
+      <button class="lang-btn active" data-lang="en" onclick="setLang('en');document.getElementById('mobileNav').classList.remove('open')">EN</button>
+      <span class="lang-sep" style="font-size:.9rem">|</span>
+      <button class="lang-btn" data-lang="zh" onclick="setLang('zh');document.getElementById('mobileNav').classList.remove('open')">中文</button>
+    </div>
+    <a href="tel:021901118" class="btn btn-primary" style="margin-top:16px;display:block;text-align:center;">📞 021 901 118</a>
+  </div>
+</div>
+
+<!-- ── Gallery Hero ───────────────────────────────────────────── -->
+<section class="gallery-hero">
+  <div class="container">
+    <a href="index.html" class="gallery-back">&larr; <span data-i18n="gal.back">Back to Home</span></a>
+    <div class="tag" data-i18n="gal.tag">Our Studio</div>
+    <h2 class="heading" data-i18n-html="gal.h2">Step Inside<br>Beauty Expert Studio</h2>
+    <div class="divider" style="margin-left:auto;margin-right:auto"></div>
+    <p class="subheading" style="margin:0 auto" data-i18n="gal.p">A private, sterilised treatment space equipped with clinic-grade devices and premium skincare.</p>
+  </div>
+</section>
+
+<!-- ── Gallery Grid ───────────────────────────────────────────── -->
+<section class="section" style="background:var(--cream);padding-top:48px">
+  <div class="container">
+    <div class="gallery-grid">
+
+      <div class="gallery-item fade-up" onclick="openLightbox(this)">
+        <img src="images/env.jpg" alt="Treatment room" loading="eager" />
+        <div class="gallery-caption">
+          <h3 data-i18n="gal.env.h">Private Treatment Room</h3>
+          <p data-i18n="gal.env.p">A calm, private space where every session begins — fully sanitised between clients.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item fade-up" style="transition-delay:.1s" onclick="openLightbox(this)">
+        <img src="images/hero.jpg" alt="Treatment in progress" loading="eager" />
+        <div class="gallery-caption">
+          <h3 data-i18n="gal.hero.h">Hands-On Expertise</h3>
+          <p data-i18n="gal.hero.p">Every treatment performed personally by Hana — 30 years of certified expertise, one-on-one.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item fade-up" onclick="openLightbox(this)">
+        <img src="images/device1.jpg" alt="Q Facial device" loading="lazy" />
+        <div class="gallery-caption">
+          <h3 data-i18n="gal.dev1.h">Q Facial — Flagship Device</h3>
+          <p data-i18n="gal.dev1.p">Korea's top-tier cleansing device, KC & MFDS dual-certified, standard in 20,000+ premium clinics.</p>
+        </div>
+      </div>
+
+      <div class="gallery-item fade-up" style="transition-delay:.1s" onclick="openLightbox(this)">
+        <img src="images/device2.jpg" alt="Premium skincare products" loading="lazy" />
+        <div class="gallery-caption">
+          <h3 data-i18n="gal.dev2.h">Clinic-Grade Products</h3>
+          <p data-i18n="gal.dev2.p">Authorised premium skincare — personally tested, gentle yet precisely targeted formulas.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ─────────────────────────────────────────────────── -->
+<footer>
+  <div class="container">
+    <div class="footer-bottom" data-i18n="ft.copy">
+      © 2025 Beauty Expert Studio · Glen Innes, Auckland · All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<!-- ── Lightbox ───────────────────────────────────────────────── -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" aria-label="Close">&times;</button>
+  <img id="lightboxImg" src="" alt="" />
+</div>
+
+<!-- ── Scripts ────────────────────────────────────────────────── -->
+<script src="js/i18n.js"></script>
+<script>
+  // Nav scroll
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 20);
+  });
+
+  // Mobile nav
+  const menuBtn   = document.getElementById('menuBtn');
+  const mobileNav = document.getElementById('mobileNav');
+  const closeNav  = document.getElementById('closeNav');
+  menuBtn.addEventListener('click',  () => mobileNav.classList.add('open'));
+  closeNav.addEventListener('click', () => mobileNav.classList.remove('open'));
+  mobileNav.addEventListener('click', e => {
+    if (e.target === mobileNav) mobileNav.classList.remove('open');
+  });
+  document.querySelectorAll('.mobile-link').forEach(l =>
+    l.addEventListener('click', () => mobileNav.classList.remove('open'))
+  );
+
+  // Fade-in
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // Lightbox
+  function openLightbox(item) {
+    const src = item.querySelector('img').src;
+    document.getElementById('lightboxImg').src = src;
+    document.getElementById('lightbox').classList.add('open');
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+  }
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+
+  // Init language
+  initLang();
+</script>
+</body>
+</html>

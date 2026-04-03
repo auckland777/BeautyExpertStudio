@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beauty Expert Studio</title>
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+<!-- ── Navigation ──────────────────────────────────────────────────── -->
+<nav id="navbar">
+  <div class="container nav-inner">
+    <a href="#" class="nav-logo">
+      <div class="logo-mark">B</div>
+      <div class="logo-text">
+        Beauty Expert Studio
+        <span>Glen Innes · Auckland</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#why-us" data-i18n="nav.why">Why Us</a></li>
+      <li><a href="#services" data-i18n="nav.services">Services</a></li>
+      <li><a href="studio.html" data-i18n="nav.studio">Studio</a></li>
+      <li><a href="#concerns" data-i18n="nav.concerns">Concerns</a></li>
+      <li><a href="#booking" data-i18n="nav.book">Book</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a class="nav-phone" href="tel:021901118">📞 021 901 118</a>
+      <div class="lang-switch">
+        <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
+        <span class="lang-sep">|</span>
+        <button class="lang-btn" id="btn-zh" onclick="setLang('zh')">中文</button>
+      </div>
+      <a href="#booking" class="btn btn-primary" data-i18n="nav.book-now">Book Now</a>
+    </div>
+    <div class="hamburger" id="menuBtn">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ── Mobile Nav ──────────────────────────────────────────────────── -->
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-drawer">
+    <button class="mobile-nav-close" id="closeNav">✕</button>
+    <ul>
+      <li><a href="#why-us" class="mobile-link" data-i18n="nav.why">Why Us</a></li>
+      <li><a href="#services" class="mobile-link" data-i18n="nav.services">Services</a></li>
+      <li><a href="studio.html" class="mobile-link" data-i18n="nav.studio">Studio</a></li>
+      <li><a href="#concerns" class="mobile-link" data-i18n="nav.concerns">Concerns</a></li>
+      <li><a href="#booking" class="mobile-link" data-i18n="mob.book">Book Appointment</a></li>
+    </ul>
+    <div class="lang-switch" style="margin-top:24px;justify-content:center;gap:8px;">
+      <button class="lang-btn active" data-lang="en" onclick="setLang('en');document.getElementById('mobileNav').classList.remove('open')">EN</button>
+      <span class="lang-sep" style="font-size:.9rem">|</span>
+      <button class="lang-btn" data-lang="zh" onclick="setLang('zh');document.getElementById('mobileNav').classList.remove('open')">中文</button>
+    </div>
+    <a href="tel:021901118" class="btn btn-primary" style="margin-top:16px;display:block;text-align:center;">📞 021 901 118</a>
+  </div>
+</div>
+
+<!-- ── Hero ────────────────────────────────────────────────────────── -->
+<section class="hero" id="home">
+  <div class="container hero-inner">
+    <div class="hero-content fade-up">
+      <div class="hero-badge" data-i18n="hero.badge">30 Years · Certified Senior Beautician</div>
+      <h1 data-i18n-html="hero.h1">Where <em>Science</em> Meets<br>Beauty</h1>
+      <p data-i18n="hero.p">Professional skin treatments backed by medical precision. Same luxury products as high-end clinics — at a fraction of the price.</p>
+      <div class="hero-actions">
+        <a href="#booking" class="btn btn-primary" data-i18n="hero.cta1">Book Appointment</a>
+        <a href="#services" class="btn btn-outline" data-i18n="hero.cta2">Explore Treatments</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <div class="num">30Y</div>
+          <div class="lbl" data-i18n="hero.stat1">Expertise</div>
+        </div>
+        <div class="hero-stat">
+          <div class="num">$59</div>
+          <div class="lbl" data-i18n="hero.stat2">From / Session</div>
+        </div>
+        <div class="hero-stat">
+          <div class="num">7+</div>
+          <div class="lbl" data-i18n="hero.stat3">Targeted Solutions</div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual fade-up" style="transition-delay:.15s">
+
+      <!-- Slide 1: Hana's Motto -->
+      <div class="hero-slide active">
+        <div class="hero-quote">
+          <blockquote>
+            <p class="quote-hook" data-i18n="quote.hook">Life is like a battery — draining from the moment you're born. If you don't want to be cast aside like a spent cell, begin the journey of self-renewal — amidst the flood of beauty standards and life's chaos, build your own steady order, inside and out.</p>
+            <p class="quote-body" data-i18n="quote.body">Every bespoke treatment I craft for you repairs your skin barrier and nurtures a radiant glow, while helping you shed inner fatigue and anxiety. In the gentle touch of my fingertips, set aside the world's expectations, listen to your body, and tenderly nourish your soul. Each personalised session is a warm force that guards your inner core and anchors you to life's true essence.</p>
+            <p class="quote-close" data-i18n="quote.close">Skincare has nothing to do with age — it's about loving yourself well, at every stage of life.</p>
+          </blockquote>
+          <div class="quote-sig">— Hana<span data-i18n="quote.sig">, Senior Beauty Specialist</span></div>
+        </div>
+      </div>
+
+      <!-- Slide 2: Our Studio (image only) -->
+      <div class="hero-slide">
+        <div class="hero-photo">
+          <img src="images/env.jpg" alt="Beauty Expert Studio environment" loading="eager" />
+        </div>
+      </div>
+
+      <!-- Slide 3: Most Popular Treatment -->
+      <div class="hero-slide">
+        <div class="hero-photo">
+          <img src="images/hero.jpg" alt="Professional beauty treatment" loading="eager" />
+        </div>
+        <div class="hero-card hero-card--compact">
+          <div class="card-label" data-i18n="card.label">⭐ Most Popular</div>
+          <h3 data-i18n="card.title">Classic Pore Purifying Treatment</h3>
+          <div class="price">$89 <span data-i18n="card.dur">/ 60 min</span></div>
+          <a href="#booking" class="btn btn-primary" style="margin-top:16px;display:block;text-align:center;" data-i18n="card.btn">Book This Treatment</a>
+        </div>
+      </div>
+
+      <!-- Slide 3: Device 1 (image only) -->
+      <div class="hero-slide">
+        <div class="hero-photo">
+          <img src="images/device1.jpg" alt="Q Facial flagship device" loading="lazy" />
+        </div>
+      </div>
+
+      <!-- Slide 4: Device 2 (image only) -->
+      <div class="hero-slide">
+        <div class="hero-photo">
+          <img src="images/device2.jpg" alt="Premium skincare products" loading="lazy" />
+        </div>
+      </div>
+
+      <!-- Dot indicators -->
+      <div class="hero-dots">
+        <button class="hero-dot active" data-slide="0" aria-label="Slide 1"></button>
+        <button class="hero-dot" data-slide="1" aria-label="Slide 2"></button>
+        <button class="hero-dot" data-slide="2" aria-label="Slide 3"></button>
+        <button class="hero-dot" data-slide="3" aria-label="Slide 4"></button>
+        <button class="hero-dot" data-slide="4" aria-label="Slide 5"></button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Why Us ───────────────────────────────────────────────────────── -->
+<section class="why-us section" id="why-us">
+  <div class="container">
+    <div class="tag" data-i18n="why.tag">Why Choose Us</div>
+    <h2 class="heading" data-i18n-html="why.h2">The Beauty Expert<br>Difference</h2>
+    <div class="divider"></div>
+    <div class="why-grid">
+      <div class="why-card fade-up">
+        <div class="why-icon">🔬</div>
+        <h4 data-i18n="why1.h4">Flagship Device — The Anti-Aging Gold Standard</h4>
+        <p data-i18n="why1.p">Featuring Korea's top-tier Q Facial device by leading biotech firm ASTERASYS — KC and MFDS dual-certified, standard in 20,000+ premium clinics worldwide. Equipped with multiple patented technologies, it is the only cleansing device that penetrates the dermis — hailed as the "anti-aging ceiling" of cleansing devices and favoured by top celebrities. It deeply repairs the skin foundation, reactivates collagen regeneration, and delivers professional clinic-grade results powered by elite hardware.</p>
+      </div>
+      <div class="why-card fade-up" style="transition-delay:.1s">
+        <div class="why-icon">💎</div>
+        <h4 data-i18n="why2.h4">Premium Clinic-Grade Products</h4>
+        <p data-i18n="why2.p">Exclusively selected premium professional skincare, sourced through authorised channels with full traceability. Every product is personally tested, rigorously screened, and carefully vetted by our principal therapist — gentle yet precisely targeted formulas with zero unnecessary additives. Paired with professional devices for synergistic results, even sensitive skin can enjoy clinic-grade care with complete confidence.</p>
+      </div>
+      <div class="why-card fade-up" style="transition-delay:.2s">
+        <div class="why-icon">🏥</div>
+        <h4 data-i18n="why3.h4">30Y Dual-Certified Senior Beautician</h4>
+        <p data-i18n="why3.p">Every treatment is performed hands-on by a senior beautician with 30 years of dual China–NZ professional qualifications. Over a decade running her own salon in China with award-winning skincare expertise, followed by roles at leading NZ beauty institutions. Extensive advanced training has built a comprehensive, mature skill system — a rare caliber in the industry. No assembly-line facials — every session is a bespoke, skin-specific plan designed one-on-one, addressing root causes to ensure every device and product performs at its absolute best.</p>
+      </div>
+      <div class="why-card fade-up" style="transition-delay:.3s">
+        <div class="why-icon">🛡️</div>
+        <h4 data-i18n="why4.h4">Medical-Grade Sterilization</h4>
+        <p data-i18n="why4.p">An uncompromising safety commitment. Industry-leading sterile disinfection protocols throughout every session. Instruments, accessories, surfaces, and the entire studio undergo thorough, multi-layer sanitization — every detail strictly controlled. Fresh supplies and full sterilization for every client, creating a worry-free private treatment space.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Services ─────────────────────────────────────────────────────── -->
+<section class="services section" id="services">
+  <div class="container">
+    <div class="services-intro fade-up">
+      <div>
+        <div class="tag" data-i18n="svc.tag">Our Treatments</div>
+        <h2 class="heading" data-i18n-html="svc.h2">Targeted Beauty<br>Solutions</h2>
+        <div class="divider" style="margin-bottom:0"></div>
+      </div>
+      <p class="subheading" style="max-width:340px" data-i18n="svc.p">Every service is designed to deliver real, visible results — backed by science, delivered with care.</p>
+    </div>
+
+    <div class="services-grid">
+
+      <!-- Classic Pore Purifying Treatment -->
+      <div class="service-card fade-up" onclick="prefillService('Classic Pore Purifying Treatment')">
+        <div class="service-header">
+          <img class="service-photo" src="images/microbubble.jpg" alt="Classic Pore Purifying Treatment" loading="lazy" />
+          <div class="service-overlay">
+            <div class="service-icon">💧</div>
+            <h3 data-i18n="s1.h3">Classic Pore Purifying Treatment</h3>
+            <div class="price-tag">$89 <span class="duration" data-i18n="s1.dur">/ 60 min</span></div>
+          </div>
+        </div>
+        <div class="service-body">
+          <ul>
+            <li data-i18n="s1.f1">Deep clean — removes dead skin and pore buildup so skin breathes easy</li>
+            <li data-i18n="s1.f2">Even tone — fades dullness, lines, acne marks & dry patches</li>
+            <li data-i18n="s1.f3">Acne & oil fix — unclogs pores, less blackheads and blemishes</li>
+            <li data-i18n="s1.f4">Glow boost — bright, fresh peeled-egg look, even without makeup</li>
+          </ul>
+          <button class="service-book-btn" data-i18n="s1.btn">Book This Treatment →</button>
+        </div>
+      </div>
+
+      <!-- LED Light Therapy -->
+      <div class="service-card fade-up" style="transition-delay:.1s" onclick="prefillService('LED Light Therapy')">
+        <div class="service-header">
+          <img class="service-photo" src="images/led-therapy.jpg" alt="LED Light Therapy" loading="lazy" />
+          <div class="service-overlay">
+            <div class="service-icon">💡</div>
+            <h3 data-i18n="s2.h3">LED Light Therapy</h3>
+            <div class="price-tag">$49 <span class="duration" data-i18n="s2.dur">/ 30 min</span></div>
+          </div>
+        </div>
+        <div class="service-body">
+          <ul>
+            <li data-i18n="s2.f1">Boosts dermal blood flow, stimulating collagen & elastin production</li>
+            <li data-i18n="s2.f2">Speeds wound healing and eases pain (backed by global studies)</li>
+            <li data-i18n="s2.f3">Blue LED targets acne-causing bacteria deep under the skin</li>
+          </ul>
+          <button class="service-book-btn" data-i18n="s2.btn">Book This Treatment →</button>
+        </div>
+      </div>
+
+      <!-- Microneedling -->
+      <div class="service-card fade-up" style="transition-delay:.2s" onclick="prefillService('Enhanced Microneedling with Mesolinfu')">
+        <div class="service-header">
+          <img class="service-photo" src="images/microneedling.jpg" alt="Enhanced Microneedling" loading="lazy" />
+          <div class="service-overlay">
+            <div class="service-icon">✨</div>
+            <h3 data-i18n="s3.h3">Enhanced Microneedling with Mesolinfu</h3>
+            <div class="price-tag">$120 <span class="duration" data-i18n="s3.dur">/ 45 min</span></div>
+          </div>
+        </div>
+        <div class="service-body">
+          <ul>
+            <li data-i18n="s3.f1">Dual-power renewal — pairs microneedling with custom meso serums</li>
+            <li data-i18n="s3.f2">Targeted texture fix — shrinks pores, smooths wrinkles, fades acne scars</li>
+            <li data-i18n="s3.f3">Deep nourishment — active serums infused while skin repairs</li>
+            <li data-i18n="s3.f4">Non-surgical, safe for all skin types</li>
+          </ul>
+          <button class="service-book-btn" data-i18n="s3.btn">Book This Treatment →</button>
+        </div>
+      </div>
+
+      <!-- CM Meridian Facial -->
+      <div class="service-card fade-up" onclick="prefillService('CM Meridian Revival Facial')">
+        <div class="service-header">
+          <img class="service-photo" src="images/meridian.jpg" alt="CM Meridian Revival Facial" loading="lazy" />
+          <div class="service-overlay">
+            <div class="service-icon">🌿</div>
+            <h3 data-i18n="s4.h3">CM Meridian Revival Facial</h3>
+            <div class="price-tag">$80 <span class="duration" data-i18n="s4.dur">/ 60 min</span></div>
+          </div>
+        </div>
+        <div class="service-body">
+          <ul>
+            <li data-i18n="s4.f1">Liver Meridian tendon release — erases stress wrinkles</li>
+            <li data-i18n="s4.f2">Stomach Meridian work — drains facial puffiness</li>
+            <li data-i18n="s4.f3">Bladder Meridian lifting — firms sagging contours</li>
+            <li data-i18n="s4.f4">Jade Gua Sha — 48hr glow, instant debloat, 21-day firming</li>
+          </ul>
+          <button class="service-book-btn" data-i18n="s4.btn">Book This Treatment →</button>
+        </div>
+      </div>
+
+      <!-- HPV Wart Removal -->
+      <div class="service-card fade-up" style="transition-delay:.1s" onclick="prefillService('Professional Electrolysis HPV Wart Removal')">
+        <div class="service-header">
+          <img class="service-photo" src="images/wart-removal.jpg" alt="Professional Electrolysis" loading="lazy" />
+          <div class="service-overlay">
+            <div class="service-icon">⚡</div>
+            <h3 data-i18n="s5.h3">Professional Electrolysis HPV Wart Removal</h3>
+            <div class="price-tag">$10 <span class="duration" data-i18n="s5.dur">per session</span></div>
+          </div>
+        </div>
+        <div class="service-body">
+          <ul>
+            <li data-i18n="s5.f1">Root-targeting — destroys the virus at its source</li>
+            <li data-i18n="s5.f2">Gentler than freezing — no blisters or scarring</li>
+            <li data-i18n="s5.f3">More complete removal versus lasers and topicals</li>
+            <li data-i18n="s5.f4">1-session solution with minimal downtime</li>
+          </ul>
+          <button class="service-book-btn" data-i18n="s5.btn">Book This Treatment →</button>
+        </div>
+      </div>
+
+      <!-- RF + Ultrasonic -->
+      <div class="service-card fade-up" style="transition-delay:.2s" onclick="prefillService('RF + Ultrasonic Serum Infusion')">
+        <div class="service-header">
+          <img class="service-photo" src="images/rf-ultrasonic.jpg" alt="RF + Ultrasonic Serum Infusion" loading="lazy" />
+          <div class="service-overlay">
+            <div class="service-icon">🔬</div>
+            <h3 data-i18n="s6.h3">RF + Ultrasonic Serum Infusion</h3>
+            <div class="price-tag">$150 <span class="duration" data-i18n="s6.dur">/ 60 min</span></div>
+          </div>
+        </div>
+        <div class="service-body">
+          <ul>
+            <li data-i18n="s6.f1">Instant results — RF tightens while ultrasound delivers active ingredients</li>
+            <li data-i18n="s6.f2">Long-term benefits — stimulates collagen, 30% pore refinement in 4 weeks</li>
+            <li data-i18n="s6.f3">5× absorption — ultra-deep serum penetration for maximum efficacy</li>
+            <li data-i18n="s6.f4">Optimal: 1–2 sessions weekly for best results</li>
+          </ul>
+          <button class="service-book-btn" data-i18n="s6.btn">Book This Treatment →</button>
+        </div>
+      </div>
+
+      <!-- Dermaplaning -->
+      <div class="service-card fade-up" onclick="prefillService('Dermaplaning')">
+        <div class="service-header">
+          <img class="service-photo" src="images/dermaplaning.jpg" alt="Dermaplaning treatment" loading="lazy" />
+          <div class="service-overlay">
+            <div class="service-icon">🪒</div>
+            <h3 data-i18n="s7.h3">Dermaplaning</h3>
+            <div class="price-tag">$59 <span class="duration" data-i18n="s7.dur">/ 45 min</span></div>
+          </div>
+        </div>
+        <div class="service-body">
+          <ul>
+            <li data-i18n="s7.f1">Smoother Texture — Gently exfoliates dead skin cells and removes fine peach fuzz for instantly softer, smoother skin</li>
+            <li data-i18n="s7.f2">Enhanced Absorption — Eliminates surface barriers so serums, moisturizers and treatments penetrate deeper and perform more effectively</li>
+          </ul>
+          <button class="service-book-btn" data-i18n="s7.btn">Book This Treatment →</button>
+        </div>
+      </div>
+
+      <!-- Add-on Banner -->
+      <div class="addon-banner fade-up">
+        <div class="pen-icon">✍️</div>
+        <div class="addon-text">
+          <h4 data-i18n="addon.h4">Add-On: Deep Nourishing Treatment</h4>
+          <p data-i18n="addon.p">Enhance any facial with an intensive nourishing boost. Perfect for dehydrated or sensitised skin.</p>
+        </div>
+        <div class="addon-price">$20 <span style="font-size:1rem;color:var(--grey);font-weight:500">/ 15'</span></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Skin Concerns ────────────────────────────────────────────────── -->
+<section class="concerns section" id="concerns">
+  <div class="container">
+    <div class="tag" data-i18n="con.tag">Targeted Solutions</div>
+    <h2 class="heading" data-i18n-html="con.h2">We Treat Your<br>Specific Concerns</h2>
+    <div class="divider"></div>
+    <p class="subheading" style="margin-bottom:32px" data-i18n="con.p">Select your concern below to explore the right treatment for you.</p>
+    <div class="concern-chips" id="concernChips">
+      <div class="chip active" data-concern="all" data-i18n="con.chip-all">All Treatments</div>
+      <div class="chip" data-concern="dullness" data-i18n="con.chip-dull">Dullness</div>
+      <div class="chip" data-concern="sensitivity" data-i18n="con.chip-sens">Sensitivity</div>
+      <div class="chip" data-concern="acne" data-i18n="con.chip-acne">Acne</div>
+      <div class="chip" data-concern="pores" data-i18n="con.chip-pore">Pores</div>
+      <div class="chip" data-concern="wrinkles" data-i18n="con.chip-wrin">Wrinkles</div>
+      <div class="chip" data-concern="aging" data-i18n="con.chip-age">Anti-Aging</div>
+      <div class="chip" data-concern="glow" data-i18n="con.chip-glow">Glow Rescue</div>
+      <div class="chip" data-concern="warts" data-i18n="con.chip-wart">Warts</div>
+    </div>
+    <div id="concernResult" style="margin-top:30px;padding:24px 28px;background:var(--light);border-radius:var(--radius);border:1px solid rgba(201,169,110,.2);display:none">
+      <strong id="concernTitle" style="display:block;margin-bottom:8px;color:var(--rose);font-size:1rem"></strong>
+      <p id="concernText" style="color:var(--grey);font-size:.92rem;margin-bottom:16px"></p>
+      <a href="#booking" class="btn btn-primary" style="font-size:.88rem;padding:11px 26px" data-i18n="con.result-btn">Book Recommended Treatment</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Promise ──────────────────────────────────────────────────────── -->
+<section class="promise">
+  <div class="container">
+    <div class="tag" style="color:var(--gold-lt)" data-i18n="pro.tag">Our Promise</div>
+    <h2 class="heading fade-up" data-i18n="pro.h2">Expertise. Honesty. Results.</h2>
+    <p class="subheading fade-up" data-i18n="pro.p">Beauty meets truth — we only recommend what your skin genuinely needs, and we deliver results you can see and feel.</p>
+    <div class="promise-pillars fade-up">
+      <div class="pillar">
+        <div class="p-icon">🎓</div>
+        <div class="p-label" data-i18n="pro.p1">Expertise</div>
+      </div>
+      <div class="pillar">
+        <div class="p-icon">🤝</div>
+        <div class="p-label" data-i18n="pro.p2">Honesty</div>
+      </div>
+      <div class="pillar">
+        <div class="p-icon">🌟</div>
+        <div class="p-label" data-i18n="pro.p3">Results</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Booking ──────────────────────────────────────────────────────── -->
+<section class="booking section" id="booking">
+  <div class="container">
+    <div class="booking-wrap">
+      <div class="booking-info fade-up">
+        <div class="tag" data-i18n="bk.tag">Book an Appointment</div>
+        <h2 class="heading" data-i18n-html="bk.h2">Ready for Your<br>Glow-Up?</h2>
+        <div class="divider"></div>
+        <p class="subheading" style="margin-bottom:32px" data-i18n="bk.p">Fill in the form and we'll confirm your appointment promptly. Walk-ins also welcome!</p>
+
+        <div class="contact-detail">
+          <div class="contact-icon">📞</div>
+          <div class="info">
+            <strong>021 901 118</strong>
+            <span data-i18n="bk.c1">Call or text anytime</span>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-icon">📍</div>
+          <div class="info">
+            <strong>Glen Innes, Auckland</strong>
+            <span data-i18n="bk.c2">New Zealand</span>
+          </div>
+        </div>
+        <div class="contact-detail">
+          <div class="contact-icon">🕐</div>
+          <div class="info">
+            <strong data-i18n="bk.c3h">Mon – Sat &nbsp;9am – 7pm</strong>
+            <span data-i18n="bk.c3s">Sun by appointment</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="booking-form fade-up" style="transition-delay:.15s">
+        <h3 data-i18n="bk.formh3">Book Your Treatment</h3>
+        <form id="bookingForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label data-i18n="bk.lbl-fn">First Name *</label>
+              <input type="text" id="firstName" data-i18n-ph="bk.ph-fn" placeholder="Jane" required />
+            </div>
+            <div class="form-group">
+              <label data-i18n="bk.lbl-ln">Last Name *</label>
+              <input type="text" id="lastName" data-i18n-ph="bk.ph-ln" placeholder="Smith" required />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label data-i18n="bk.lbl-ph">Phone *</label>
+              <input type="tel" id="phone" placeholder="021 000 000" required />
+            </div>
+            <div class="form-group">
+              <label data-i18n="bk.lbl-em">Email</label>
+              <input type="email" id="email" data-i18n-ph="bk.ph-em" placeholder="jane@email.com" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label data-i18n="bk.lbl-tr">Treatment *</label>
+            <select id="treatment" required>
+              <option value="" data-i18n-opt="bk.opt-sel">— Select a treatment —</option>
+              <option value="Classic Pore Purifying Treatment">Classic Pore Purifying Treatment — $89 / 60'</option>
+              <option value="LED Light Therapy">LED Light Therapy — $49 / 30'</option>
+              <option value="Enhanced Microneedling with Mesolinfu">Enhanced Microneedling with Mesolinfu — $120 / 45'</option>
+              <option value="CM Meridian Revival Facial">CM Meridian Revival Facial — $80 / 60'</option>
+              <option value="Professional Electrolysis HPV Wart Removal">Electrolysis HPV Wart Removal — $10</option>
+              <option value="RF + Ultrasonic Serum Infusion">RF + Ultrasonic Serum Infusion — $150 / 60'</option>
+              <option value="Dermaplaning">Dermaplaning — $59 / 45'</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label data-i18n="bk.lbl-ao">Add-On Deep Nourishing ($20 / 15')</label>
+            <select id="addon">
+              <option value="no" data-i18n-opt="bk.opt-no">No thanks</option>
+              <option value="yes" data-i18n-opt="bk.opt-yes">Yes, add it!</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label data-i18n="bk.lbl-dt">Preferred Date *</label>
+              <input type="date" id="prefDate" required />
+            </div>
+            <div class="form-group">
+              <label data-i18n="bk.lbl-tm">Preferred Time *</label>
+              <select id="prefTime" required>
+                <option value="">— Select time —</option>
+                <option>9:00 AM</option><option>9:30 AM</option>
+                <option>10:00 AM</option><option>10:30 AM</option>
+                <option>11:00 AM</option><option>11:30 AM</option>
+                <option>12:00 PM</option><option>12:30 PM</option>
+                <option>1:00 PM</option><option>1:30 PM</option>
+                <option>2:00 PM</option><option>2:30 PM</option>
+                <option>3:00 PM</option><option>3:30 PM</option>
+                <option>4:00 PM</option><option>4:30 PM</option>
+                <option>5:00 PM</option><option>5:30 PM</option>
+                <option>6:00 PM</option><option>6:30 PM</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label data-i18n="bk.lbl-no">Skin Concerns / Notes</label>
+            <textarea id="notes" data-i18n-ph="bk.ph-no" placeholder="Tell us about your skin concerns or any questions you have…"></textarea>
+          </div>
+          <button type="submit" class="form-submit" data-i18n="bk.submit">Confirm Appointment ✦</button>
+          <p class="form-note" data-i18n="bk.note">We'll text or call to confirm within a few hours. No payment needed upfront.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ───────────────────────────────────────────────────────── -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="logo-text">Beauty Expert Studio</div>
+        <p data-i18n="ft.brand">Professional beauty treatments with 30 years of certified expertise. Honest advice, luxury results, unbeatable value.</p>
+        <p style="margin-top:12px">📞 <a href="tel:021901118" style="color:var(--gold)">021 901 118</a><br>📍 Glen Innes, Auckland</p>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="ft.svc">Treatments</h5>
+        <ul>
+          <li><a href="#services" data-i18n="ft.s1">Classic Pore Purifying Treatment</a></li>
+          <li><a href="#services" data-i18n="ft.s2">LED Light Therapy</a></li>
+          <li><a href="#services" data-i18n="ft.s3">Microneedling + Meso</a></li>
+          <li><a href="#services" data-i18n="ft.s4">CM Meridian Facial</a></li>
+          <li><a href="#services" data-i18n="ft.s5">HPV Wart Removal</a></li>
+          <li><a href="#services" data-i18n="ft.s6">RF + Ultrasonic Infusion</a></li>
+          <li><a href="#services" data-i18n="ft.s7">Dermaplaning</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5 data-i18n="ft.links">Quick Links</h5>
+        <ul>
+          <li><a href="#why-us" data-i18n="ft.l1">Why Choose Us</a></li>
+          <li><a href="#concerns" data-i18n="ft.l2">Skin Concerns</a></li>
+          <li><a href="#booking" data-i18n="ft.l3">Book Appointment</a></li>
+        </ul>
+        <h5 style="margin-top:24px" data-i18n="ft.hours">Hours</h5>
+        <ul>
+          <li data-i18n="ft.h1">Mon – Sat: 9am – 7pm</li>
+          <li data-i18n="ft.h2">Sun: By appointment</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom" data-i18n="ft.copy">
+      © 2025 Beauty Expert Studio · Glen Innes, Auckland · All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<!-- ── Sticky Mobile CTA ────────────────────────────────────────────── -->
+<div class="sticky-cta">
+  <a href="tel:021901118" class="btn btn-outline" style="flex:1;text-align:center" data-i18n="cta.call">📞 Call</a>
+  <a href="#booking" class="btn btn-primary" style="flex:2;text-align:center" data-i18n="cta.book">Book Now</a>
+</div>
+
+<!-- ── Success Modal ────────────────────────────────────────────────── -->
+<div class="modal-overlay" id="successModal">
+  <div class="modal">
+    <div class="check">🌸</div>
+    <h3 id="modalTitle" data-i18n="mod.ok-title">Appointment Sent!</h3>
+    <p id="modalMsg" data-i18n="mod.ok-msg">Your booking request has been emailed to us. We'll confirm via call or text within a few hours. We can't wait to see you!</p>
+    <button class="close-modal" onclick="closeModal()" data-i18n="mod.ok-btn">Great, thanks!</button>
+  </div>
+</div>
+
+<!-- ── Error Modal ─────────────────────────────────────────────────── -->
+<div class="modal-overlay" id="errorModal">
+  <div class="modal">
+    <div class="check">⚠️</div>
+    <h3 data-i18n="mod.err-title">Couldn't Send Email</h3>
+    <p data-i18n-html="mod.err-msg">Please call or text us directly on <strong><a href="tel:021901118" style="color:var(--rose)">021 901 118</a></strong> to book your appointment. Sorry for the inconvenience!</p>
+    <button class="close-modal" onclick="document.getElementById('errorModal').classList.remove('open')" data-i18n="mod.err-btn">Got it</button>
+  </div>
+</div>
+
+<!-- ── JavaScript ───────────────────────────────────────────────────── -->
+<!-- Internationalization & Translations -->
+<script src="js/i18n.js"></script>
+<!-- Main Application Script -->
+<script src="js/script.js"></script>
+</body>
+</html>
