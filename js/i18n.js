@@ -14,7 +14,7 @@ const TRANSLATIONS = {
     'hero.p':'Professional skin treatments backed by medical precision. Same luxury products as high-end clinics — at a fraction of the price.',
     'hero.cta1':'Book Appointment', 'hero.cta2':'Explore Treatments',
     'hero.stat1':'Expertise', 'hero.stat2':'From / Session', 'hero.stat3':'Targeted Solutions',
-    // Hana's motto
+    // Hannah's motto
     'quote.hook':'Life is like a battery — draining from the moment you\'re born. If you don\'t want to be cast aside like a spent cell, begin the journey of self-renewal — amidst the flood of beauty standards and life\'s chaos, build your own steady order, inside and out.',
     'quote.body':'Every bespoke treatment I craft for you repairs your skin barrier and nurtures a radiant glow, while helping you shed inner fatigue and anxiety. In the gentle touch of my fingertips, set aside the world\'s expectations, listen to your body, and tenderly nourish your soul. Each personalised session is a warm force that guards your inner core and anchors you to life\'s true essence.',
     'quote.close':'Skincare has nothing to do with age — it\'s about loving yourself well, at every stage of life.',
@@ -44,6 +44,29 @@ const TRANSLATIONS = {
     // Services intro
     'svc.tag':'Our Treatments', 'svc.h2':'Targeted Beauty<br>Solutions',
     'svc.p':'Every service is designed to deliver real, visible results — backed by science, delivered with care.',
+    'svc.cat-facial':'Facial Treatments',
+    // Q-Facial Series
+    'qf.badge':'★ Signature Series',
+    'qf.title':'Q Facial Skin Renewal Treatment Series',
+    'qf.desc':'A top-tier Korean salon-grade facial treatment, a must-have for celebrities visiting Korea',
+    'qf1.h3':'Purifying Glow Treatment', 'qf1.dur':'/ 45 min',
+    'qf1.f1':'Three professional-grade solutions (Formula A repair, B purification, C soothing)',
+    'qf1.f2':'Deeply cleanses skin and repairs the skin barrier',
+    'qf1.f3':'Enhances absorption and achieves gentle rejuvenation',
+    'qf1.f4':'Ideal for daily maintenance of all skin types',
+    'qf1.btn':'Book This Treatment →',
+    'qf2.h3':'Intensive Repair Infusion', 'qf2.dur':'/ 60 min',
+    'qf2.f1':'Includes full Purifying Glow Treatment + customized ampoule infusion',
+    'qf2.f2':'5 ampoule options: anti-wrinkle, brightening, pore-minimizing, soothing, radiance',
+    'qf2.f3':'Deeply repairs the skin base and targets specific concerns',
+    'qf2.f4':'Enhances overall radiance and skin health',
+    'qf2.btn':'Book This Treatment →',
+    'qf3.h3':'Multi-Dimensional Sculpting Treatment', 'qf3.dur':'/ 75 min',
+    'qf3.f1':'Combines Intensive Repair Infusion with dual-frequency precision ultrasound',
+    'qf3.f2':'10MHz + 3MHz delivers ampoule ingredients into the dermis',
+    'qf3.f3':'Stimulates collagen production for firmer, younger-looking skin',
+    'qf3.f4':'Tightens and lifts skin contours for visible sculpting results',
+    'qf3.btn':'Book This Treatment →',
     // Service 1
     's1.h3':'Classic Pore Purifying Treatment', 's1.dur':'/ 60 min',
     's1.f1':'Deep clean — removes dead skin and pore buildup so skin breathes easy',
@@ -93,6 +116,31 @@ const TRANSLATIONS = {
     // Add-on
     'addon.h4':'Add-On: Deep Nourishing Treatment',
     'addon.p':'Enhance any facial with an intensive nourishing boost. Perfect for dehydrated or sensitised skin.',
+    // Body Treatments
+    'svc.cat-body':'Body Treatments',
+    'bd.badge':'★ Vitality Revival Series',
+    'bd.title':'Magic Health Master',
+    'bd.desc':'Precisely releases energy through advanced equipment for deep penetration, physical & mental regulation, internal vitality boosting, and slim body contouring',
+    'bd1.h3':'Dai Meridian Rejuvenation', 'bd1.dur':'/ 45 min',
+    'bd1.f1':'Warms the uterus to dispel cold',
+    'bd1.f2':'Promotes waist & abdomen circulation and metabolism',
+    'bd1.f3':'Relieves local stagnation and discomfort',
+    'bd1.btn':'Book This Treatment →',
+    'bd2.h3':'Breast & Lymphatic Drainage Therapy', 'bd2.dur':'/ 45 min',
+    'bd2.f1':'Low-frequency energy softens nodules',
+    'bd2.f2':'Unblocks chest & armpit lymphatic vessels',
+    'bd2.f3':'Relieves meridian stagnation and chest discomfort',
+    'bd2.btn':'Book This Treatment →',
+    'bd3.h3':'Shoulder, Neck & Lower Back Pain Relief', 'bd3.dur':'/ 60 min',
+    'bd3.f1':'Advanced energy technology releases fascial adhesions and muscle knots',
+    'bd3.f2':'Relieves fibrous hyperplasia, muscle fatigue, and frozen shoulder',
+    'bd3.f3':'Eases stiff/painful limbs and restricted movement',
+    'bd3.btn':'Book This Treatment →',
+    'bd4.h3':'Full Body Sculpting & Contouring', 'bd4.dur':'/ 75 min',
+    'bd4.f1':'High-tech precision energy for targeted fat reduction',
+    'bd4.f2':'Comprehensive body contouring and skin tightening',
+    'bd4.f3':'Visible slimming and sculpting results',
+    'bd4.btn':'Book This Treatment →',
     // Concerns
     'con.tag':'Targeted Solutions', 'con.h2':'We Treat Your<br>Specific Concerns',
     'con.p':'Select your concern below to explore the right treatment for you.',
@@ -113,6 +161,7 @@ const TRANSLATIONS = {
     'bk.lbl-ln':'Last Name *', 'bk.ph-ln':'Smith',
     'bk.lbl-ph':'Phone *', 'bk.lbl-em':'Email', 'bk.ph-em':'jane@email.com',
     'bk.lbl-tr':'Treatment *', 'bk.opt-sel':'— Select a treatment —',
+    'bk.og-qf':'Q Facial Skin Renewal Series', 'bk.og-facial':'More Facial Treatments', 'bk.og-body':'Body Treatments',
     'bk.lbl-ao':'Add-On Deep Nourishing ($20 / 15\')',
     'bk.opt-no':'No thanks', 'bk.opt-yes':'Yes, add it!',
     'bk.lbl-dt':'Preferred Date *', 'bk.lbl-tm':'Preferred Time *',
@@ -123,10 +172,11 @@ const TRANSLATIONS = {
     // Footer
     'ft.brand':'Professional beauty treatments with 30 years of certified expertise. Honest advice, luxury results, unbeatable value.',
     'ft.svc':'Treatments',
+    'ft.qf':'Q Facial Skin Renewal Series',
     'ft.s1':'Classic Pore Purifying Treatment', 'ft.s2':'LED Light Therapy',
     'ft.s3':'Microneedling + Meso', 'ft.s4':'CM Meridian Facial',
     'ft.s5':'HPV Wart Removal', 'ft.s6':'RF + Ultrasonic Infusion',
-    'ft.s7':'Dermaplaning',
+    'ft.s7':'Dermaplaning', 'ft.bd':'Magic Health Master Series',
     'ft.links':'Quick Links',
     'ft.l1':'Why Choose Us', 'ft.l2':'Skin Concerns', 'ft.l3':'Book Appointment',
     'ft.hours':'Hours', 'ft.h1':'Mon – Sat: 9am – 7pm', 'ft.h2':'Sun: By appointment',
@@ -147,7 +197,7 @@ const TRANSLATIONS = {
     'gal.env.h':'Private Treatment Room',
     'gal.env.p':'A calm, private space where every session begins — fully sanitised between clients.',
     'gal.hero.h':'Hands-On Expertise',
-    'gal.hero.p':'Every treatment performed personally by Hana — 30 years of certified expertise, one-on-one.',
+    'gal.hero.p':'Every treatment performed personally by Hannah — 30 years of certified expertise, one-on-one.',
     'gal.dev1.h':'Q Facial — Flagship Device',
     'gal.dev1.p':'Korea\'s top-tier cleansing device, KC & MFDS dual-certified, standard in 20,000+ premium clinics.',
     'gal.dev2.h':'Clinic-Grade Products',
@@ -163,7 +213,7 @@ const TRANSLATIONS = {
     'hero.p':'以医学精准度支撑的专业肌肤护理，使用与高端诊所相同的奢华产品，价格仅为其一小部分。',
     'hero.cta1':'立即预约', 'hero.cta2':'探索疗程',
     'hero.stat1':'专业经验', 'hero.stat2':'起 / 次', 'hero.stat3':'针对性解决方案',
-    // Hana's motto
+    // Hannah's motto
     'quote.hook':'人生这块电池，从出生起便开始消耗。若不想像耗尽的旧电池被时光抛下，就请开启自愈之路——在审美洪流与生活纷扰里，为自己建立内外的安稳秩序。',
     'quote.body':'我为你定制的每一套专业手法，既帮你修护肌肤屏障、养出透亮外在状态，也陪你卸下内心疲惫与焦虑。指尖轻触间，你可暂时放下外界期待，聆听身体的声音，温柔滋养心灵。而这每一套定制化护理，正是守护你心灵内核、锚定生命本真的温暖力量。',
     'quote.close':'保养无关年龄，是每个阶段的你，都在好好爱自己。',
@@ -193,6 +243,29 @@ const TRANSLATIONS = {
     // Services intro
     'svc.tag':'我们的疗程', 'svc.h2':'精准美肤<br>解决方案',
     'svc.p':'每一项服务均致力于提供真实可见的效果——以科学为后盾，以用心呈现。',
+    'svc.cat-facial':'面部护理',
+    // Q-Facial Series
+    'qf.badge':'★ 招牌系列',
+    'qf.title':'Q Facial 肌肤焕新护理系列',
+    'qf.desc':'韩国顶级院线级面部护理，明星赴韩必做项目',
+    'qf1.h3':'净透焕肤护理', 'qf1.dur':'/ 45分钟',
+    'qf1.f1':'三重专业级配方（A修护液、B净化液、C舒缓液）',
+    'qf1.f2':'深层清洁肌肤，修护皮肤屏障',
+    'qf1.f3':'增强吸收力，实现温和焕肤',
+    'qf1.f4':'适合所有肤质的日常维护',
+    'qf1.btn':'立即预约此疗程 →',
+    'qf2.h3':'精华密集修护导入', 'qf2.dur':'/ 60分钟',
+    'qf2.f1':'包含完整净透焕肤护理 + 定制安瓶精华导入',
+    'qf2.f2':'5种安瓶可选：抗皱、亮白、缩毛孔、舒缓、提亮',
+    'qf2.f3':'深层修护肌底，精准针对肌肤问题',
+    'qf2.f4':'全面提升光泽度与肌肤健康',
+    'qf2.btn':'立即预约此疗程 →',
+    'qf3.h3':'多维紧塑焕颜护理', 'qf3.dur':'/ 75分钟',
+    'qf3.f1':'融合精华密集修护导入与双频精准超声技术',
+    'qf3.f2':'10MHz + 3MHz 将安瓶精华导入真皮层',
+    'qf3.f3':'刺激胶原蛋白生成，令肌肤更紧致年轻',
+    'qf3.f4':'紧致提拉面部轮廓，呈现显著塑形效果',
+    'qf3.btn':'立即预约此疗程 →',
     // Service 1
     's1.h3':'经典毛孔净化护理', 's1.dur':'/ 60分钟',
     's1.f1':'深层清洁——清除老废角质与毛孔污垢，让肌肤自由呼吸',
@@ -242,6 +315,31 @@ const TRANSLATIONS = {
     // Add-on
     'addon.h4':'加购项目：深层滋养护理',
     'addon.p':'任意面部护理均可加购深层滋养，密集补水修护。特别适合干燥或敏感肌肤。',
+    // Body Treatments
+    'svc.cat-body':'身体护理',
+    'bd.badge':'★ 活力焕新系列',
+    'bd.title':'魔力养生大师',
+    'bd.desc':'精准释放能量，通过高端设备深层穿透，调理身心，激活内在活力，纤体塑形',
+    'bd1.h3':'带脉焕活调理', 'bd1.dur':'/ 45分钟',
+    'bd1.f1':'暖宫驱寒',
+    'bd1.f2':'促进腰腹循环代谢',
+    'bd1.f3':'疏通局部淤堵不适',
+    'bd1.btn':'立即预约此疗程 →',
+    'bd2.h3':'胸部淋巴疏通护理', 'bd2.dur':'/ 45分钟',
+    'bd2.f1':'低频能量软化结节',
+    'bd2.f2':'疏通胸腋淋巴管道',
+    'bd2.f3':'缓解经络淤堵及胸部不适',
+    'bd2.btn':'立即预约此疗程 →',
+    'bd3.h3':'肩颈腰背痛舒缓护理', 'bd3.dur':'/ 60分钟',
+    'bd3.f1':'高端能量技术松解筋膜粘连与肌肉结节',
+    'bd3.f2':'缓解纤维增生、肌肉疲劳、冻结肩',
+    'bd3.f3':'改善四肢僵硬疼痛及活动受限',
+    'bd3.btn':'立即预约此疗程 →',
+    'bd4.h3':'全身塑形紧致护理', 'bd4.dur':'/ 75分钟',
+    'bd4.f1':'高科技精准能量靶向减脂',
+    'bd4.f2':'全身塑形与肌肤紧致',
+    'bd4.f3':'呈现显著纤体塑形效果',
+    'bd4.btn':'立即预约此疗程 →',
     // Concerns
     'con.tag':'精准解决方案', 'con.h2':'针对您的<br>肌肤问题',
     'con.p':'点击下方选择您的肌肤问题，探索最适合您的疗程。',
@@ -262,6 +360,7 @@ const TRANSLATIONS = {
     'bk.lbl-ln':'姓氏 *', 'bk.ph-ln':'如：王',
     'bk.lbl-ph':'电话 *', 'bk.lbl-em':'电子邮箱', 'bk.ph-em':'example@email.com',
     'bk.lbl-tr':'护理项目 *', 'bk.opt-sel':'— 请选择疗程 —',
+    'bk.og-qf':'Q Facial 肌肤焕新系列', 'bk.og-facial':'更多面部护理', 'bk.og-body':'身体护理',
     'bk.lbl-ao':'加购深层滋养（$20 / 15分钟）',
     'bk.opt-no':'不需要', 'bk.opt-yes':'是，加购！',
     'bk.lbl-dt':'期望预约日期 *', 'bk.lbl-tm':'期望预约时间 *',
@@ -272,10 +371,11 @@ const TRANSLATIONS = {
     // Footer
     'ft.brand':'30年认证高级美容师，专业美肤护理，诚实建议，奢华效果，超值定价。',
     'ft.svc':'护理项目',
+    'ft.qf':'Q Facial 肌肤焕新系列',
     'ft.s1':'经典毛孔净化护理', 'ft.s2':'LED光疗',
     'ft.s3':'微针 + 美塑导入', 'ft.s4':'中医经络面部护理',
     'ft.s5':'HPV疣体去除', 'ft.s6':'射频 + 超声波精华导入',
-    'ft.s7':'面部刮痧焕肤',
+    'ft.s7':'面部刮痧焕肤', 'ft.bd':'魔力养生大师系列',
     'ft.links':'快速导航',
     'ft.l1':'为何选择我们', 'ft.l2':'肌肤问题', 'ft.l3':'预约护理',
     'ft.hours':'营业时间', 'ft.h1':'周一至周六：上午9时–下午7时', 'ft.h2':'周日：需提前预约',
@@ -296,7 +396,7 @@ const TRANSLATIONS = {
     'gal.env.h':'私密护理房间',
     'gal.env.p':'宁静的私密空间，每位客户之间全面消毒，安心无忧。',
     'gal.hero.h':'亲手操作的专业技艺',
-    'gal.hero.p':'每次护理均由Hana亲自操作——三十年认证资深美容师，一对一专属服务。',
+    'gal.hero.p':'每次护理均由Hannah亲自操作——三十年认证资深美容师，一对一专属服务。',
     'gal.dev1.h':'Q Facial——旗舰仪器',
     'gal.dev1.p':'韩国顶级清洁仪器，KC与MFDS双重认证，全球超20,000家高端院线标配。',
     'gal.dev2.h':'院线级产品',
@@ -353,6 +453,11 @@ function setLang(lang) {
   document.querySelectorAll('[data-i18n-opt]').forEach(el => {
     const key = el.getAttribute('data-i18n-opt');
     if (t[key] !== undefined) el.textContent = t[key];
+  });
+  // Update optgroup labels
+  document.querySelectorAll('[data-i18n-label]').forEach(el => {
+    const key = el.getAttribute('data-i18n-label');
+    if (t[key] !== undefined) el.setAttribute('label', t[key]);
   });
 
   // Update lang toggle buttons

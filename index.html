@@ -74,24 +74,10 @@
         <a href="#booking" class="btn btn-primary" data-i18n="hero.cta1">Book Appointment</a>
         <a href="#services" class="btn btn-outline" data-i18n="hero.cta2">Explore Treatments</a>
       </div>
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <div class="num">30Y</div>
-          <div class="lbl" data-i18n="hero.stat1">Expertise</div>
-        </div>
-        <div class="hero-stat">
-          <div class="num">$59</div>
-          <div class="lbl" data-i18n="hero.stat2">From / Session</div>
-        </div>
-        <div class="hero-stat">
-          <div class="num">7+</div>
-          <div class="lbl" data-i18n="hero.stat3">Targeted Solutions</div>
-        </div>
-      </div>
     </div>
     <div class="hero-visual fade-up" style="transition-delay:.15s">
 
-      <!-- Slide 1: Hana's Motto -->
+      <!-- Slide 1: Hannah's Motto -->
       <div class="hero-slide active">
         <div class="hero-quote">
           <blockquote>
@@ -99,18 +85,11 @@
             <p class="quote-body" data-i18n="quote.body">Every bespoke treatment I craft for you repairs your skin barrier and nurtures a radiant glow, while helping you shed inner fatigue and anxiety. In the gentle touch of my fingertips, set aside the world's expectations, listen to your body, and tenderly nourish your soul. Each personalised session is a warm force that guards your inner core and anchors you to life's true essence.</p>
             <p class="quote-close" data-i18n="quote.close">Skincare has nothing to do with age — it's about loving yourself well, at every stage of life.</p>
           </blockquote>
-          <div class="quote-sig">— Hana<span data-i18n="quote.sig">, Senior Beauty Specialist</span></div>
+          <div class="quote-sig">— Hannah</div>
         </div>
       </div>
 
-      <!-- Slide 2: Our Studio (image only) -->
-      <div class="hero-slide">
-        <div class="hero-photo">
-          <img src="images/env.jpg" alt="Beauty Expert Studio environment" loading="eager" />
-        </div>
-      </div>
-
-      <!-- Slide 3: Most Popular Treatment -->
+      <!-- Slide 2: Most Popular Treatment -->
       <div class="hero-slide">
         <div class="hero-photo">
           <img src="images/hero.jpg" alt="Professional beauty treatment" loading="eager" />
@@ -123,17 +102,24 @@
         </div>
       </div>
 
-      <!-- Slide 3: Device 1 (image only) -->
+      <!-- Slide 3: Q-Facial Water Shining System -->
       <div class="hero-slide">
-        <div class="hero-photo">
-          <img src="images/device1.jpg" alt="Q Facial flagship device" loading="lazy" />
+        <div class="hero-photo hero-photo--contain">
+          <img src="images/carousel1.jpg" alt="Q-Facial Water Shining System" loading="lazy" />
         </div>
       </div>
 
-      <!-- Slide 4: Device 2 (image only) -->
+      <!-- Slide 4: Ultrasonic Dual Wavelength -->
       <div class="hero-slide">
-        <div class="hero-photo">
-          <img src="images/device2.jpg" alt="Premium skincare products" loading="lazy" />
+        <div class="hero-photo hero-photo--contain">
+          <img src="images/carousel2.jpg" alt="Ultrasonic dual wavelength technology" loading="lazy" />
+        </div>
+      </div>
+
+      <!-- Slide 5: ASTERASYS Q-Facial Device -->
+      <div class="hero-slide">
+        <div class="hero-photo hero-photo--contain">
+          <img src="images/carousel3.jpg" alt="ASTERASYS Q-Facial device" loading="lazy" />
         </div>
       </div>
 
@@ -193,6 +179,86 @@
       <p class="subheading" style="max-width:340px" data-i18n="svc.p">Every service is designed to deliver real, visible results — backed by science, delivered with care.</p>
     </div>
 
+    <!-- ── Facial Treatments Category ── -->
+    <div class="services-category fade-up">
+      <h3 class="category-heading" data-i18n="svc.cat-facial">Facial Treatments</h3>
+    </div>
+
+    <!-- ── Q Facial Skin Renewal Series ── -->
+    <div class="qfacial-series fade-up">
+      <div class="qfacial-header">
+        <div class="qfacial-badge" data-i18n="qf.badge">&#9733; Signature Series</div>
+        <h3 data-i18n="qf.title">Q Facial Skin Renewal Treatment Series</h3>
+        <p data-i18n="qf.desc">A top-tier Korean salon-grade facial treatment, a must-have for celebrities visiting Korea</p>
+      </div>
+      <div class="qfacial-grid">
+
+        <!-- Purifying Glow Treatment -->
+        <div class="service-card" onclick="prefillService('Purifying Glow Treatment')">
+          <div class="service-header">
+            <img class="service-photo" src="images/Purifying Glow Treatment.jpg" alt="Purifying Glow Treatment" loading="lazy" />
+            <div class="service-overlay">
+              <div class="service-icon">✨</div>
+              <h3 data-i18n="qf1.h3">Purifying Glow Treatment</h3>
+              <div class="price-tag">$188 <span class="duration" data-i18n="qf1.dur">/ 45 min</span></div>
+            </div>
+          </div>
+          <div class="service-body">
+            <ul>
+              <li data-i18n="qf1.f1">Three professional-grade solutions (Formula A repair, B purification, C soothing)</li>
+              <li data-i18n="qf1.f2">Deeply cleanses skin and repairs the skin barrier</li>
+              <li data-i18n="qf1.f3">Enhances absorption and achieves gentle rejuvenation</li>
+              <li data-i18n="qf1.f4">Ideal for daily maintenance of all skin types</li>
+            </ul>
+            <button class="service-book-btn" data-i18n="qf1.btn">Book This Treatment &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Intensive Repair Infusion -->
+        <div class="service-card" onclick="prefillService('Intensive Repair Infusion')">
+          <div class="service-header">
+            <img class="service-photo" src="images/Intensive Repair Infusion.jpg" alt="Intensive Repair Infusion" loading="lazy" />
+            <div class="service-overlay">
+              <div class="service-icon">💎</div>
+              <h3 data-i18n="qf2.h3">Intensive Repair Infusion</h3>
+              <div class="price-tag">$228 <span class="duration" data-i18n="qf2.dur">/ 60 min</span></div>
+            </div>
+          </div>
+          <div class="service-body">
+            <ul>
+              <li data-i18n="qf2.f1">Includes full Purifying Glow Treatment + customized ampoule infusion</li>
+              <li data-i18n="qf2.f2">5 ampoule options: anti-wrinkle, brightening, pore-minimizing, soothing, radiance</li>
+              <li data-i18n="qf2.f3">Deeply repairs the skin base and targets specific concerns</li>
+              <li data-i18n="qf2.f4">Enhances overall radiance and skin health</li>
+            </ul>
+            <button class="service-book-btn" data-i18n="qf2.btn">Book This Treatment &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Multi-Dimensional Sculpting Treatment -->
+        <div class="service-card" onclick="prefillService('Multi-Dimensional Sculpting Treatment')">
+          <div class="service-header">
+            <img class="service-photo" src="images/Multi-Dimensional Sculpting Treatment.jpg" alt="Multi-Dimensional Sculpting Treatment" loading="lazy" />
+            <div class="service-overlay">
+              <div class="service-icon">🔬</div>
+              <h3 data-i18n="qf3.h3">Multi-Dimensional Sculpting Treatment</h3>
+              <div class="price-tag">$288 <span class="duration" data-i18n="qf3.dur">/ 75 min</span></div>
+            </div>
+          </div>
+          <div class="service-body">
+            <ul>
+              <li data-i18n="qf3.f1">Combines Intensive Repair Infusion with dual-frequency precision ultrasound</li>
+              <li data-i18n="qf3.f2">10MHz + 3MHz delivers ampoule ingredients into the dermis</li>
+              <li data-i18n="qf3.f3">Stimulates collagen production for firmer, younger-looking skin</li>
+              <li data-i18n="qf3.f4">Tightens and lifts skin contours for visible sculpting results</li>
+            </ul>
+            <button class="service-book-btn" data-i18n="qf3.btn">Book This Treatment &rarr;</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
     <div class="services-grid">
 
       <!-- Classic Pore Purifying Treatment -->
@@ -243,36 +309,37 @@
           <div class="service-overlay">
             <div class="service-icon">✨</div>
             <h3 data-i18n="s3.h3">Enhanced Microneedling with Mesolinfu</h3>
-            <div class="price-tag">$120 <span class="duration" data-i18n="s3.dur">/ 45 min</span></div>
+            <div class="price-tag">$269 <span class="duration" data-i18n="s3.dur">/ 30 min</span></div>
           </div>
         </div>
         <div class="service-body">
           <ul>
-            <li data-i18n="s3.f1">Dual-power renewal — pairs microneedling with custom meso serums</li>
-            <li data-i18n="s3.f2">Targeted texture fix — shrinks pores, smooths wrinkles, fades acne scars</li>
-            <li data-i18n="s3.f3">Deep nourishment — active serums infused while skin repairs</li>
-            <li data-i18n="s3.f4">Non-surgical, safe for all skin types</li>
+            <li data-i18n="s3.f1">Micro-channel activation — creates controlled pathways to trigger natural skin repair</li>
+            <li data-i18n="s3.f2">Collagen renewal — stimulates fibroblasts for collagen formation and remodeling</li>
+            <li data-i18n="s3.f3">Dermal repair — restores structural damage within deeper skin layers</li>
+            <li data-i18n="s3.f4">Deep skin fix — targets acne scars, enlarged pores and static wrinkles beyond daily skincare</li>
           </ul>
           <button class="service-book-btn" data-i18n="s3.btn">Book This Treatment →</button>
         </div>
       </div>
 
-      <!-- CM Meridian Facial -->
-      <div class="service-card fade-up" onclick="prefillService('CM Meridian Revival Facial')">
+      <!-- Aromatherapy Facial Meridian Kneading -->
+      <div class="service-card fade-up" onclick="prefillService('Aromatherapy Facial Meridian Kneading')">
         <div class="service-header">
-          <img class="service-photo" src="images/meridian.jpg" alt="CM Meridian Revival Facial" loading="lazy" />
+          <img class="service-photo" src="images/meridian.jpg" alt="Aromatherapy Facial Meridian Kneading" loading="lazy" />
           <div class="service-overlay">
             <div class="service-icon">🌿</div>
-            <h3 data-i18n="s4.h3">CM Meridian Revival Facial</h3>
-            <div class="price-tag">$80 <span class="duration" data-i18n="s4.dur">/ 60 min</span></div>
+            <h3 data-i18n="s4.h3">Aromatherapy Facial Meridian Kneading</h3>
+            <div class="price-tag">$128 <span class="duration" data-i18n="s4.dur">/ 60 min</span></div>
           </div>
         </div>
         <div class="service-body">
           <ul>
-            <li data-i18n="s4.f1">Liver Meridian tendon release — erases stress wrinkles</li>
-            <li data-i18n="s4.f2">Stomach Meridian work — drains facial puffiness</li>
-            <li data-i18n="s4.f3">Bladder Meridian lifting — firms sagging contours</li>
-            <li data-i18n="s4.f4">Jade Gua Sha — 48hr glow, instant debloat, 21-day firming</li>
+            <li data-i18n="s4.f1">Aromatherapy infusion — premium essential oils enhance relaxation and skin vitality</li>
+            <li data-i18n="s4.f2">Meridian activation — stimulates facial acupoints to restore internal balance</li>
+            <li data-i18n="s4.f3">Circulation boost — relieves stagnation through targeted meridian kneading</li>
+            <li data-i18n="s4.f4">Detox & sculpt — jade gua sha reduces turbidity, puffiness, and sagging</li>
+            <li data-i18n="s4.f5">Natural revitalisation — supports the flow of qi and blood for holistic rejuvenation</li>
           </ul>
           <button class="service-book-btn" data-i18n="s4.btn">Book This Treatment →</button>
         </div>
@@ -299,27 +366,6 @@
         </div>
       </div>
 
-      <!-- RF + Ultrasonic -->
-      <div class="service-card fade-up" style="transition-delay:.2s" onclick="prefillService('RF + Ultrasonic Serum Infusion')">
-        <div class="service-header">
-          <img class="service-photo" src="images/rf-ultrasonic.jpg" alt="RF + Ultrasonic Serum Infusion" loading="lazy" />
-          <div class="service-overlay">
-            <div class="service-icon">🔬</div>
-            <h3 data-i18n="s6.h3">RF + Ultrasonic Serum Infusion</h3>
-            <div class="price-tag">$150 <span class="duration" data-i18n="s6.dur">/ 60 min</span></div>
-          </div>
-        </div>
-        <div class="service-body">
-          <ul>
-            <li data-i18n="s6.f1">Instant results — RF tightens while ultrasound delivers active ingredients</li>
-            <li data-i18n="s6.f2">Long-term benefits — stimulates collagen, 30% pore refinement in 4 weeks</li>
-            <li data-i18n="s6.f3">5× absorption — ultra-deep serum penetration for maximum efficacy</li>
-            <li data-i18n="s6.f4">Optimal: 1–2 sessions weekly for best results</li>
-          </ul>
-          <button class="service-book-btn" data-i18n="s6.btn">Book This Treatment →</button>
-        </div>
-      </div>
-
       <!-- Dermaplaning -->
       <div class="service-card fade-up" onclick="prefillService('Dermaplaning')">
         <div class="service-header">
@@ -343,13 +389,114 @@
       <div class="addon-banner fade-up">
         <div class="pen-icon">✍️</div>
         <div class="addon-text">
-          <h4 data-i18n="addon.h4">Add-On: Deep Nourishing Treatment</h4>
-          <p data-i18n="addon.p">Enhance any facial with an intensive nourishing boost. Perfect for dehydrated or sensitised skin.</p>
+          <h4 data-i18n="addon.h4">Add-Ons</h4>
         </div>
-        <div class="addon-price">$20 <span style="font-size:1rem;color:var(--grey);font-weight:500">/ 15'</span></div>
+        <div class="addon-items">
+          <div class="addon-item">Neck + Decolletage <span class="addon-price">$49</span></div>
+          <div class="addon-item">Neck Only <span class="addon-price">$29</span></div>
+          <div class="addon-item">Hands <span class="addon-price">$39</span></div>
+        </div>
       </div>
 
     </div>
+
+    <!-- ── Body Treatments Category ── -->
+    <div class="services-category fade-up" style="margin-top:56px">
+      <h3 class="category-heading" data-i18n="svc.cat-body">Body Treatments</h3>
+    </div>
+
+    <!-- ── Magic Health Master: Vitality Revival Series ── -->
+    <div class="body-series fade-up">
+      <div class="body-series-header">
+        <div class="body-series-badge" data-i18n="bd.badge">&#9733; Vitality Revival Series</div>
+        <h3 data-i18n="bd.title">Magic Health Master</h3>
+        <p data-i18n="bd.desc">Precisely releases energy through advanced equipment for deep penetration, physical &amp; mental regulation, internal vitality boosting, and slim body contouring</p>
+      </div>
+      <div class="body-series-grid">
+
+        <!-- Dai Meridian Rejuvenation -->
+        <div class="service-card" onclick="prefillService('Dai Meridian Rejuvenation')">
+          <div class="service-header">
+            <img class="service-photo" src="images/Dai Meridian Rejuvenation.jpg" alt="Dai Meridian Rejuvenation" loading="lazy" />
+            <div class="service-overlay">
+              <div class="service-icon">🔥</div>
+              <h3 data-i18n="bd1.h3">Dai Meridian Rejuvenation</h3>
+              <div class="price-tag">$138 <span class="duration" data-i18n="bd1.dur">/ 45 min</span></div>
+            </div>
+          </div>
+          <div class="service-body">
+            <ul>
+              <li data-i18n="bd1.f1">Warms the uterus to dispel cold</li>
+              <li data-i18n="bd1.f2">Promotes waist &amp; abdomen circulation and metabolism</li>
+              <li data-i18n="bd1.f3">Relieves local stagnation and discomfort</li>
+            </ul>
+            <button class="service-book-btn" data-i18n="bd1.btn">Book This Treatment &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Breast & Lymphatic Drainage Therapy -->
+        <div class="service-card" onclick="prefillService('Breast & Lymphatic Drainage Therapy')">
+          <div class="service-header">
+            <img class="service-photo" src="images/Breast & Lymphatic Drainage Therapy.jpg" alt="Breast & Lymphatic Drainage Therapy" loading="lazy" />
+            <div class="service-overlay">
+              <div class="service-icon">💜</div>
+              <h3 data-i18n="bd2.h3">Breast &amp; Lymphatic Drainage Therapy</h3>
+              <div class="price-tag">$138 <span class="duration" data-i18n="bd2.dur">/ 45 min</span></div>
+            </div>
+          </div>
+          <div class="service-body">
+            <ul>
+              <li data-i18n="bd2.f1">Low-frequency energy softens nodules</li>
+              <li data-i18n="bd2.f2">Unblocks chest &amp; armpit lymphatic vessels</li>
+              <li data-i18n="bd2.f3">Relieves meridian stagnation and chest discomfort</li>
+            </ul>
+            <button class="service-book-btn" data-i18n="bd2.btn">Book This Treatment &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Shoulder, Neck & Lower Back Pain Relief -->
+        <div class="service-card" onclick="prefillService('Shoulder, Neck & Lower Back Pain Relief Treatment')">
+          <div class="service-header">
+            <img class="service-photo" src="images/Shoulder, Neck & Lower Back Pain Relief Treatment.jpg" alt="Shoulder, Neck & Lower Back Pain Relief" loading="lazy" />
+            <div class="service-overlay">
+              <div class="service-icon">💪</div>
+              <h3 data-i18n="bd3.h3">Shoulder, Neck &amp; Lower Back Pain Relief</h3>
+              <div class="price-tag">$198 <span class="duration" data-i18n="bd3.dur">/ 60 min</span></div>
+            </div>
+          </div>
+          <div class="service-body">
+            <ul>
+              <li data-i18n="bd3.f1">Advanced energy technology releases fascial adhesions and muscle knots</li>
+              <li data-i18n="bd3.f2">Relieves fibrous hyperplasia, muscle fatigue, and frozen shoulder</li>
+              <li data-i18n="bd3.f3">Eases stiff/painful limbs and restricted movement</li>
+            </ul>
+            <button class="service-book-btn" data-i18n="bd3.btn">Book This Treatment &rarr;</button>
+          </div>
+        </div>
+
+        <!-- Full Body Sculpting & Contouring -->
+        <div class="service-card" onclick="prefillService('Full Body Sculpting & Contouring Treatment')">
+          <div class="service-header">
+            <img class="service-photo" src="images/Full Body Sculpting & Contouring Treatment.jpg" alt="Full Body Sculpting & Contouring" loading="lazy" />
+            <div class="service-overlay">
+              <div class="service-icon">✦</div>
+              <h3 data-i18n="bd4.h3">Full Body Sculpting &amp; Contouring</h3>
+              <div class="price-tag">$288 <span class="duration" data-i18n="bd4.dur">/ 75 min</span></div>
+            </div>
+          </div>
+          <div class="service-body">
+            <ul>
+              <li data-i18n="bd4.f1">High-tech precision energy for targeted fat reduction</li>
+              <li data-i18n="bd4.f2">Comprehensive body contouring and skin tightening</li>
+              <li data-i18n="bd4.f3">Visible slimming and sculpting results</li>
+            </ul>
+            <button class="service-book-btn" data-i18n="bd4.btn">Book This Treatment &rarr;</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -462,20 +609,34 @@
             <label data-i18n="bk.lbl-tr">Treatment *</label>
             <select id="treatment" required>
               <option value="" data-i18n-opt="bk.opt-sel">— Select a treatment —</option>
+              <optgroup label="Q Facial Skin Renewal Series" data-i18n-label="bk.og-qf">
+                <option value="Purifying Glow Treatment">Purifying Glow Treatment — $188 / 45'</option>
+                <option value="Intensive Repair Infusion">Intensive Repair Infusion — $228 / 60'</option>
+                <option value="Multi-Dimensional Sculpting Treatment">Multi-Dimensional Sculpting Treatment — $288 / 75'</option>
+              </optgroup>
+              <optgroup label="More Facial Treatments" data-i18n-label="bk.og-facial">
               <option value="Classic Pore Purifying Treatment">Classic Pore Purifying Treatment — $89 / 60'</option>
               <option value="LED Light Therapy">LED Light Therapy — $49 / 30'</option>
-              <option value="Enhanced Microneedling with Mesolinfu">Enhanced Microneedling with Mesolinfu — $120 / 45'</option>
-              <option value="CM Meridian Revival Facial">CM Meridian Revival Facial — $80 / 60'</option>
+              <option value="Enhanced Microneedling with Mesolinfu">Enhanced Microneedling with Mesolinfu — $269 / 30'</option>
+              <option value="Aromatherapy Facial Meridian Kneading">Aromatherapy Facial Meridian Kneading — $128 / 60'</option>
               <option value="Professional Electrolysis HPV Wart Removal">Electrolysis HPV Wart Removal — $10</option>
-              <option value="RF + Ultrasonic Serum Infusion">RF + Ultrasonic Serum Infusion — $150 / 60'</option>
               <option value="Dermaplaning">Dermaplaning — $59 / 45'</option>
+              </optgroup>
+              <optgroup label="Body Treatments" data-i18n-label="bk.og-body">
+                <option value="Dai Meridian Rejuvenation">Dai Meridian Rejuvenation — $138 / 45'</option>
+                <option value="Breast & Lymphatic Drainage Therapy">Breast & Lymphatic Drainage Therapy — $138 / 45'</option>
+                <option value="Shoulder, Neck & Lower Back Pain Relief Treatment">Shoulder, Neck & Back Pain Relief — $198 / 60'</option>
+                <option value="Full Body Sculpting & Contouring Treatment">Full Body Sculpting & Contouring — $288 / 75'</option>
+              </optgroup>
             </select>
           </div>
           <div class="form-group">
-            <label data-i18n="bk.lbl-ao">Add-On Deep Nourishing ($20 / 15')</label>
+            <label data-i18n="bk.lbl-ao">Add-Ons</label>
             <select id="addon">
               <option value="no" data-i18n-opt="bk.opt-no">No thanks</option>
-              <option value="yes" data-i18n-opt="bk.opt-yes">Yes, add it!</option>
+              <option value="Neck + Decolletage">Neck + Decolletage — $49</option>
+              <option value="Neck Only">Neck Only — $29</option>
+              <option value="Hands">Hands — $39</option>
             </select>
           </div>
           <div class="form-row">
@@ -524,13 +685,14 @@
       <div class="footer-col">
         <h5 data-i18n="ft.svc">Treatments</h5>
         <ul>
+          <li><a href="#services" data-i18n="ft.qf">Q Facial Skin Renewal Series</a></li>
           <li><a href="#services" data-i18n="ft.s1">Classic Pore Purifying Treatment</a></li>
           <li><a href="#services" data-i18n="ft.s2">LED Light Therapy</a></li>
           <li><a href="#services" data-i18n="ft.s3">Microneedling + Meso</a></li>
-          <li><a href="#services" data-i18n="ft.s4">CM Meridian Facial</a></li>
+          <li><a href="#services" data-i18n="ft.s4">Aromatherapy Facial Meridian Kneading</a></li>
           <li><a href="#services" data-i18n="ft.s5">HPV Wart Removal</a></li>
-          <li><a href="#services" data-i18n="ft.s6">RF + Ultrasonic Infusion</a></li>
           <li><a href="#services" data-i18n="ft.s7">Dermaplaning</a></li>
+          <li><a href="#services" data-i18n="ft.bd">Magic Health Master Series</a></li>
         </ul>
       </div>
       <div class="footer-col">

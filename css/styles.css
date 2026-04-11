@@ -190,6 +190,16 @@ nav.scrolled { box-shadow: 0 2px 20px rgba(44,26,34,.10); }
   position: absolute; inset: 0;
   background: linear-gradient(135deg, rgba(44,26,34,.60) 0%, rgba(44,26,34,.25) 60%, transparent 100%);
 }
+/* Contain variant — for info/product images that shouldn't be cropped */
+.hero-photo--contain {
+  background: linear-gradient(160deg, var(--cream) 0%, #FFF8F5 40%, rgba(201,169,110,.10) 100%);
+}
+.hero-photo--contain img {
+  object-fit: contain;
+  object-position: center;
+  padding: 20px;
+}
+.hero-photo--contain::after { display: none; }
 .hero-card {
   background: var(--white);
   border-radius: 24px;
@@ -335,6 +345,63 @@ nav.scrolled { box-shadow: 0 2px 20px rgba(44,26,34,.10); }
 /* ── Services ─────────────────────────────────────────────────── */
 .services { background: var(--cream); }
 .services-intro { display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 20px; margin-bottom: 48px; }
+
+/* ── Services Category Header ────────────────────────────────── */
+.services-category { margin-bottom: 28px; }
+.category-heading {
+  font-size: 1.3rem; font-weight: 800; color: var(--dark);
+  letter-spacing: .04em;
+  display: flex; align-items: center; gap: 10px;
+}
+.category-heading::before {
+  content: ''; display: block;
+  width: 4px; height: 24px; border-radius: 2px;
+  background: linear-gradient(180deg, var(--gold), var(--rose));
+}
+
+/* ── Q-Facial Series Block ───────────────────────────────────── */
+.qfacial-series {
+  background: linear-gradient(135deg, rgba(201,169,110,.10), rgba(155,92,114,.05));
+  border: 1.5px solid rgba(201,169,110,.32);
+  border-radius: 20px;
+  padding: 36px 32px 32px;
+  margin-bottom: 40px;
+}
+.qfacial-header { text-align: center; margin-bottom: 28px; }
+.qfacial-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--gold), var(--rose));
+  color: #fff; font-size: .72rem; font-weight: 700;
+  letter-spacing: .12em; text-transform: uppercase;
+  padding: 6px 20px; border-radius: 50px; margin-bottom: 12px;
+}
+.qfacial-header h3 {
+  font-size: 1.4rem; font-weight: 800; color: var(--dark); margin-bottom: 6px;
+}
+.qfacial-header p { font-size: .92rem; color: var(--grey); max-width: 520px; margin: 0 auto; }
+.qfacial-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+
+/* ── Body Treatment Series Block ─────────────────────────────── */
+.body-series {
+  background: linear-gradient(135deg, rgba(110,74,90,.08), rgba(201,169,110,.06));
+  border: 1.5px solid rgba(110,74,90,.22);
+  border-radius: 20px;
+  padding: 36px 32px 32px;
+}
+.body-series-header { text-align: center; margin-bottom: 28px; }
+.body-series-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--mid), var(--rose));
+  color: #fff; font-size: .72rem; font-weight: 700;
+  letter-spacing: .12em; text-transform: uppercase;
+  padding: 6px 20px; border-radius: 50px; margin-bottom: 12px;
+}
+.body-series-header h3 {
+  font-size: 1.4rem; font-weight: 800; color: var(--dark); margin-bottom: 6px;
+}
+.body-series-header p { font-size: .92rem; color: var(--grey); max-width: 600px; margin: 0 auto; }
+.body-series-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+
 .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
 .service-card {
   background: var(--white);
@@ -407,9 +474,31 @@ nav.scrolled { box-shadow: 0 2px 20px rgba(44,26,34,.10); }
   display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
 }
 .addon-banner .pen-icon { font-size: 2rem; }
-.addon-banner .addon-text h4 { font-size: 1rem; font-weight: 800; color: var(--dark); margin-bottom: 4px; }
-.addon-banner .addon-text p { font-size: .88rem; color: var(--grey); }
-.addon-banner .addon-price { margin-left: auto; font-size: 1.8rem; font-weight: 900; color: var(--gold); white-space: nowrap; }
+.addon-banner .addon-text h4 { font-size: 1.1rem; font-weight: 800; color: var(--dark); margin-bottom: 0; }
+.addon-banner .addon-items { display: flex; gap: 16px; margin-left: auto; flex-wrap: wrap; }
+.addon-item {
+  background: var(--white);
+  border: 1px solid rgba(201,169,110,.35);
+  border-radius: 10px;
+  padding: 14px 22px;
+  font-size: .92rem;
+  font-weight: 600;
+  color: var(--dark);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform var(--trans), box-shadow var(--trans);
+}
+.addon-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(44,26,34,.1);
+}
+.addon-item .addon-price {
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: var(--gold);
+  white-space: nowrap;
+}
 
 /* ── Concerns ─────────────────────────────────────────────────── */
 .concerns { background: var(--white); }
@@ -605,6 +694,7 @@ footer {
   /* Fix 4: show hero-visual on tablet at a reduced height (was display:none) */
   .hero-visual { min-height: 360px; }
   /* Fix 2: why-grid stays 2 cols on tablet — only collapses at phone size */
+  .qfacial-grid { grid-template-columns: repeat(3, 1fr); }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
   .booking-wrap { grid-template-columns: 1fr; gap: 36px; }
   .footer-inner { grid-template-columns: 1fr 1fr; }
@@ -617,6 +707,10 @@ footer {
   .hamburger { display: flex; padding: 10px; margin-right: -10px; }
   /* Fix 2: why-grid collapses to 1 col only on phone */
   .why-grid { grid-template-columns: 1fr; }
+  .qfacial-series { padding: 28px 18px 24px; }
+  .qfacial-grid { grid-template-columns: 1fr; }
+  .body-series { padding: 28px 18px 24px; }
+  .body-series-grid { grid-template-columns: 1fr; }
   /* Fix 4: hide hero-visual on phone — too cramped; phone bar covers it */
   .hero-visual { display: none; }
   /* Fix 3: drop forced 100vh height — let content determine the height */
