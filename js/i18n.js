@@ -16,8 +16,7 @@ const TRANSLATIONS = {
     'hero.stat1':'Expertise', 'hero.stat2':'From / Session', 'hero.stat3':'Targeted Solutions',
     // Hannah's motto
     'quote.hook':'Life is like a battery — draining from the moment you\'re born. If you don\'t want to be left behind by time, begin the journey of self-renewal — amidst the flood of beauty standards and life\'s chaos, rebuild your steady order, inside and out.',
-    'quote.body':'Every bespoke treatment is designed to repair your skin barrier and nurture a radiant glow, while helping you shed fatigue and anxiety, and listen to your body\'s inner voice. With gentle force, we guard your inner core and anchor you to life\'s true essence.',
-    'quote.close':'Skincare has nothing to do with age — it\'s about loving yourself well, at every stage of life.',
+    'quote.close':'Every treatment is a gentle recalibration of body and mind. Skincare has nothing to do with age — it\'s about loving yourself well, at every stage of life.',
     'quote.sig':', Senior Beauty Specialist',
     // Hero card
     'card.label':'⭐ Most Popular', 'card.title':'Classic Pore Purifying Treatment', 'card.dur':'/ 60 min',
@@ -41,7 +40,7 @@ const TRANSLATIONS = {
     'svc.p':'Every service is designed to deliver real, visible results — backed by science, delivered with care.',
     'svc.cat-facial':'Facial Treatments',
     // Q-Facial Series
-    'qf.badge':'★ Signature Series',
+    'qf.badge':'★ Korea Q Facial Skin Renewal Series',
     'qf.title':'Q Facial Skin Renewal Treatment Series',
     'qf.desc':'A top-tier Korean salon-grade facial treatment, a must-have for celebrities visiting Korea',
     'qf1.h3':'Purifying Glow Treatment', 'qf1.dur':'/ 45 min',
@@ -202,9 +201,8 @@ const TRANSLATIONS = {
     'hero.cta1':'立即预约', 'hero.cta2':'探索疗程',
     'hero.stat1':'专业经验', 'hero.stat2':'起 / 次', 'hero.stat3':'针对性解决方案',
     // Hannah's motto
-    'quote.hook':'人生这块电池，从出生起便开始消耗。若不想被时光抛下，就开启自愈之路——在审美洪流与生活纷扰里，重建内外安稳的秩序。',
-    'quote.body':'所有定制护理旨在：修护肌肤屏障，养出透亮外在；卸下疲惫焦虑，聆听身体内在的声音。以温柔力量，守护心灵内核，锚定生命本真。',
-    'quote.close':'保养无关年龄，而是每个阶段的你，都在好好爱自己。',
+    'quote.hook':'人生这块电池，从出生起便开始消耗。若不想被时光抛下，请开启自愈之路——在审美洪流与生活纷扰里，重建内外安稳的秩序。',
+    'quote.close':'每一次护理，都是对身心的一次温柔校准。保养无关年龄，而是每个阶段的你，都在好好爱自己。',
     'quote.sig':'，资深高级美容师',
     // Hero card
     'card.label':'⭐ 最受欢迎', 'card.title':'经典毛孔净化护理', 'card.dur':'/ 60分钟',
@@ -220,7 +218,7 @@ const TRANSLATIONS = {
     'why2.h4':'院线正品',
     'why2.p':'院线专属正品，正规渠道可溯源，配方温和，零冗余添加，敏弱肌安心使用。',
     'why3.h4':'资深美容师',
-    'why3.p':'中、新双资质，30年资深高级美容师亲自主理，业内稀缺，一对一定制方案，以专业技术实现真正有效护肤。',
+    'why3.p':'中、新双资质，30年高级美容师亲自主理，业内稀缺，一对一定制方案，以专业技术实现真正有效护肤。',
     'why4.h4':'无菌消毒',
     'why4.p':'高标准无菌消毒，仪器、配件一客一换一消杀，打造安心私密护理空间。',
     // Services intro
@@ -228,7 +226,7 @@ const TRANSLATIONS = {
     'svc.p':'每一项服务均致力于提供真实可见的效果——以科学为后盾，以用心呈现。',
     'svc.cat-facial':'面部护理',
     // Q-Facial Series
-    'qf.badge':'★ 招牌系列',
+    'qf.badge':'★ 韩国Q Facial 焕肤护理系列',
     'qf.title':'Q Facial 肌肤焕新护理系列',
     'qf.desc':'韩国顶级院线级面部护理，明星赴韩必做项目',
     'qf1.h3':'净透焕肤护理', 'qf1.dur':'/ 45分钟',
