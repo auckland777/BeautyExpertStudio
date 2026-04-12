@@ -109,6 +109,7 @@ nav.scrolled { box-shadow: 0 2px 20px rgba(44,26,34,.10); }
 }
 .nav-links a:hover { color: var(--rose); }
 .nav-cta { display: flex; align-items: center; gap: 14px; }
+.nav-fb-mobile { display: none; }
 .nav-phone {
   font-size: .88rem; font-weight: 700; color: var(--rose);
   display: flex; align-items: center; gap: 6px;
@@ -702,6 +703,7 @@ footer {
 @media (max-width: 680px) {
   /* Fix 1: hide phone number — it clutters the nav on small screens */
   .nav-links, .nav-cta .btn, .nav-phone { display: none; }
+  .nav-fb-mobile { display: flex; align-items: center; padding: 10px; }
   /* Fix 5: larger tap target for hamburger (44px minimum) */
   .hamburger { display: flex; padding: 10px; margin-right: -10px; }
   .why-grid { grid-template-columns: 1fr; }

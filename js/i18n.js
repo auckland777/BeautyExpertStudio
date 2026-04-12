@@ -103,6 +103,9 @@ const TRANSLATIONS = {
     's5.btn':'Book This Treatment →',
     // Add-on
     'addon.h4':'Add-Ons',
+    'addon.i1':'Neck + Decolletage <span class="addon-price">$49</span>',
+    'addon.i2':'Neck Only <span class="addon-price">$29</span>',
+    'addon.i3':'Hands <span class="addon-price">$39</span>',
     // Body Treatments
     'svc.cat-body':'Body Treatments',
     'bd.badge':'★ Magic Health Master',
@@ -289,6 +292,9 @@ const TRANSLATIONS = {
     's5.btn':'立即预约此疗程 →',
     // Add-on
     'addon.h4':'附加项目',
+    'addon.i1':'颈部 + 胸口护理 <span class="addon-price">$49</span>',
+    'addon.i2':'颈部护理 <span class="addon-price">$29</span>',
+    'addon.i3':'手部护理 <span class="addon-price">$39</span>',
     // Body Treatments
     'svc.cat-body':'身体护理',
     'bd.badge':'★ 生命能量焕活系列',

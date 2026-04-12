@@ -30,6 +30,8 @@
     </ul>
     <div class="nav-cta">
       <a class="nav-phone" href="tel:021901118">📞 021 901 118</a>
+      <a class="nav-phone nav-fb-desktop" href="https://www.facebook.com/BeautyExpertStudio" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-2px"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg> Facebook</a>
+      <a class="nav-fb-mobile" href="https://www.facebook.com/BeautyExpertStudio" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="var(--rose)"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
       <div class="lang-switch">
         <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
         <span class="lang-sep">|</span>
@@ -139,7 +141,6 @@
 <section class="why-us section" id="why-us">
   <div class="container">
     <div class="tag" data-i18n="why.tag">Why Choose Us</div>
-    <h2 class="heading" data-i18n-html="why.h2">The Beauty Expert<br>Difference</h2>
     <div class="divider"></div>
     <div class="why-grid">
       <div class="why-card fade-up">
@@ -167,16 +168,8 @@
 </section>
 
 <!-- ── Services ─────────────────────────────────────────────────────── -->
-<section class="services section" id="services">
+<section class="services section" id="services" style="padding-top:48px">
   <div class="container">
-    <div class="services-intro fade-up">
-      <div>
-        <div class="tag" data-i18n="svc.tag">Our Treatments</div>
-        <h2 class="heading" data-i18n-html="svc.h2">Targeted Beauty<br>Solutions</h2>
-        <div class="divider" style="margin-bottom:0"></div>
-      </div>
-      <p class="subheading" style="max-width:340px" data-i18n="svc.p">Every service is designed to deliver real, visible results — backed by science, delivered with care.</p>
-    </div>
 
     <!-- ── Facial Treatments Category ── -->
     <div class="services-category fade-up">
@@ -381,9 +374,9 @@
           <h4 data-i18n="addon.h4">Add-Ons</h4>
         </div>
         <div class="addon-items">
-          <div class="addon-item">Neck + Decolletage <span class="addon-price">$49</span></div>
-          <div class="addon-item">Neck Only <span class="addon-price">$29</span></div>
-          <div class="addon-item">Hands <span class="addon-price">$39</span></div>
+          <div class="addon-item" data-i18n-html="addon.i1">Neck + Decolletage <span class="addon-price">$49</span></div>
+          <div class="addon-item" data-i18n-html="addon.i2">Neck Only <span class="addon-price">$29</span></div>
+          <div class="addon-item" data-i18n-html="addon.i3">Hands <span class="addon-price">$39</span></div>
         </div>
       </div>
 
@@ -553,7 +546,7 @@
         <div class="contact-detail">
           <div class="contact-icon">📍</div>
           <div class="info">
-            <strong>Glen Innes, Auckland</strong>
+            <strong><a href="https://www.google.com/maps/search/Beauty+Expert+Studio+Taniwha+Street+Wai+O+Taiki+Bay+Auckland+1072" target="_blank" rel="noopener" style="color:inherit">Glen Innes, Auckland</a></strong>
             <span data-i18n="bk.c2">New Zealand</span>
           </div>
         </div>
@@ -664,7 +657,7 @@
       <div class="footer-brand">
         <div class="logo-text">Beauty Expert Studio</div>
         <p data-i18n="ft.brand">Professional beauty treatments with 30 years of certified expertise. Honest advice, luxury results, unbeatable value.</p>
-        <p style="margin-top:12px">📞 <a href="tel:021901118" style="color:var(--gold)">021 901 118</a><br>📍 Glen Innes, Auckland</p>
+        <p style="margin-top:12px">📞 <a href="tel:021901118" style="color:var(--gold)">021 901 118</a><br>📍 <a href="https://www.google.com/maps/search/Beauty+Expert+Studio+Taniwha+Street+Wai+O+Taiki+Bay+Auckland+1072" target="_blank" rel="noopener" style="color:var(--gold)">Glen Innes, Auckland</a><br><a href="https://www.facebook.com/BeautyExpertStudio" target="_blank" rel="noopener" style="color:var(--gold)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-2px"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg> Facebook</a><br>✉️ <a href="mailto:beautyexperthu@gmail.com" style="color:var(--gold)">beautyexperthu@gmail.com</a></p>
       </div>
       <div class="footer-col">
         <h5 data-i18n="ft.svc">Treatments</h5>
