@@ -84,8 +84,8 @@
       <li><a href="#booking" data-i18n="nav.book">Book</a></li>
     </ul>
     <div class="nav-cta">
-      <a class="nav-phone" href="tel:021901118">📞 021 901 118</a>
-      <a class="nav-phone nav-fb-desktop" href="https://www.facebook.com/BeautyExpertStudio" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-2px"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg> Facebook</a>
+      <a class="nav-phone" href="tel:021901118">📞 <span class="nav-label">021 901 118</span></a>
+      <a class="nav-phone nav-fb-desktop" href="https://www.facebook.com/BeautyExpertStudio" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-2px"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg> <span class="nav-label">Facebook</span></a>
       <a class="nav-fb-mobile" href="https://www.facebook.com/BeautyExpertStudio" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="var(--rose)"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
       <div class="lang-switch">
         <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
@@ -110,6 +110,7 @@
       <li><a href="studio.html" class="mobile-link" data-i18n="nav.studio">Studio</a></li>
       <li><a href="#concerns" class="mobile-link" data-i18n="nav.concerns">Concerns</a></li>
       <li><a href="#booking" class="mobile-link" data-i18n="mob.book">Book Appointment</a></li>
+      <li><a href="#contact" class="mobile-link" data-i18n="nav.contact">Contact Us</a></li>
     </ul>
     <div class="lang-switch" style="margin-top:24px;justify-content:center;gap:8px;">
       <button class="lang-btn active" data-lang="en" onclick="setLang('en');document.getElementById('mobileNav').classList.remove('open')">EN</button>
@@ -195,8 +196,7 @@
 <!-- ── Why Us ───────────────────────────────────────────────────────── -->
 <section class="why-us section" id="why-us">
   <div class="container">
-    <div class="tag" data-i18n="why.tag">Why Choose Us</div>
-    <div class="divider"></div>
+    <h3 class="category-heading" data-i18n="why.tag">Why Choose Us</h3>
     <div class="why-grid">
       <div class="why-card fade-up">
         <div class="why-icon">🔬</div>
@@ -234,7 +234,7 @@
     <!-- ── Q Facial Skin Renewal Series ── -->
     <div class="qfacial-series fade-up">
       <div class="qfacial-header">
-        <div class="qfacial-badge" data-i18n="qf.badge">&#9733; Korea Q Facial Skin Renewal Series</div>
+        <div class="qfacial-badge" data-i18n="qf.badge">Korea Q Facial Skin Renewal Series</div>
         <p data-i18n="qf.desc">A top-tier Korean salon-grade facial treatment, a must-have for celebrities visiting Korea</p>
       </div>
       <div class="qfacial-grid">
@@ -390,7 +390,7 @@
           <img class="service-photo" src="images/wart-removal.jpg" alt="Professional Electrolysis" loading="lazy" />
           <div class="service-overlay">
             <h3 data-i18n="s5.h3">Professional Electrolysis Wart Removal</h3>
-            <div class="price-tag">$10-15 <span class="duration" data-i18n="s5.dur">per session</span></div>
+            <div class="price-tag">$10-15 <span class="duration" data-i18n="s5.dur">per wart</span></div>
           </div>
         </div>
         <div class="service-body">
@@ -445,7 +445,7 @@
     <!-- ── Magic Health Master: Vitality Revival Series ── -->
     <div class="body-series fade-up">
       <div class="body-series-header">
-        <div class="body-series-badge" data-i18n="bd.badge">&#9733; Magic Health Master</div>
+        <div class="body-series-badge" data-i18n="bd.badge">Magic Health Master</div>
         <p data-i18n="bd.desc">Precisely releases energy through advanced equipment for deep penetration, physical &amp; mental regulation, internal vitality boosting, and slim body contouring</p>
       </div>
       <div class="body-series-grid">
@@ -706,7 +706,7 @@
 </section>
 
 <!-- ── Footer ───────────────────────────────────────────────────────── -->
-<footer>
+<footer id="contact">
   <div class="container">
     <div class="footer-inner">
       <div class="footer-brand">

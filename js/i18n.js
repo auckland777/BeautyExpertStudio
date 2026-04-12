@@ -7,7 +7,7 @@ const TRANSLATIONS = {
   en: {
     // Nav
     'nav.why':'Why Us', 'nav.services':'Services', 'nav.studio':'Studio', 'nav.concerns':'Concerns',
-    'nav.book':'Book', 'nav.book-now':'Book Now', 'mob.book':'Book Appointment',
+    'nav.book':'Book', 'nav.book-now':'Book Now', 'mob.book':'Book Appointment', 'nav.contact':'Contact Us',
     // Hero
     'hero.badge':'30 Years · Certified Senior Beautician',
     'hero.h1':'Where <em>Science</em> Meets<br>Beauty',
@@ -40,7 +40,7 @@ const TRANSLATIONS = {
     'svc.p':'Every service is designed to deliver real, visible results — backed by science, delivered with care.',
     'svc.cat-facial':'Facial Treatments',
     // Q-Facial Series
-    'qf.badge':'★ Korea Q Facial Skin Renewal Series',
+    'qf.badge':'Korea Q Facial Skin Renewal Series',
     'qf.title':'Q Facial Skin Renewal Treatment Series',
     'qf.desc':'A top-tier Korean salon-grade facial treatment, a must-have for celebrities visiting Korea',
     'qf1.h3':'Purifying Glow Treatment', 'qf1.dur':'/ 45 min',
@@ -95,7 +95,7 @@ const TRANSLATIONS = {
     's4.f5':'Natural revitalisation — supports the flow of qi and blood for holistic rejuvenation',
     's4.btn':'Book This Treatment →',
     // Service 5
-    's5.h3':'Professional Electrolysis Wart Removal', 's5.dur':'per session',
+    's5.h3':'Professional Electrolysis Wart Removal', 's5.dur':'per wart',
     's5.f1':'Root-targeting — destroys the virus at its source',
     's5.f2':'Gentler than freezing — no blisters or scarring',
     's5.f3':'More complete removal versus lasers and topicals',
@@ -108,7 +108,7 @@ const TRANSLATIONS = {
     'addon.i3':'Hands <span class="addon-price">$39</span>',
     // Body Treatments
     'svc.cat-body':'Body Treatments',
-    'bd.badge':'★ Magic Health Master',
+    'bd.badge':'Magic Health Master',
     'bd.title':'Magic Health Master',
     'bd.desc':'Precisely releases energy through advanced equipment for deep penetration, physical & mental regulation, internal vitality boosting, and slim body contouring',
     'bd1.h3':'Dai Meridian Rejuvenation', 'bd1.dur':'/ 45 min',
@@ -196,7 +196,7 @@ const TRANSLATIONS = {
   zh: {
     // Nav
     'nav.why':'为何选择我们', 'nav.services':'服务项目', 'nav.studio':'工作室', 'nav.concerns':'肌肤问题',
-    'nav.book':'预约', 'nav.book-now':'立即预约', 'mob.book':'预约护理',
+    'nav.book':'预约', 'nav.book-now':'立即预约', 'mob.book':'预约护理', 'nav.contact':'联系我们',
     // Hero
     'hero.badge':'30年经验，认证高级美容师',
     'hero.h1':'科学与<em>美丽</em>的<br>完美融合',
@@ -229,9 +229,9 @@ const TRANSLATIONS = {
     'svc.p':'每一项服务均致力于提供真实可见的效果——以科学为后盾，以用心呈现。',
     'svc.cat-facial':'面部护理',
     // Q-Facial Series
-    'qf.badge':'★ Q Facial 焕肤护理系列',
+    'qf.badge':'Q Facial 焕肤护理系列',
     'qf.title':'Q Facial 肌肤焕新护理系列',
-    'qf.desc':'韩国顶级院线级面部护理，明星赴韩必做项目',
+    'qf.desc':'韩国顶级面部护理，明星赴韩必做项目',
     'qf1.h3':'净澈焕肤', 'qf1.dur':'/ 45分钟',
     'qf1.f1':'三款院线专属溶液（Formula-A修复 + B净肤 + C舒缓）',
     'qf1.f2':'深层清洁肌肤，修复屏障',
@@ -284,7 +284,7 @@ const TRANSLATIONS = {
     's4.f5':'自然焕活——疏通气血运行，实现全面焕颜',
     's4.btn':'立即预约此疗程 →',
     // Service 5
-    's5.h3':'专业电解疣体去除', 's5.dur':'每次',
+    's5.h3':'专业电解疣体去除', 's5.dur':'每粒',
     's5.f1':'根源靶向——从源头消灭病毒',
     's5.f2':'比冷冻治疗更温和——无水泡、无疤痕',
     's5.f3':'比激光及外用药物更彻底清除',
@@ -297,7 +297,7 @@ const TRANSLATIONS = {
     'addon.i3':'手部护理 <span class="addon-price">$39</span>',
     // Body Treatments
     'svc.cat-body':'身体护理',
-    'bd.badge':'★ 生命能量焕活系列',
+    'bd.badge':'生命能量焕活系列',
     'bd.title':'魔力养生大师',
     'bd.desc':'运用仪器精准释放能量，深层渗透、调理身心，焕发内在活力，同步塑造纤盈身体线条',
     'bd1.h3':'带脉焕活调理', 'bd1.dur':'/ 45分钟',
