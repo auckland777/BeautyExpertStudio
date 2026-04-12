@@ -86,13 +86,13 @@ function prefillService(name) {
 
 // ── Concern chips
 window.concernData = {
-  dullness:    { title: 'For Dullness', text: 'We recommend the Classic Pore Purifying Treatment ($89), Dermaplaning ($59), or RF + Ultrasonic Serum Infusion ($150) to restore radiance, even tone, and instant brightness. CM Meridian Revival Facial ($80) also delivers a 48-hour glow with instant debloating.', service: 'Classic Pore Purifying Treatment' },
+  dullness:    { title: 'For Dullness', text: 'We recommend the Classic Pore Purifying Treatment ($89), Dermaplaning ($59), or the Purifying Glow Treatment ($188) to restore radiance, even tone, and instant brightness. Aromatherapy Facial Meridian Kneading ($128) also enhances circulation for a natural, lasting glow.', service: 'Classic Pore Purifying Treatment' },
   sensitivity: { title: 'For Sensitivity', text: 'LED Light Therapy ($49) is ideal for sensitive skin — it calms inflammation and supports the skin barrier without irritation.', service: 'LED Light Therapy' },
-  acne:        { title: 'For Acne & Breakouts', text: 'Blue LED Light Therapy ($49) targets acne-causing bacteria. The Classic Pore Purifying Treatment ($89) unclogs pores and reduces excess oil. Enhanced Microneedling with Mesolinfu ($120) also fades acne scars and refines texture.', service: 'LED Light Therapy' },
-  pores:       { title: 'For Large Pores', text: 'The Classic Pore Purifying Treatment ($89) deep-cleans and unclogs pores. Enhanced Microneedling with Mesolinfu ($120) shrinks pores and smooths texture. RF + Ultrasonic Serum Infusion ($150) delivers 30% pore refinement in 4 weeks.', service: 'Classic Pore Purifying Treatment' },
-  wrinkles:    { title: 'For Wrinkles & Lines', text: 'Enhanced Microneedling with Mesolinfu ($120) deeply smooths wrinkles and fades lines. RF + Ultrasonic ($150) lifts and firms instantly. CM Meridian Revival Facial ($80) releases stress wrinkles and firms sagging contours.', service: 'Enhanced Microneedling with Mesolinfu' },
-  aging:       { title: 'For Anti-Aging', text: 'RF + Ultrasonic Serum Infusion ($150) stimulates collagen with 30% pore refinement in 4 weeks. CM Meridian Revival Facial ($80) provides holistic lifting and 21-day firming. Enhanced Microneedling with Mesolinfu ($120) reactivates collagen and smooths fine lines.', service: 'RF + Ultrasonic Serum Infusion' },
-  glow:        { title: 'For Glow Rescue', text: 'The Classic Pore Purifying Treatment ($89) delivers an instant peeled-egg glow. Dermaplaning ($59) gives a smooth, radiant finish. CM Meridian Revival Facial ($80) offers a 48-hour glow with instant debloating. Add the Deep Nourishing add-on for $20 for maximum luminosity.', service: 'Classic Pore Purifying Treatment' },
+  acne:        { title: 'For Acne & Breakouts', text: 'Blue LED Light Therapy ($49) targets acne-causing bacteria. The Classic Pore Purifying Treatment ($89) unclogs pores and reduces excess oil. Enhanced Microneedling with Mesolinfu ($269) also fades acne scars and refines texture.', service: 'LED Light Therapy' },
+  pores:       { title: 'For Large Pores', text: 'The Classic Pore Purifying Treatment ($89) deep-cleans and unclogs pores. Enhanced Microneedling with Mesolinfu ($269) shrinks pores and smooths texture. The Intensive Repair Infusion ($228) offers a pore-minimizing ampoule option for visible refinement.', service: 'Classic Pore Purifying Treatment' },
+  wrinkles:    { title: 'For Wrinkles & Lines', text: 'Enhanced Microneedling with Mesolinfu ($269) deeply smooths wrinkles and fades lines. The Multi-Dimensional Sculpting Treatment ($288) uses dual-frequency ultrasound to stimulate collagen and lift contours. Aromatherapy Facial Meridian Kneading ($128) relieves stagnation and firms facial contours.', service: 'Enhanced Microneedling with Mesolinfu' },
+  aging:       { title: 'For Anti-Aging', text: 'The Multi-Dimensional Sculpting Treatment ($288) stimulates collagen production with dual-frequency ultrasound for firmer, younger-looking skin. Aromatherapy Facial Meridian Kneading ($128) provides holistic rejuvenation through meridian activation. Enhanced Microneedling with Mesolinfu ($269) reactivates collagen and smooths fine lines.', service: 'Multi-Dimensional Sculpting Treatment' },
+  glow:        { title: 'For Glow Rescue', text: 'The Classic Pore Purifying Treatment ($89) delivers an instant peeled-egg glow. Dermaplaning ($59) gives a smooth, radiant finish. Aromatherapy Facial Meridian Kneading ($128) enhances circulation for a natural, radiant complexion.', service: 'Classic Pore Purifying Treatment' },
   warts:       { title: 'For Warts (HPV)', text: 'Professional Electrolysis HPV Wart Removal ($10/session) destroys the virus at its root — gentler than freezing with no blisters or scarring, and more complete than lasers or topicals. Typically resolved in a single session with minimal downtime.', service: 'Professional Electrolysis HPV Wart Removal' },
 };
 const concernResult = document.getElementById('concernResult');
@@ -202,7 +202,7 @@ document.getElementById('bookingForm').addEventListener('submit', async function
   const phone     = document.getElementById('phone').value.trim();
   const email     = document.getElementById('email').value.trim();
   const treatment = document.getElementById('treatment').value;
-  const addon     = document.getElementById('addon').value === 'yes' ? 'Yes (+$20 / 15 min)' : 'No';
+  const addon     = document.getElementById('addon').value;
   const prefDate  = document.getElementById('prefDate').value;
   const prefTime  = document.getElementById('prefTime').value;
   const notes     = document.getElementById('notes').value.trim();
