@@ -95,7 +95,7 @@ const TRANSLATIONS = {
     's4.f5':'Natural revitalisation — supports the flow of qi and blood for holistic rejuvenation',
     's4.btn':'Book This Treatment →',
     // Service 5
-    's5.h3':'Professional Electrolysis HPV Wart Removal', 's5.dur':'per session',
+    's5.h3':'Professional Electrolysis Wart Removal', 's5.dur':'per session',
     's5.f1':'Root-targeting — destroys the virus at its source',
     's5.f2':'Gentler than freezing — no blisters or scarring',
     's5.f3':'More complete removal versus lasers and topicals',
@@ -105,7 +105,7 @@ const TRANSLATIONS = {
     'addon.h4':'Add-Ons',
     // Body Treatments
     'svc.cat-body':'Body Treatments',
-    'bd.badge':'★ Vitality Revival Series',
+    'bd.badge':'★ Magic Health Master',
     'bd.title':'Magic Health Master',
     'bd.desc':'Precisely releases energy through advanced equipment for deep penetration, physical & mental regulation, internal vitality boosting, and slim body contouring',
     'bd1.h3':'Dai Meridian Rejuvenation', 'bd1.dur':'/ 45 min',
@@ -162,7 +162,7 @@ const TRANSLATIONS = {
     'ft.qf':'Q Facial Skin Renewal Series',
     'ft.s1':'Classic Pore Purifying Treatment', 'ft.s2':'LED Light Therapy',
     'ft.s3':'Microneedling + Meso', 'ft.s4':'Aromatherapy Facial Meridian Kneading',
-    'ft.s5':'HPV Wart Removal',
+    'ft.s5':'Wart Removal',
     'ft.s7':'Dermaplaning', 'ft.bd':'Magic Health Master Series',
     'ft.links':'Quick Links',
     'ft.l1':'Why Choose Us', 'ft.l2':'Skin Concerns', 'ft.l3':'Book Appointment',
@@ -226,7 +226,7 @@ const TRANSLATIONS = {
     'svc.p':'每一项服务均致力于提供真实可见的效果——以科学为后盾，以用心呈现。',
     'svc.cat-facial':'面部护理',
     // Q-Facial Series
-    'qf.badge':'★ 韩国Q Facial 焕肤护理系列',
+    'qf.badge':'★ Q Facial 焕肤护理系列',
     'qf.title':'Q Facial 肌肤焕新护理系列',
     'qf.desc':'韩国顶级院线级面部护理，明星赴韩必做项目',
     'qf1.h3':'净澈焕肤', 'qf1.dur':'/ 45分钟',
@@ -281,7 +281,7 @@ const TRANSLATIONS = {
     's4.f5':'自然焕活——疏通气血运行，实现全面焕颜',
     's4.btn':'立即预约此疗程 →',
     // Service 5
-    's5.h3':'专业电解HPV疣体去除', 's5.dur':'每次',
+    's5.h3':'专业电解疣体去除', 's5.dur':'每次',
     's5.f1':'根源靶向——从源头消灭病毒',
     's5.f2':'比冷冻治疗更温和——无水泡、无疤痕',
     's5.f3':'比激光及外用药物更彻底清除',
@@ -291,9 +291,9 @@ const TRANSLATIONS = {
     'addon.h4':'附加项目',
     // Body Treatments
     'svc.cat-body':'身体护理',
-    'bd.badge':'★ 活力焕新系列',
+    'bd.badge':'★ 生命能量焕活系列',
     'bd.title':'魔力养生大师',
-    'bd.desc':'精准释放能量，通过高端设备深层穿透，调理身心，激活内在活力，纤体塑形',
+    'bd.desc':'运用仪器精准释放能量，深层渗透、调理身心，焕发内在活力，同步塑造纤盈身体线条',
     'bd1.h3':'带脉焕活调理', 'bd1.dur':'/ 45分钟',
     'bd1.f1':'暖宫驱寒',
     'bd1.f2':'促进腰腹循环代谢',
@@ -348,7 +348,7 @@ const TRANSLATIONS = {
     'ft.qf':'Q Facial 肌肤焕新系列',
     'ft.s1':'经典毛孔净化护理', 'ft.s2':'LED光疗',
     'ft.s3':'微针 + 美塑导入', 'ft.s4':'芳疗经络面部揉捏护理',
-    'ft.s5':'HPV疣体去除',
+    'ft.s5':'疣体去除',
     'ft.s7':'面部刮痧焕肤', 'ft.bd':'魔力养生大师系列',
     'ft.links':'快速导航',
     'ft.l1':'为何选择我们', 'ft.l2':'肌肤问题', 'ft.l3':'预约护理',
@@ -387,7 +387,7 @@ const concernDataI18n = {
     wrinkles:    { title: 'For Wrinkles & Lines',  text: 'Enhanced Microneedling with Mesolinfu ($269) deeply smooths wrinkles and fades lines. The Multi-Dimensional Sculpting Treatment ($288) uses dual-frequency ultrasound to stimulate collagen and lift contours. Aromatherapy Facial Meridian Kneading ($128) relieves stagnation and firms facial contours.', service: 'Enhanced Microneedling with Mesolinfu' },
     aging:       { title: 'For Anti-Aging',       text: 'The Multi-Dimensional Sculpting Treatment ($288) stimulates collagen production with dual-frequency ultrasound for firmer, younger-looking skin. Aromatherapy Facial Meridian Kneading ($128) provides holistic rejuvenation through meridian activation. Enhanced Microneedling with Mesolinfu ($269) reactivates collagen and smooths fine lines.', service: 'Multi-Dimensional Sculpting Treatment' },
     glow:        { title: 'For Glow Rescue',      text: 'The Classic Pore Purifying Treatment ($89) delivers an instant peeled-egg glow. Dermaplaning ($59) gives a smooth, radiant finish. Aromatherapy Facial Meridian Kneading ($128) enhances circulation for a natural, radiant complexion.', service: 'Classic Pore Purifying Treatment' },
-    warts:       { title: 'For Warts (HPV)',      text: 'Professional Electrolysis HPV Wart Removal ($10/session) destroys the virus at its root — gentler than freezing with no blisters or scarring, and more complete than lasers or topicals. Typically resolved in a single session with minimal downtime.', service: 'Professional Electrolysis HPV Wart Removal' },
+    warts:       { title: 'For Warts',      text: 'Professional Electrolysis Wart Removal ($10-15/session) destroys the virus at its root — gentler than freezing with no blisters or scarring, and more complete than lasers or topicals. Typically resolved in a single session with minimal downtime.', service: 'Professional Electrolysis Wart Removal' },
   },
   zh: {
     dullness:    { title: '针对暗沉问题',       text: '推荐经典毛孔净化护理（$89）、面部刮痧焕肤（$59）或净透焕肤护理（$188），即刻恢复光泽，均匀肤色，重焕亮采。芳疗经络面部揉捏护理（$128）亦可通过促进循环带来持久自然光泽。', service: 'Classic Pore Purifying Treatment' },
@@ -397,7 +397,7 @@ const concernDataI18n = {
     wrinkles:    { title: '针对皱纹与细纹',     text: '强化微针导入美塑疗程（$269）深度抚平皱纹、淡化细纹；多维紧塑焕颜护理（$288）运用双频超声技术刺激胶原生成，提拉面部轮廓；芳疗经络面部揉捏护理（$128）疏通淤堵，紧致面部轮廓。', service: 'Enhanced Microneedling with Mesolinfu' },
     aging:       { title: '针对肌肤抗衰',       text: '多维紧塑焕颜护理（$288）运用双频超声技术刺激胶原蛋白生成，令肌肤更紧致年轻；芳疗经络面部揉捏护理（$128）通过经络激活实现全面焕颜；强化微针导入美塑疗程（$269）激活胶原、抚平细纹。', service: 'Multi-Dimensional Sculpting Treatment' },
     glow:        { title: '针对急速提亮',       text: '经典毛孔净化护理（$89）带来即刻如剥壳鸡蛋般的嫩滑光泽；面部刮痧焕肤（$59）令肌肤光滑亮丽；芳疗经络面部揉捏护理（$128）通过促进循环带来自然亮丽肤色。', service: 'Classic Pore Purifying Treatment' },
-    warts:       { title: '针对疣体（HPV）',    text: '专业电解HPV疣体去除（$10/次）从根源消灭病毒——比冷冻治疗更温和，无水泡、无疤痕，比激光及外用药物更彻底。通常单次即可见效，恢复期极短。', service: 'Professional Electrolysis HPV Wart Removal' },
+    warts:       { title: '针对疣体',    text: '专业电解疣体去除（$10-15/次）从根源消灭病毒——比冷冻治疗更温和，无水泡、无疤痕，比激光及外用药物更彻底。通常单次即可见效，恢复期极短。', service: 'Professional Electrolysis Wart Removal' },
   }
 };
 
