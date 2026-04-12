@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://auckland777.github.io/BeautyExpertStudio/sitemap.xml
