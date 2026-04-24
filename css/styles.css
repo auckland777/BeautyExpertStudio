@@ -372,9 +372,9 @@ nav.scrolled { box-shadow: 0 2px 20px rgba(44,26,34,.10); }
 .qfacial-badge {
   display: inline-block;
   background: linear-gradient(135deg, var(--gold), var(--rose));
-  color: #fff; font-size: .72rem; font-weight: 700;
+  color: #fff; font-size: .88rem; font-weight: 700;
   letter-spacing: .12em; text-transform: uppercase;
-  padding: 6px 20px; border-radius: 50px; margin-bottom: 12px;
+  padding: 8px 22px; border-radius: 50px; margin-bottom: 12px;
 }
 .qfacial-header h3 {
   font-size: 1.4rem; font-weight: 800; color: var(--dark); margin-bottom: 6px;
@@ -393,9 +393,9 @@ nav.scrolled { box-shadow: 0 2px 20px rgba(44,26,34,.10); }
 .body-series-badge {
   display: inline-block;
   background: linear-gradient(135deg, var(--mid), var(--rose));
-  color: #fff; font-size: .72rem; font-weight: 700;
+  color: #fff; font-size: .88rem; font-weight: 700;
   letter-spacing: .12em; text-transform: uppercase;
-  padding: 6px 20px; border-radius: 50px; margin-bottom: 12px;
+  padding: 8px 22px; border-radius: 50px; margin-bottom: 12px;
 }
 .body-series-header h3 {
   font-size: 1.4rem; font-weight: 800; color: var(--dark); margin-bottom: 6px;
