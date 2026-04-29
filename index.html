@@ -70,7 +70,7 @@
 <nav id="navbar">
   <div class="container nav-inner">
     <a href="#" class="nav-logo">
-      <div class="logo-mark">B</div>
+      <div class="logo-mark"><svg viewBox="80 30 240 240" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="lpc" x1="50%" y1="0%" x2="50%" y2="100%"><stop offset="0%" stop-color="#9B5C72"/><stop offset="100%" stop-color="#C9A96E"/></linearGradient><linearGradient id="lpl" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#9B5C72" stop-opacity=".8"/><stop offset="100%" stop-color="#C9A96E" stop-opacity=".4"/></linearGradient><linearGradient id="lpr" x1="100%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#C9A96E" stop-opacity=".8"/><stop offset="100%" stop-color="#9B5C72" stop-opacity=".4"/></linearGradient></defs><g transform="translate(200,160)"><path d="M0-110Q22-60 22-10 22 25 0 35-22 25-22-10-22-60 0-110Z" fill="url(#lpc)" opacity=".9"/><path d="M-15-95Q-55-50-50 0-48 30-18 35 0 28 5 5 8-40-15-95Z" fill="url(#lpl)" opacity=".7" transform="rotate(-22)"/><path d="M15-95Q55-50 50 0 48 30 18 35 0 28-5 5-8-40 15-95Z" fill="url(#lpr)" opacity=".7" transform="rotate(22)"/><path d="M-20-80Q-72-35-65 15-60 42-30 42-10 38-2 15 5-30-20-80Z" fill="url(#lpl)" opacity=".45" transform="rotate(-42)"/><path d="M20-80Q72-35 65 15 60 42 30 42 10 38 2 15-5-30 20-80Z" fill="url(#lpr)" opacity=".45" transform="rotate(42)"/><circle cx="0" cy="10" r="5" fill="#C9A96E" opacity=".6"/></g></svg></div>
       <div class="logo-text">
         Beauty Expert Studio
         <span>Glen Innes · Auckland</span>
@@ -79,14 +79,28 @@
     <ul class="nav-links">
       <li><a href="#why-us" data-i18n="nav.why">Why Us</a></li>
       <li><a href="#services" data-i18n="nav.services">Services</a></li>
-      <li><a href="studio.html" data-i18n="nav.studio">Studio</a></li>
       <li><a href="#concerns" data-i18n="nav.concerns">Concerns</a></li>
       <li><a href="#booking" data-i18n="nav.book">Book</a></li>
+      <li class="nav-dropdown">
+        <a class="nav-dropdown-toggle"><span data-i18n="nav.studio-menu">Our Studio</span> <svg class="dd-chevron" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></a>
+        <ul class="nav-dropdown-menu">
+          <li><a href="studio.html" data-i18n="nav.studio">Studio Gallery</a></li>
+          <li><a href="qfacial.html" data-i18n="nav.qfacial">Q Facial Device</a></li>
+          <li><a href="consent.html" data-i18n="nav.consent">Consent Form</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown">
+        <a class="nav-dropdown-toggle nav-contact-toggle"><span data-i18n="nav.contact-menu">Contact</span> <svg class="dd-chevron" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></a>
+        <ul class="nav-dropdown-menu">
+          <li><a href="tel:021901118"><span class="dd-icon">📞</span> 021 901 118</a></li>
+          <li><a href="https://www.facebook.com/BeautyExpertStudio" target="_blank" rel="noopener"><span class="dd-icon"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></span> Facebook</a></li>
+          <li><a href="https://www.google.com/maps/search/Beauty+Expert+Studio+Taniwha+Street+Wai+O+Taiki+Bay+Auckland+1072" target="_blank" rel="noopener"><span class="dd-icon">📍</span> Glen Innes, Auckland</a></li>
+        </ul>
+      </li>
     </ul>
     <div class="nav-cta">
-      <a class="nav-phone" href="tel:021901118">📞 <span class="nav-label">021 901 118</span></a>
-      <a class="nav-phone nav-fb-desktop" href="https://www.facebook.com/BeautyExpertStudio" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-2px"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg> <span class="nav-label">Facebook</span></a>
-      <a class="nav-fb-mobile" href="https://www.facebook.com/BeautyExpertStudio" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="var(--rose)"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+      <a class="nav-mobile-icon" href="tel:021901118" aria-label="Call us">📞</a>
+      <a class="nav-mobile-icon" href="https://www.facebook.com/BeautyExpertStudio" target="_blank" rel="noopener" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
       <div class="lang-switch">
         <button class="lang-btn active" id="btn-en" onclick="setLang('en')">EN</button>
         <span class="lang-sep">|</span>
@@ -108,6 +122,8 @@
       <li><a href="#why-us" class="mobile-link" data-i18n="nav.why">Why Us</a></li>
       <li><a href="#services" class="mobile-link" data-i18n="nav.services">Services</a></li>
       <li><a href="studio.html" class="mobile-link" data-i18n="nav.studio">Studio</a></li>
+      <li><a href="qfacial.html" class="mobile-link" data-i18n="nav.qfacial">Q Facial</a></li>
+      <li><a href="consent.html" class="mobile-link" data-i18n="nav.consent">Consent Form</a></li>
       <li><a href="#concerns" class="mobile-link" data-i18n="nav.concerns">Concerns</a></li>
       <li><a href="#booking" class="mobile-link" data-i18n="mob.book">Book Appointment</a></li>
       <li><a href="#contact" class="mobile-link" data-i18n="nav.contact">Contact Us</a></li>
@@ -710,7 +726,10 @@
   <div class="container">
     <div class="footer-inner">
       <div class="footer-brand">
-        <div class="logo-text">Beauty Expert Studio</div>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
+          <svg viewBox="80 30 240 240" width="36" height="36" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="flpc" x1="50%" y1="0%" x2="50%" y2="100%"><stop offset="0%" stop-color="#C9A96E"/><stop offset="100%" stop-color="#9B5C72"/></linearGradient><linearGradient id="flpl" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#C9A96E" stop-opacity=".8"/><stop offset="100%" stop-color="#9B5C72" stop-opacity=".4"/></linearGradient><linearGradient id="flpr" x1="100%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#C9A96E" stop-opacity=".8"/><stop offset="100%" stop-color="#9B5C72" stop-opacity=".4"/></linearGradient></defs><g transform="translate(200,160)"><path d="M0-110Q22-60 22-10 22 25 0 35-22 25-22-10-22-60 0-110Z" fill="url(#flpc)" opacity=".9"/><path d="M-15-95Q-55-50-50 0-48 30-18 35 0 28 5 5 8-40-15-95Z" fill="url(#flpl)" opacity=".7" transform="rotate(-22)"/><path d="M15-95Q55-50 50 0 48 30 18 35 0 28-5 5-8-40 15-95Z" fill="url(#flpr)" opacity=".7" transform="rotate(22)"/><path d="M-20-80Q-72-35-65 15-60 42-30 42-10 38-2 15 5-30-20-80Z" fill="url(#flpl)" opacity=".45" transform="rotate(-42)"/><path d="M20-80Q72-35 65 15 60 42 30 42 10 38 2 15-5-30 20-80Z" fill="url(#flpr)" opacity=".45" transform="rotate(42)"/></g></svg>
+          <div class="logo-text">Beauty Expert Studio</div>
+        </div>
         <p data-i18n="ft.brand">Professional beauty treatments with 30 years of certified expertise. Honest advice, luxury results, unbeatable value.</p>
         <p style="margin-top:12px">📞 <a href="tel:021901118" style="color:var(--gold)">021 901 118</a><br>📍 <a href="https://www.google.com/maps/search/Beauty+Expert+Studio+Taniwha+Street+Wai+O+Taiki+Bay+Auckland+1072" target="_blank" rel="noopener" style="color:var(--gold)">Glen Innes, Auckland</a><br><a href="https://www.facebook.com/BeautyExpertStudio" target="_blank" rel="noopener" style="color:var(--gold)"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="vertical-align:-2px"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg> Facebook</a><br>✉️ <a href="mailto:beautyexperthu@gmail.com" style="color:var(--gold)">beautyexperthu@gmail.com</a></p>
       </div>

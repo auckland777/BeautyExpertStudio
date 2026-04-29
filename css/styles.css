@@ -91,12 +91,10 @@ nav.scrolled { box-shadow: 0 2px 20px rgba(44,26,34,.10); }
   display: flex; align-items: center; gap: 10px;
 }
 .nav-logo .logo-mark {
-  width: 40px; height: 40px;
-  background: linear-gradient(135deg, var(--rose), var(--gold));
-  border-radius: 50%;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.1rem; color: #fff; font-weight: 900;
+  width: 38px; height: 38px;
+  flex-shrink: 0;
 }
+.nav-logo .logo-mark svg { width: 100%; height: 100%; }
 .nav-logo .logo-text { font-size: 1.05rem; font-weight: 700; color: var(--dark); line-height: 1.2; }
 .nav-logo .logo-text span { display: block; font-size: .68rem; font-weight: 500; color: var(--grey); letter-spacing: .08em; }
 .nav-links {
@@ -108,12 +106,55 @@ nav.scrolled { box-shadow: 0 2px 20px rgba(44,26,34,.10); }
   transition: color var(--trans);
 }
 .nav-links a:hover { color: var(--rose); }
-.nav-cta { display: flex; align-items: center; gap: 14px; white-space: nowrap; }
-.nav-fb-mobile { display: none; }
-.nav-phone {
-  font-size: .88rem; font-weight: 700; color: var(--rose);
-  display: flex; align-items: center; gap: 6px; white-space: nowrap;
+
+/* ── Nav dropdown ────────────────────────────────────────────── */
+.nav-dropdown { position: relative; }
+.nav-dropdown-toggle {
+  display: flex; align-items: center; gap: 4px; cursor: pointer;
 }
+.nav-dropdown-toggle .dd-chevron {
+  width: 10px; height: 10px;
+  transition: transform .25s ease;
+}
+.nav-dropdown:hover .dd-chevron { transform: rotate(180deg); }
+.nav-dropdown-menu {
+  position: absolute; top: calc(100% + 8px); left: 50%;
+  transform: translateX(-50%);
+  background: var(--white);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 32px rgba(44,26,34,.13);
+  padding: 8px 0; min-width: 190px;
+  list-style: none; z-index: 100;
+  opacity: 0; visibility: hidden;
+  transition: opacity .2s ease, visibility .2s ease;
+}
+.nav-dropdown-menu::before {
+  content: ''; position: absolute;
+  top: -12px; left: 0; right: 0; height: 12px;
+}
+.nav-dropdown:hover .nav-dropdown-menu {
+  opacity: 1; visibility: visible;
+}
+.nav-dropdown-menu li a {
+  display: block; padding: 10px 22px;
+  font-size: .88rem; font-weight: 600;
+  color: var(--mid);
+  transition: background .2s, color .2s;
+}
+.nav-dropdown-menu li a:hover {
+  background: rgba(155,92,114,.06);
+  color: var(--rose);
+}
+.nav-dropdown-menu li a .dd-icon {
+  display: inline-flex; width: 20px; text-align: center; margin-right: 6px;
+  flex-shrink: 0;
+}
+
+.nav-cta { display: flex; align-items: center; gap: 14px; white-space: nowrap; }
+.nav-contact-toggle {
+  font-size: .88rem; font-weight: 700; color: var(--rose) !important;
+}
+.nav-mobile-icon { display: none; color: var(--rose); padding: 8px; }
 .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
 .hamburger span { display: block; width: 24px; height: 2px; background: var(--dark); border-radius: 2px; transition: var(--trans); }
 
@@ -690,7 +731,6 @@ footer {
 /* ── Responsive ───────────────────────────────────────────────── */
 /* ── Nav collapse (≤1100px) ───────────────────────────────────── */
 @media (max-width: 1100px) {
-  .nav-label { display: none; }
   .nav-links { gap: 16px; }
   .nav-links a { font-size: .84rem; }
   .nav-cta { gap: 8px; }
@@ -713,9 +753,8 @@ footer {
 }
 /* ── Phone (≤680px) ───────────────────────────────────────────── */
 @media (max-width: 680px) {
-  /* Fix 1: hide phone number — it clutters the nav on small screens */
-  .nav-links, .nav-cta .btn, .nav-phone { display: none; }
-  .nav-fb-mobile { display: flex; align-items: center; padding: 10px; }
+  .nav-links, .nav-cta .btn { display: none; }
+  .nav-mobile-icon { display: flex; align-items: center; }
   /* Fix 5: larger tap target for hamburger (44px minimum) */
   .hamburger { display: flex; padding: 10px; margin-right: -10px; }
   .why-grid { grid-template-columns: 1fr; }
