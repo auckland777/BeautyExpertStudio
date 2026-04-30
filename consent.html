@@ -45,6 +45,37 @@
       margin: 4px 0 0;
     }
 
+    /* ── Language switcher ─────────────────────────────────── */
+    .lang-switch {
+      display: flex; gap: 4px; justify-content: center; margin-top: 14px;
+    }
+    .lang-switch button {
+      padding: 4px 18px; border-radius: 20px;
+      border: 1.5px solid rgba(201,169,110,.3);
+      background: var(--light); color: var(--mid);
+      font-size: .82rem; font-weight: 600; cursor: pointer;
+      transition: all .2s;
+    }
+    .lang-switch button.active {
+      background: var(--rose); color: #fff;
+      border-color: var(--rose);
+    }
+    .lang-switch button:hover:not(.active) {
+      border-color: var(--rose); color: var(--rose);
+    }
+
+    /* ── Back to Home link ─────────────────────────────────── */
+    .nav-back-link {
+      font-size: .88rem; font-weight: 600; color: var(--rose);
+      text-decoration: none; transition: color .2s;
+      display: flex; align-items: center;
+    }
+    .nav-back-link:hover { color: var(--rose-dk); }
+
+    /* ── Bilingual visibility ─────────────────────────────── */
+    body.lang-en .lang-zh { display: none !important; }
+    body.lang-zh .lang-en { display: none !important; }
+
     /* ── Form sections ─────────────────────────────────────── */
     .cf-section {
       margin-bottom: 32px;
@@ -149,6 +180,18 @@
       color: var(--gold); font-weight: 900;
     }
 
+    /* ── Contraindication items ───────────────────────────── */
+    .cf-contra-item {
+      margin-bottom: 14px;
+    }
+    .cf-contra-item .cf-contra-title {
+      font-size: .9rem; font-weight: 700; color: var(--dark);
+      margin-bottom: 4px;
+    }
+    .cf-contra-item .cf-contra-desc {
+      font-size: .86rem; color: var(--mid); line-height: 1.7;
+    }
+
     /* ── Signature area ────────────────────────────────────── */
     .cf-sig-row {
       display: grid; grid-template-columns: 1fr 1fr;
@@ -212,7 +255,7 @@
 
     /* ── Print styles ──────────────────────────────────────── */
     @media print {
-      nav, .mobile-nav, .hamburger, .cf-actions, .cf-sig-clear,
+      nav, .mobile-nav, .hamburger, .cf-actions, .cf-sig-clear, .lang-switch, .nav-back-link,
       .consent-page { padding-top: 0; }
       nav { display: none !important; }
       .consent-form { box-shadow: none; padding: 20px; }
@@ -233,7 +276,7 @@
     }
   </style>
 </head>
-<body>
+<body class="lang-en">
 
 <!-- ── Navigation ─────────────────────────────────────────────── -->
 <nav id="navbar">
@@ -245,13 +288,10 @@
         <span>Glen Innes &middot; Auckland</span>
       </div>
     </a>
-    <div class="nav-cta">
-      <a class="nav-mobile-icon" href="tel:021901118" aria-label="Call us">&#x1F4DE;</a>
-      <a class="nav-mobile-icon" href="https://www.facebook.com/BeautyExpertStudio" target="_blank" rel="noopener" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
-    </div>
-    <div class="hamburger" id="menuBtn">
-      <span></span><span></span><span></span>
-    </div>
+    <a href="index.html" class="nav-back-link">
+      <span class="lang-en">&larr; Back to Home</span>
+      <span class="lang-zh">&larr; 返回首页</span>
+    </a>
   </div>
 </nav>
 
@@ -266,156 +306,343 @@
           <svg viewBox="80 30 240 240" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="lpc2" x1="50%" y1="0%" x2="50%" y2="100%"><stop offset="0%" stop-color="#9B5C72"/><stop offset="100%" stop-color="#C9A96E"/></linearGradient><linearGradient id="lpl2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#9B5C72" stop-opacity=".8"/><stop offset="100%" stop-color="#C9A96E" stop-opacity=".4"/></linearGradient><linearGradient id="lpr2" x1="100%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#C9A96E" stop-opacity=".8"/><stop offset="100%" stop-color="#9B5C72" stop-opacity=".4"/></linearGradient></defs><g transform="translate(200,160)"><path d="M0-110Q22-60 22-10 22 25 0 35-22 25-22-10-22-60 0-110Z" fill="url(#lpc2)" opacity=".9"/><path d="M-15-95Q-55-50-50 0-48 30-18 35 0 28 5 5 8-40-15-95Z" fill="url(#lpl2)" opacity=".7" transform="rotate(-22)"/><path d="M15-95Q55-50 50 0 48 30 18 35 0 28-5 5-8-40 15-95Z" fill="url(#lpr2)" opacity=".7" transform="rotate(22)"/><path d="M-20-80Q-72-35-65 15-60 42-30 42-10 38-2 15 5-30-20-80Z" fill="url(#lpl2)" opacity=".45" transform="rotate(-42)"/><path d="M20-80Q72-35 65 15 60 42 30 42 10 38 2 15-5-30 20-80Z" fill="url(#lpr2)" opacity=".45" transform="rotate(42)"/></g></svg>
         </div>
         <h1>Beauty Expert Studio</h1>
-        <h2>Facial Treatment Informed Consent Form</h2>
+        <h2>
+          <span class="lang-en">Informed Consent Form</span>
+          <span class="lang-zh">知情同意书</span>
+        </h2>
+        <div class="lang-switch">
+          <button type="button" class="active" data-lang="en" onclick="setConsentLang('en')">EN</button>
+          <button type="button" data-lang="zh" onclick="setConsentLang('zh')">中文</button>
+        </div>
       </div>
 
       <!-- Client Info -->
       <div class="cf-section">
         <div class="cf-row">
           <div class="cf-field">
-            <label for="clientName">Client Name *</label>
+            <label for="clientName">
+              <span class="lang-en">Client Name *</span>
+              <span class="lang-zh">顾客姓名 *</span>
+            </label>
             <input type="text" id="clientName" required />
           </div>
           <div class="cf-field">
-            <label for="clientAge">Age *</label>
+            <label for="clientAge">
+              <span class="lang-en">Age *</span>
+              <span class="lang-zh">年龄 *</span>
+            </label>
             <input type="number" id="clientAge" min="1" max="120" required />
           </div>
           <div class="cf-field">
-            <label for="clientPhone">Phone *</label>
+            <label for="clientPhone">
+              <span class="lang-en">Phone *</span>
+              <span class="lang-zh">电话 *</span>
+            </label>
             <input type="tel" id="clientPhone" required />
           </div>
         </div>
 
-        <label style="font-size:.82rem;font-weight:600;color:var(--mid)">Skin Type *</label>
+        <label style="font-size:.82rem;font-weight:600;color:var(--mid)">
+          <span class="lang-en">Skin Type *</span>
+          <span class="lang-zh">肤质类型 *</span>
+        </label>
         <div class="cf-check-group">
-          <label class="cf-check"><input type="radio" name="skinType" value="dry" required /> Dry</label>
-          <label class="cf-check"><input type="radio" name="skinType" value="oily" /> Oily</label>
-          <label class="cf-check"><input type="radio" name="skinType" value="combination" /> Combination</label>
-          <label class="cf-check"><input type="radio" name="skinType" value="sensitive" /> Sensitive</label>
-          <label class="cf-check"><input type="radio" name="skinType" value="normal" /> Normal</label>
-          <label class="cf-check"><input type="radio" name="skinType" value="other" /> Other</label>
+          <label class="cf-check"><input type="radio" name="skinType" value="dry" required />
+            <span class="lang-en">Dry</span><span class="lang-zh">干性</span>
+          </label>
+          <label class="cf-check"><input type="radio" name="skinType" value="oily" />
+            <span class="lang-en">Oily</span><span class="lang-zh">油性</span>
+          </label>
+          <label class="cf-check"><input type="radio" name="skinType" value="combination" />
+            <span class="lang-en">Combination</span><span class="lang-zh">混合性</span>
+          </label>
+          <label class="cf-check"><input type="radio" name="skinType" value="sensitive" />
+            <span class="lang-en">Sensitive</span><span class="lang-zh">敏感性</span>
+          </label>
+          <label class="cf-check"><input type="radio" name="skinType" value="normal" />
+            <span class="lang-en">Normal</span><span class="lang-zh">中性</span>
+          </label>
+          <label class="cf-check"><input type="radio" name="skinType" value="other" />
+            <span class="lang-en">Other</span><span class="lang-zh">其他</span>
+          </label>
         </div>
         <div class="cf-field" id="skinOtherWrap" style="display:none;max-width:300px;margin-bottom:12px">
-          <input type="text" id="skinOther" placeholder="Please specify..." />
+          <input type="text" id="skinOther" data-ph-en="Please specify..." data-ph-zh="请注明..." placeholder="Please specify..." />
         </div>
 
-        <label style="font-size:.82rem;font-weight:600;color:var(--mid)">Age Confirmation *</label>
+        <label style="font-size:.82rem;font-weight:600;color:var(--mid)">
+          <span class="lang-en">Age Confirmation *</span>
+          <span class="lang-zh">年龄确认 *</span>
+        </label>
         <div class="cf-check-group">
-          <label class="cf-check"><input type="radio" name="ageConfirm" value="18plus" required /> I am 18 or older</label>
-          <label class="cf-check"><input type="radio" name="ageConfirm" value="under18" /> I am under 18 (Guardian signature required below)</label>
+          <label class="cf-check"><input type="radio" name="ageConfirm" value="18plus" required />
+            <span class="lang-en">I am 18 years old or above</span>
+            <span class="lang-zh">本人已年满18周岁</span>
+          </label>
+          <label class="cf-check"><input type="radio" name="ageConfirm" value="under18" />
+            <span class="lang-en">I am under 18 years old (Legal Guardian's signature required below)</span>
+            <span class="lang-zh">本人未满18周岁（需法定监护人签字）</span>
+          </label>
         </div>
       </div>
 
       <!-- Treatment Selection -->
       <div class="cf-section">
-        <div class="cf-section-title"><span class="cf-num">&check;</span> Confirmation of Selected Treatment(s)</div>
-        <div class="cf-check-group">
-          <label class="cf-check"><input type="checkbox" name="treatment" value="meridian" /> Aromatherapy Meridian Therapy</label>
-          <label class="cf-check"><input type="checkbox" name="treatment" value="qfacial" /> Q Facial</label>
-          <label class="cf-check"><input type="checkbox" name="treatment" value="deepPore" /> Deep Pore Cleansing</label>
-          <label class="cf-check"><input type="checkbox" name="treatment" value="dermaplaning" /> Dermaplaning</label>
+        <div class="cf-section-title">
+          <span class="cf-num">&check;</span>
+          <span class="lang-en">Select Treatment Items (Please tick)</span>
+          <span class="lang-zh">选择护理项目（请勾选）</span>
+        </div>
+        <div class="cf-check-group vertical">
+          <label class="cf-check"><input type="checkbox" name="treatment" value="qfacial" />
+            <span class="lang-en">Korea Q Facial Skin Renewal Series</span>
+            <span class="lang-zh">韩国Q Facial焕肤系列</span>
+          </label>
+          <label class="cf-check"><input type="checkbox" name="treatment" value="porePurify" />
+            <span class="lang-en">Classic Pore Purifying Treatment</span>
+            <span class="lang-zh">经典毛孔净化护理</span>
+          </label>
+          <label class="cf-check"><input type="checkbox" name="treatment" value="led" />
+            <span class="lang-en">LED Light Therapy</span>
+            <span class="lang-zh">LED光疗</span>
+          </label>
+          <label class="cf-check"><input type="checkbox" name="treatment" value="microneedling" />
+            <span class="lang-en">Mesoinfus Microneedling</span>
+            <span class="lang-zh">Mesoinfus微针导入</span>
+          </label>
+          <label class="cf-check"><input type="checkbox" name="treatment" value="meridian" />
+            <span class="lang-en">Aromatherapy Facial Meridian Kneading</span>
+            <span class="lang-zh">芳疗面部经络疏通</span>
+          </label>
+          <label class="cf-check"><input type="checkbox" name="treatment" value="wartRemoval" />
+            <span class="lang-en">Electrolysis Wart Removal</span>
+            <span class="lang-zh">电解祛疣</span>
+          </label>
+          <label class="cf-check"><input type="checkbox" name="treatment" value="dermaplaning" />
+            <span class="lang-en">Dermaplaning</span>
+            <span class="lang-zh">Dermaplaning面部磨皮刀护理</span>
+          </label>
+          <label class="cf-check"><input type="checkbox" name="treatment" value="magicHealth" />
+            <span class="lang-en">Magic Health Master: Vitality Revival</span>
+            <span class="lang-zh">养生大师：活力再生</span>
+          </label>
         </div>
       </div>
 
-      <!-- Part I -->
+      <!-- Client Statement & Information Disclosure -->
       <div class="cf-section">
-        <div class="cf-section-title"><span class="cf-num">I</span> Client Declaration and Information Disclosure</div>
-        <p class="cf-text">I confirm that I have been informed about and understand the nature, procedure, and expected outcomes of the selected treatment(s), and hereby declare the following:</p>
+        <div class="cf-section-title">
+          <span class="cf-num">I</span>
+          <span class="lang-en">Client Statement &amp; Information Disclosure</span>
+          <span class="lang-zh">顾客声明与信息披露</span>
+        </div>
 
-        <p class="cf-text"><strong>1. Understanding of Results:</strong> I understand that the selected treatments constitute customized facial maintenance care. The efficacy of the treatments may vary based on individual skin type, lifestyle habits, and treatment frequency. Beauty Expert Studio does not provide absolute guarantees regarding these outcomes.</p>
+        <p class="cf-text lang-en">I acknowledge all treatments are customised services, and results vary from person to person.</p>
+        <p class="cf-text lang-zh">本人知晓所有护理均为定制化服务，效果因人而异。</p>
 
-        <p class="cf-text"><strong>2. Verification of Information Accuracy:</strong> I confirm that I have truthfully disclosed and verified the following:</p>
-        <ul class="cf-sublist">
-          <li>I have not taken any oral isotretinoin medications in the past six months, nor used any retinoid products (e.g., isotretinoin, tretinoin cream, professional-grade high-concentration retinoid skincare products) in the past two weeks.</li>
-          <li>I have fully disclosed all oral medications, topical medications, and facial skincare products I am currently using.</li>
-          <li>I have not undergone any other facial treatments or procedures (e.g., laser, IPL, chemical peels) on my face within the past seven days.</li>
-        </ul>
+        <p class="cf-text lang-en">I have truthfully disclosed my skin condition, cosmetic treatment history, oral and external medication use, skincare product usage and any special medical conditions, without any concealment.</p>
+        <p class="cf-text lang-zh">本人已如实告知自身肤质状况、医美治疗史、口服及外用药物使用情况、护肤品使用情况及任何特殊疾病状况，绝无隐瞒。</p>
 
-        <p class="cf-text"><strong>3. Acknowledgment of Responsibility:</strong> I understand and agree that if any adverse reactions &mdash; such as redness, stinging, peeling, or abnormal pigmentation &mdash; occur during or after the treatment due to my withholding of the above information, the associated risks and liabilities shall be borne solely by myself.</p>
-
-        <label class="cf-check" style="margin-top:8px"><input type="checkbox" id="partIAgree" required /> <em>I have read and agree to Part I</em></label>
+        <p class="cf-text lang-en">If relevant medical information is deliberately withheld, I shall take full responsibility for any allergies, discomfort or adverse reactions caused by the treatment.</p>
+        <p class="cf-text lang-zh">如因故意隐瞒相关医疗信息，导致护理过程中出现任何过敏、不适或不良反应，本人愿承担全部责任。</p>
       </div>
 
-      <!-- Part II -->
+      <!-- General Pre-existing Contraindication -->
       <div class="cf-section">
-        <div class="cf-section-title"><span class="cf-num">II</span> Contraindications Confirmation</div>
-        <p class="cf-text">I confirm that I am currently free from any of the following conditions which would render me unsuitable for this treatment:</p>
-        <ol class="cf-list">
-          <li data-n="1.">Active facial infection, acute dermatitis, unhealed wounds, ulcers, or currently experiencing a severe acne breakout.</li>
-          <li data-n="2.">Skin conditions such as eczema, psoriasis, rosacea, or fungal dermatitis.</li>
-          <li data-n="3.">Pregnancy, lactation, or active attempts to conceive.</li>
-          <li data-n="4.">Known allergies to any product components that may be used during the treatment (e.g., specific essential oils, cleansing agents).</li>
-          <li data-n="5.">History of intense facial sun exposure within the past week, or currently exhibiting post-sun exposure reactions such as redness or a burning sensation.</li>
-          <li data-n="6.">Excessively thin stratum corneum coupled with current symptoms of sensitivity including redness, stinging, or peeling.</li>
-          <li data-n="7."><em>(Specific to Dermaplaning)</em> Use of depilatory creams in the treatment area within the past week, or undergoing laser/IPL hair removal or waxing within the past 1&ndash;2 weeks.</li>
-          <li data-n="8.">Currently undergoing chemotherapy or radiotherapy.</li>
-          <li data-n="9.">Epilepsy or history of seizures.</li>
-        </ol>
-        <label class="cf-check"><input type="checkbox" id="partIIAgree" required /> <em>I confirm I am free from all of the above conditions</em></label>
+        <div class="cf-section-title">
+          <span class="cf-num">II</span>
+          <span class="lang-en">General Pre-existing Contraindication</span>
+          <span class="lang-zh">通用禁忌症</span>
+        </div>
+
+        <p class="cf-text lang-en"><strong>Anyone receiving chemotherapy or radiotherapy is not eligible for any booking or treatment service.</strong></p>
+        <p class="cf-text lang-zh"><strong>正在接受化疗或放疗者，不适合预约或接受任何护理服务。</strong></p>
+
+        <label class="cf-check" style="margin-top:8px">
+          <input type="checkbox" id="generalContraAgree" required />
+          <span class="lang-en"><em>I confirm: I am not in the above applicable category</em></span>
+          <span class="lang-zh"><em>本人确认：本人不属于以上适用类别</em></span>
+        </label>
       </div>
 
-      <!-- Part III -->
+      <!-- Contraindications for Individual Treatments -->
       <div class="cf-section">
-        <div class="cf-section-title"><span class="cf-num">III</span> Post-Treatment Care Compliance</div>
-        <p class="cf-text"><strong>1. General Post-Treatment Requirements:</strong> For 24 hours post-treatment, avoid activities that induce heavy sweating such as saunas or hot spring baths. Increase daily hydration. Use only gentle skincare products and avoid those containing alcohol, acids, or abrasive particles. Avoid exfoliation for one week. Strict daily application of a broad-spectrum sunscreen with SPF 50+ is required.</p>
+        <div class="cf-section-title">
+          <span class="cf-num">III</span>
+          <span class="lang-en">Contraindications for Individual Treatments</span>
+          <span class="lang-zh">各项目禁忌症</span>
+        </div>
 
-        <p class="cf-text"><strong>2. Specific Instructions:</strong></p>
-        <ul class="cf-sublist">
-          <li><strong>Aromatherapy Meridian Therapy:</strong> Mild discomfort or tenderness post-treatment is a normal physiological reaction to the meridian stimulation. It typically subsides within 24&ndash;48 hours.</li>
-          <li><strong>Deep Pore Cleansing (Acne-Prone Skin):</strong> Pay attention to dietary habits post-treatment, reducing intake of high-sugar and high-fat foods. Strictly avoid direct sun exposure for two weeks.</li>
-          <li><strong>Dermaplaning:</strong> If skin redness occurs, a cold compress may be applied for relief.</li>
-        </ul>
-        <label class="cf-check"><input type="checkbox" id="partIIIAgree" required /> <em>I understand and will comply with the post-treatment care instructions</em></label>
-      </div>
+        <!-- 1. Q Facial / Classic Pore -->
+        <div class="cf-contra-item">
+          <div class="cf-contra-title">
+            <span class="lang-en">1. Korea Q Facial Skin Renewal Series / Classic Pore Purifying Treatment</span>
+            <span class="lang-zh">1. 韩国Q Facial焕肤系列 / 经典毛孔净化护理</span>
+          </div>
+          <p class="cf-contra-desc lang-en">Facial herpes simplex, herpes zoster, facial tinea, molluscum contagiosum, inflamed ruptured warts, impetigo, dermatomycosis and other contagious skin conditions.</p>
+          <p class="cf-contra-desc lang-zh">面部单纯疱疹、带状疱疹、面癣、传染性软疣、发炎破裂疣体、脓疱疮、皮肤癣菌病及其他传染性皮肤病。</p>
+        </div>
 
-      <!-- Part IV -->
-      <div class="cf-section">
-        <div class="cf-section-title"><span class="cf-num">IV</span> Acknowledgment of Potential Risks</div>
-        <p class="cf-text">I acknowledge and understand that receiving this treatment involves the following potential risks, despite the studio taking professional measures to minimize their likelihood:</p>
-        <ol class="cf-list">
-          <li data-n="1.">Temporary skin redness, mild swelling, irritation, tightness, or short-term flaking may occur post-treatment.</li>
-          <li data-n="2.">In rare instances, hyperpigmentation or hypopigmentation may occur.</li>
-          <li data-n="3.">Improper post-treatment care (e.g., picking, failure to maintain cleanliness) carries a risk of infection or scarring.</li>
-        </ol>
-        <label class="cf-check"><input type="checkbox" id="partIVAgree" required /> <em>I acknowledge and accept the potential risks described above</em></label>
-      </div>
+        <!-- 2. LED Light Therapy -->
+        <div class="cf-contra-item">
+          <div class="cf-contra-title">
+            <span class="lang-en">2. LED Light Therapy</span>
+            <span class="lang-zh">2. LED光疗</span>
+          </div>
+          <p class="cf-contra-desc lang-en">Severe allergy to light and light source; taking photosensitive medications (Tetracycline antibiotics, Retinoids, Thiazide diuretics, St. John's Wort etc.); any contagious skin conditions on the face.</p>
+          <p class="cf-contra-desc lang-zh">对光及光源严重过敏；正在服用光敏性药物（四环素类抗生素、维A酸类药物、噻嗪类利尿剂、圣约翰草等）；面部任何传染性皮肤病。</p>
+        </div>
 
-      <!-- Part V — Portrait Use -->
-      <div class="cf-section">
-        <div class="cf-section-title"><span class="cf-num">V</span> Portrait Use Authorization</div>
-        <p class="cf-text">I authorize Beauty Expert Studio to photograph/video my treatment for <strong>internal record-keeping and educational purposes</strong> only. These materials will remain strictly confidential.</p>
-        <p class="cf-text">I grant Beauty Expert Studio exclusive rights to use my before/after images for <strong>promotional purposes</strong> (website, social media, marketing materials) without compensation.</p>
+        <!-- 3. Mesoinfus Microneedling -->
+        <div class="cf-contra-item">
+          <div class="cf-contra-title">
+            <span class="lang-en">3. Mesoinfus Microneedling</span>
+            <span class="lang-zh">3. Mesoinfus微针导入</span>
+          </div>
+          <p class="cf-contra-desc lang-en">Any contagious skin conditions on the face; pregnancy and breastfeeding period; prone to bruising and poor blood clotting; severe inflammation and purulent acne breakout on the face.</p>
+          <p class="cf-contra-desc lang-zh">面部任何传染性皮肤病；妊娠及哺乳期；容易瘀伤及凝血功能不良；面部严重炎症及化脓性痤疮爆发。</p>
+        </div>
 
-        <label style="font-size:.82rem;font-weight:600;color:var(--mid);margin-top:8px">Please select one *</label>
-        <div class="cf-check-group">
-          <label class="cf-check"><input type="radio" name="portraitConsent" value="consent" required /> I consent</label>
-          <label class="cf-check"><input type="radio" name="portraitConsent" value="no-consent" /> I do not consent</label>
+        <!-- 4. Aromatherapy Facial Meridian Kneading -->
+        <div class="cf-contra-item">
+          <div class="cf-contra-title">
+            <span class="lang-en">4. Aromatherapy Facial Meridian Kneading</span>
+            <span class="lang-zh">4. 芳疗面部经络疏通</span>
+          </div>
+          <p class="cf-contra-desc lang-en">Pregnancy and breastfeeding period; history of epilepsy or past convulsive disorders; allergy to essential oil and aromatherapy ingredients.</p>
+          <p class="cf-contra-desc lang-zh">妊娠及哺乳期；有癫痫病史或曾有抽搐发作；对精油及芳疗成分过敏。</p>
+        </div>
+
+        <!-- 5. Electrolysis Wart Removal -->
+        <div class="cf-contra-item">
+          <div class="cf-contra-title">
+            <span class="lang-en">5. Electrolysis Wart Removal</span>
+            <span class="lang-zh">5. 电解祛疣</span>
+          </div>
+          <p class="cf-contra-desc lang-en">Active facial herpes and contagious skin diseases; warts with broken skin, inflammation or purulent discharge.</p>
+          <p class="cf-contra-desc lang-zh">面部活跃期疱疹及传染性皮肤病；疣体有破损、发炎或化脓分泌物。</p>
+          <p class="cf-text lang-en" style="margin-top:6px;font-style:italic">I acknowledge that temporary redness and scabbing may occur after electrolysis treatment; in rare cases, slight pigmentation or depressed scarring may appear.</p>
+          <p class="cf-text lang-zh" style="margin-top:6px;font-style:italic">本人知晓电解治疗后可能出现暂时性发红及结痂；少数情况下可能出现轻微色素沉着或凹陷性疤痕。</p>
+        </div>
+
+        <!-- 6. Dermaplaning -->
+        <div class="cf-contra-item">
+          <div class="cf-contra-title">
+            <span class="lang-en">6. Dermaplaning</span>
+            <span class="lang-zh">6. Dermaplaning面部磨皮刀护理</span>
+          </div>
+          <p class="cf-contra-desc lang-en">Oral intake of Isotretinoin within the past 3 months; high-concentration Retinoid products used within the past 2 weeks; active eczema, rosacea and fungal skin diseases on the face; hair removal cream used within 7 days on the treatment area, laser / IPL / waxing treatment received within 1&ndash;2 weeks.</p>
+          <p class="cf-contra-desc lang-zh">过去3个月内口服异维A酸；过去2周内使用高浓度维A酸类产品；面部活跃期湿疹、玫瑰痤疮及真菌性皮肤病；7天内在护理区域使用脱毛膏，1-2周内接受过激光/IPL/蜜蜡脱毛治疗。</p>
+        </div>
+
+        <!-- 7. Magic Health Master -->
+        <div class="cf-contra-item">
+          <div class="cf-contra-title">
+            <span class="lang-en">7. Magic Health Master: Vitality Revival</span>
+            <span class="lang-zh">7. 养生大师：活力再生</span>
+          </div>
+          <p class="cf-contra-desc lang-en">Pregnancy and breastfeeding period; wearing a pacemaker, defibrillator or implanted metal device; severe heart disease, severe hypertension, arrhythmia; epilepsy or past convulsive disorders; acute inflammation, high fever and physical debilitation; contagious skin conditions on the treatment area.</p>
+          <p class="cf-contra-desc lang-zh">妊娠及哺乳期；佩戴心脏起搏器、除颤器或植入式金属装置；严重心脏病、严重高血压、心律不齐；癫痫或曾有抽搐发作；急性炎症、高热及体质虚弱；护理区域的传染性皮肤病。</p>
         </div>
       </div>
 
-      <!-- Part VI — Client Confirmation -->
+      <!-- Aftercare Guidelines -->
       <div class="cf-section">
-        <div class="cf-section-title"><span class="cf-num">VI</span> Client Confirmation</div>
-        <p class="cf-text">I have carefully read and fully understand the entire contents of this Informed Consent Form. The information I have provided is true, accurate, and complete. I have received a thorough explanation from the beauty therapist regarding the treatment procedures, associated risks, and post-treatment care instructions. I voluntarily consent to undergo the treatment and assume the known risks. I agree to promptly inform the studio of any subsequent changes in my health status.</p>
+        <div class="cf-section-title">
+          <span class="cf-num">IV</span>
+          <span class="lang-en">Aftercare Guidelines</span>
+          <span class="lang-zh">术后护理指引</span>
+        </div>
+        <ol class="cf-list lang-en">
+          <li data-n="1.">Avoid sauna, strenuous exercise and excessive sweating within 24 hours after treatment.</li>
+          <li data-n="2.">Do not exfoliate within one week; refrain from using acidic products, exfoliating scrubs, alcohol-containing and high-concentration Retinoid irritant products.</li>
+          <li data-n="3.">Apply broad-spectrum sunscreen daily (SPF30 or above recommended, SPF50+ preferable) due to strong UV radiation in New Zealand; avoid prolonged sun exposure.</li>
+          <li data-n="4.">Temporary redness, tightness and dryness after treatment are normal skin reactions, which generally subside within 1&ndash;3 days.</li>
+        </ol>
+        <ol class="cf-list lang-zh">
+          <li data-n="1.">护理后24小时内避免桑拿、剧烈运动及大量出汗。</li>
+          <li data-n="2.">一周内勿去角质；避免使用酸性产品、去角质磨砂膏、含酒精及高浓度维A酸类刺激性产品。</li>
+          <li data-n="3.">每日涂抹广谱防晒霜（建议SPF30以上，SPF50+更佳），新西兰紫外线辐射强烈，避免长时间日晒。</li>
+          <li data-n="4.">护理后出现暂时性发红、紧绷及干燥属正常皮肤反应，通常1-3天内自行消退。</li>
+        </ol>
+      </div>
 
-        <label class="cf-check" style="margin-top:8px"><input type="checkbox" id="finalAgree" required /> <strong><em>I have read, understood, and agree to all terms of this consent form</em></strong></label>
+      <!-- Photography Authorization -->
+      <div class="cf-section">
+        <div class="cf-section-title">
+          <span class="cf-num">V</span>
+          <span class="lang-en">Photography Authorization</span>
+          <span class="lang-zh">拍照授权</span>
+        </div>
+
+        <p class="cf-text lang-en">All photos taken during treatment are for internal record and training use only, kept strictly confidential.</p>
+        <p class="cf-text lang-zh">护理过程中拍摄的所有照片仅供内部记录与教学存档，严格保密。</p>
+
+        <label style="font-size:.82rem;font-weight:600;color:var(--mid);margin-top:8px">
+          <span class="lang-en">Please select one *</span>
+          <span class="lang-zh">请选择 *</span>
+        </label>
+        <div class="cf-check-group">
+          <label class="cf-check"><input type="radio" name="portraitConsent" value="consent" required />
+            <span class="lang-en">I agree to use before-and-after treatment photos for studio promotion and social media posting</span>
+            <span class="lang-zh">本人同意护理前后对比照用于门店宣传、社交平台推广使用</span>
+          </label>
+          <label class="cf-check"><input type="radio" name="portraitConsent" value="no-consent" />
+            <span class="lang-en">I do not agree</span>
+            <span class="lang-zh">本人不同意</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Final Acknowledgment & Consent -->
+      <div class="cf-section">
+        <div class="cf-section-title">
+          <span class="cf-num">VI</span>
+          <span class="lang-en">Final Acknowledgment &amp; Consent</span>
+          <span class="lang-zh">最终知情确认</span>
+        </div>
+
+        <label class="cf-check" style="margin-top:8px">
+          <input type="checkbox" id="finalAgree" required />
+          <span class="lang-en"><strong><em>I have read and fully understood all terms</em></strong></span>
+          <span class="lang-zh"><strong><em>本人已逐字阅读并完全理解本知情同意书所有条款，清楚了解通用禁忌及各项目禁忌症、肌肤正常反应及术后护理要求，无任何疑问，自愿接受本次护理，并遵从专业术后护理建议。本人确认以上填写信息真实完整。</em></strong></span>
+        </label>
       </div>
 
       <!-- Signatures -->
       <div class="cf-section">
-        <div class="cf-section-title"><span class="cf-num">&starf;</span> Signatures</div>
+        <div class="cf-section-title">
+          <span class="cf-num">&starf;</span>
+          <span class="lang-en">Signatures</span>
+          <span class="lang-zh">签名</span>
+        </div>
 
-        <label style="font-size:.82rem;font-weight:600;color:var(--mid);margin-bottom:4px">Signed by *</label>
+        <label style="font-size:.82rem;font-weight:600;color:var(--mid);margin-bottom:4px">
+          <span class="lang-en">Signed by *</span>
+          <span class="lang-zh">签署人 *</span>
+        </label>
         <div class="cf-check-group" style="margin-bottom:16px">
-          <label class="cf-check"><input type="radio" name="signerType" value="client" checked /> Client (18 or older)</label>
-          <label class="cf-check"><input type="radio" name="signerType" value="guardian" /> Parent / Guardian (client under 18)</label>
+          <label class="cf-check"><input type="radio" name="signerType" value="client" checked />
+            <span class="lang-en">Client (18 or older)</span>
+            <span class="lang-zh">顾客本人（18周岁或以上）</span>
+          </label>
+          <label class="cf-check"><input type="radio" name="signerType" value="guardian" />
+            <span class="lang-en">Parent / Guardian (client under 18)</span>
+            <span class="lang-zh">家长/监护人（顾客未满18周岁）</span>
+          </label>
         </div>
 
         <div class="cf-sig-row">
           <div class="cf-sig-block full" id="clientSigBlock">
             <div class="cf-sig-label">
-              Client Signature *
-              <button type="button" class="cf-sig-clear" onclick="clearSig('sigClient')">Clear</button>
+              <span>
+                <span class="lang-en">Client Signature *</span>
+                <span class="lang-zh">顾客签名 *</span>
+              </span>
+              <button type="button" class="cf-sig-clear" onclick="clearSig('sigClient')">
+                <span class="lang-en">Clear</span>
+                <span class="lang-zh">清除</span>
+              </button>
             </div>
             <canvas class="cf-sig-canvas" id="sigClient"></canvas>
             <div class="cf-sig-date">
@@ -424,13 +651,22 @@
           </div>
           <div class="cf-sig-block full" id="guardianSigBlock" style="display:none">
             <div class="cf-sig-label">
-              Guardian Signature *
-              <button type="button" class="cf-sig-clear" onclick="clearSig('sigGuardian')">Clear</button>
+              <span>
+                <span class="lang-en">Guardian Signature *</span>
+                <span class="lang-zh">监护人签名 *</span>
+              </span>
+              <button type="button" class="cf-sig-clear" onclick="clearSig('sigGuardian')">
+                <span class="lang-en">Clear</span>
+                <span class="lang-zh">清除</span>
+              </button>
             </div>
             <canvas class="cf-sig-canvas" id="sigGuardian"></canvas>
             <div class="cf-sig-date">
-              <label for="guardianName" style="font-size:.78rem;color:var(--mid)">Guardian Name</label>
-              <input type="text" id="guardianName" placeholder="Full name" style="margin-bottom:6px" />
+              <label for="guardianName" style="font-size:.78rem;color:var(--mid)">
+                <span class="lang-en">Guardian Name</span>
+                <span class="lang-zh">监护人姓名</span>
+              </label>
+              <input type="text" id="guardianName" data-ph-en="Full name" data-ph-zh="请填写全名" placeholder="Full name" style="margin-bottom:6px" />
               <input type="date" id="dateGuardian" />
             </div>
           </div>
@@ -438,15 +674,24 @@
         <div class="cf-sig-row" style="margin-top:16px">
           <div class="cf-sig-block full">
             <div class="cf-sig-label">
-              Beauty Specialist Signature *
-              <button type="button" class="cf-sig-clear" onclick="clearSig('sigSpecialist')">Clear</button>
+              <span>
+                <span class="lang-en">Beauty Specialist Signature *</span>
+                <span class="lang-zh">美容师签名 *</span>
+              </span>
+              <button type="button" class="cf-sig-clear" onclick="clearSig('sigSpecialist')">
+                <span class="lang-en">Clear</span>
+                <span class="lang-zh">清除</span>
+              </button>
             </div>
             <canvas class="cf-sig-canvas" id="sigSpecialist"></canvas>
             <div class="cf-sig-date">
               <input type="date" id="dateSpecialist" required />
             </div>
             <div class="cf-sig-date" style="margin-top:6px">
-              <label for="specialistEmail" style="font-size:.78rem;color:var(--mid)">Email (form will be sent here)</label>
+              <label for="specialistEmail" style="font-size:.78rem;color:var(--mid)">
+                <span class="lang-en">Email (form will be sent here)</span>
+                <span class="lang-zh">电子邮箱（表单将发送至此）</span>
+              </label>
               <input type="email" id="specialistEmail" value="beautyexperthu@gmail.com" required />
             </div>
           </div>
@@ -455,9 +700,18 @@
 
       <!-- Actions -->
       <div class="cf-actions">
-        <button type="button" class="btn btn-primary" onclick="submitForm()">Submit Form</button>
-        <button type="button" class="btn-secondary" onclick="window.print()">Print Form</button>
-        <button type="button" class="btn-secondary" onclick="resetForm()">Reset</button>
+        <button type="button" class="btn btn-primary" id="submitBtn" onclick="submitForm()">
+          <span class="lang-en">Submit Form</span>
+          <span class="lang-zh">提交表单</span>
+        </button>
+        <button type="button" class="btn-secondary" onclick="window.print()">
+          <span class="lang-en">Print Form</span>
+          <span class="lang-zh">打印表单</span>
+        </button>
+        <button type="button" class="btn-secondary" onclick="resetForm()">
+          <span class="lang-en">Reset</span>
+          <span class="lang-zh">重置</span>
+        </button>
       </div>
 
     </form>
@@ -466,15 +720,33 @@
 
 <!-- ── Scripts ────────────────────────────────────────────────── -->
 <script>
+  // ── Language switching ──────────────────────────────────────
+  let currentLang = localStorage.getItem('lang') || 'en';
+
+  function setConsentLang(lang) {
+    currentLang = lang;
+    localStorage.setItem('lang', lang);
+    document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+    document.body.classList.remove('lang-en', 'lang-zh');
+    document.body.classList.add('lang-' + lang);
+    // Update toggle buttons
+    document.querySelectorAll('.lang-switch button').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+    // Update placeholders
+    document.querySelectorAll('[data-ph-en]').forEach(el => {
+      el.placeholder = lang === 'zh' ? el.dataset.phZh : el.dataset.phEn;
+    });
+  }
+
+  // Bilingual alert helper
+  function t(en, zh) { return currentLang === 'zh' ? zh : en; }
+
   // ── EmailJS Configuration ───────────────────────────────────
-  // Uses the same EmailJS account as the booking form.
-  // You need to create a NEW email template in EmailJS for consent forms.
-  // Template variables: {{to_email}}, {{client_name}}, {{treatments}}, {{date}}
-  // In the template, set "To Email" to {{to_email}}.
   const CONSENT_EMAIL = {
     publicKey:  '6QlllbeMFpQkSODhH',
     serviceId:  'service_t00ac06',
-    templateId: 'template_consent',  // ← Create this template in EmailJS
+    templateId: 'template_consent',
   };
   emailjs.init({ publicKey: CONSENT_EMAIL.publicKey });
 
@@ -499,11 +771,9 @@
     document.getElementById('guardianSigBlock').style.display = isGuardian ? '' : 'none';
     document.getElementById('dateClient').required = !isGuardian;
     document.getElementById('dateGuardian').required = isGuardian;
-    // Set today's date on the guardian date field when switching to it
     if (isGuardian && !document.getElementById('dateGuardian').value) {
       document.getElementById('dateGuardian').value = today;
     }
-    // Resize visible canvas so it draws correctly
     const visibleId = isGuardian ? 'sigGuardian' : 'sigClient';
     setTimeout(() => pads[visibleId] && pads[visibleId].resize(), 50);
   }
@@ -585,8 +855,6 @@
   function clearSig(id) { pads[id].clear(); }
 
   // ── PDF: prepare DOM for capture ────────────────────────────
-  // Hides UI-only elements and replaces canvases with images.
-  // The blank-pages fix is scrollY:0 in html2canvas options (set in submitForm).
   function prepareDOMForPDF() {
     const undo = [];
     const form = document.getElementById('consentForm');
@@ -602,7 +870,14 @@
       undo.push(() => b.style.display = '');
     });
 
-    // 3. Hide "Signed by" label + radio group
+    // 3. Hide language switcher
+    const langSwitch = form.querySelector('.lang-switch');
+    if (langSwitch) {
+      langSwitch.style.display = 'none';
+      undo.push(() => langSwitch.style.display = '');
+    }
+
+    // 4. Hide "Signed by" label + radio group
     const signerRadio = form.querySelector('input[name="signerType"]');
     if (signerRadio) {
       const grp = signerRadio.closest('.cf-check-group');
@@ -614,17 +889,17 @@
       }
     }
 
-    // 4. Hide inactive signer block
+    // 5. Hide inactive signer block
     const isGuardian = document.querySelector('input[name="signerType"][value="guardian"]').checked;
     const hideBlock = document.getElementById(isGuardian ? 'clientSigBlock' : 'guardianSigBlock');
     hideBlock.style.display = 'none';
     undo.push(() => { /* already hidden by updateSignerView */ });
 
-    // 5. Remove box-shadow for cleaner PDF
+    // 6. Remove box-shadow for cleaner PDF
     form.style.boxShadow = 'none';
     undo.push(() => form.style.boxShadow = '');
 
-    // 6. Replace ALL canvas elements with <img>
+    // 7. Replace ALL canvas elements with <img>
     form.querySelectorAll('canvas').forEach(canvas => {
       const img = document.createElement('img');
       if (canvas.width > 0 && canvas.height > 0) {
@@ -655,34 +930,32 @@
     }
     const treatments = form.querySelectorAll('input[name="treatment"]:checked');
     if (treatments.length === 0) {
-      alert('Please select at least one treatment.');
+      alert(t('Please select at least one treatment.', '请至少选择一项护理项目。'));
       return;
     }
     const isGuardianSigner = document.querySelector('input[name="signerType"][value="guardian"]').checked;
     if (isGuardianSigner) {
-      if (pads.sigGuardian.isEmpty) { alert('Guardian signature is required.'); return; }
+      if (pads.sigGuardian.isEmpty) { alert(t('Guardian signature is required.', '需要监护人签名。')); return; }
     } else {
-      if (pads.sigClient.isEmpty) { alert('Client signature is required.'); return; }
+      if (pads.sigClient.isEmpty) { alert(t('Client signature is required.', '需要顾客签名。')); return; }
     }
     if (pads.sigSpecialist.isEmpty) {
-      alert('Beauty Specialist signature is required.');
+      alert(t('Beauty Specialist signature is required.', '需要美容师签名。'));
       return;
     }
 
-    const submitBtn = form.querySelector('.cf-actions .btn-primary');
-    const origText = submitBtn.textContent;
+    const submitBtn = document.getElementById('submitBtn');
+    const origHTML = submitBtn.innerHTML;
     submitBtn.disabled = true;
-    submitBtn.textContent = 'Generating PDF...';
+    submitBtn.textContent = t('Generating PDF...', '正在生成PDF...');
 
     const clientName = document.getElementById('clientName').value || 'client';
     const dateStr = document.getElementById('dateSpecialist').value || today;
     const filename = 'Consent_' + clientName.replace(/\s+/g, '_') + '_' + dateStr + '.pdf';
 
-    // Scroll to top — html2canvas uses scroll position for rendering offset
     const savedScroll = window.scrollY;
     window.scrollTo(0, 0);
 
-    // Prepare DOM: move form to body top, swap canvases, hide chrome
     const restoreDOM = prepareDOMForPDF();
 
     try {
@@ -698,10 +971,13 @@
       restoreDOM();
       window.scrollTo(0, savedScroll);
 
-      // Try to send email notification
-      submitBtn.textContent = 'Sending email...';
+      submitBtn.textContent = t('Sending email...', '正在发送邮件...');
       const clientPhone = document.getElementById('clientPhone').value;
-      const treatmentList = Array.from(treatments).map(t => t.parentElement.textContent.trim()).join(', ');
+      const treatmentList = Array.from(treatments).map(cb => {
+        const label = cb.parentElement;
+        const visibleSpan = label.querySelector('.lang-en');
+        return visibleSpan ? visibleSpan.textContent.trim() : label.textContent.trim();
+      }).join(', ');
       const toEmail = document.getElementById('specialistEmail').value;
       const signerLabel = isGuardianSigner
         ? 'Guardian: ' + (document.getElementById('guardianName').value || '(not provided)')
@@ -716,25 +992,37 @@
           date:         dateStr,
           signer:       signerLabel
         });
-        alert('PDF downloaded and consent form emailed to ' + toEmail + '.');
+        alert(t(
+          'PDF downloaded and consent form emailed to ' + toEmail + '.',
+          'PDF已下载，知情同意书已发送至 ' + toEmail + '。'
+        ));
       } catch (emailErr) {
         console.error('Email error:', emailErr);
-        alert('PDF downloaded successfully.\nEmail could not be sent: ' + (emailErr.text || emailErr.message || 'unknown error'));
+        alert(t(
+          'PDF downloaded successfully.\nEmail could not be sent: ' + (emailErr.text || emailErr.message || 'unknown error'),
+          'PDF下载成功。\n邮件发送失败：' + (emailErr.text || emailErr.message || '未知错误')
+        ));
       }
 
     } catch (pdfErr) {
       restoreDOM();
       window.scrollTo(0, savedScroll);
       console.error('PDF error:', pdfErr);
-      alert('PDF generation failed. Please use the Print button to save the form.\n\nError: ' + pdfErr.message);
+      alert(t(
+        'PDF generation failed. Please use the Print button to save the form.\n\nError: ' + pdfErr.message,
+        'PDF生成失败。请使用打印按钮保存表单。\n\n错误：' + pdfErr.message
+      ));
     } finally {
       submitBtn.disabled = false;
-      submitBtn.textContent = origText;
+      submitBtn.innerHTML = origHTML;
     }
   }
 
   function resetForm() {
-    if (!confirm('Are you sure you want to reset the form? All data will be cleared.')) return;
+    if (!confirm(t(
+      'Are you sure you want to reset the form? All data will be cleared.',
+      '确定要重置表单吗？所有数据将被清除。'
+    ))) return;
     document.getElementById('consentForm').reset();
     Object.values(pads).forEach(p => p.clear());
     document.getElementById('skinOtherWrap').style.display = 'none';
@@ -743,6 +1031,9 @@
     document.getElementById('specialistEmail').value = 'beautyexperthu@gmail.com';
     updateSignerView();
   }
+
+  // Initialize language on load
+  setConsentLang(currentLang);
 </script>
 </body>
 </html>
