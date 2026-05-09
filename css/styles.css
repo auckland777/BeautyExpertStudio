@@ -374,13 +374,6 @@ nav.scrolled { box-shadow: 0 2px 20px rgba(44,26,34,.10); }
   transition: transform var(--trans), box-shadow var(--trans);
 }
 .why-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
-.why-icon {
-  width: 52px; height: 52px;
-  background: linear-gradient(135deg, var(--rose), var(--gold));
-  border-radius: 14px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.4rem; margin-bottom: 18px;
-}
 .why-card h4 { font-size: 1.05rem; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
 .why-card p { font-size: .9rem; color: var(--grey); }
 
@@ -421,7 +414,7 @@ nav.scrolled { box-shadow: 0 2px 20px rgba(44,26,34,.10); }
   font-size: 1.4rem; font-weight: 800; color: var(--dark); margin-bottom: 6px;
 }
 .qfacial-header p { font-size: .92rem; color: var(--grey); max-width: 520px; margin: 0 auto; }
-.qfacial-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.qfacial-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
 
 /* ── Body Treatment Series Block ─────────────────────────────── */
 .body-series {
@@ -481,6 +474,12 @@ nav.scrolled { box-shadow: 0 2px 20px rgba(44,26,34,.10); }
 }
 .service-overlay .price-tag .duration {
   font-size: .78rem; font-weight: 500; color: rgba(255,255,255,.72);
+}
+.service-overlay .price-package {
+  margin-top: 4px;
+  font-size: .8rem; font-weight: 700;
+  color: var(--gold-lt);
+  letter-spacing: .02em;
 }
 .service-body { padding: 22px 24px; flex: 1; display: flex; flex-direction: column; }
 .service-body ul { list-style: none; flex: 1; }
@@ -746,7 +745,7 @@ footer {
   /* Fix 4: show hero-visual on tablet at a reduced height (was display:none) */
   .hero-visual { min-height: 360px; }
   .why-grid { grid-template-columns: repeat(2, 1fr); }
-  .qfacial-grid { grid-template-columns: repeat(3, 1fr); }
+  .qfacial-grid { grid-template-columns: repeat(2, 1fr); }
   .services-grid { grid-template-columns: repeat(2, 1fr); }
   .booking-wrap { grid-template-columns: 1fr; gap: 36px; }
   .footer-inner { grid-template-columns: 1fr 1fr; }

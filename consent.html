@@ -112,6 +112,7 @@
     .cf-field input[type="tel"],
     .cf-field input[type="number"],
     .cf-field input[type="date"],
+    .cf-field select,
     .cf-field textarea {
       padding: 10px 14px;
       border: 1.5px solid rgba(201,169,110,.3);
@@ -121,7 +122,9 @@
       transition: border-color .2s;
       background: var(--light);
     }
+    .cf-field select { appearance: auto; cursor: pointer; }
     .cf-field input:focus,
+    .cf-field select:focus,
     .cf-field textarea:focus {
       outline: none;
       border-color: var(--rose);
@@ -328,10 +331,19 @@
           </div>
           <div class="cf-field">
             <label for="clientAge">
-              <span class="lang-en">Age *</span>
-              <span class="lang-zh">年龄 *</span>
+              <span class="lang-en">Age Range *</span>
+              <span class="lang-zh">年龄范围 *</span>
             </label>
-            <input type="number" id="clientAge" min="1" max="120" required />
+            <select id="clientAge" required>
+              <option value="" data-en="— Select age range —" data-zh="— 请选择年龄范围 —">— Select age range —</option>
+              <option value="under-18" data-en="Under 18" data-zh="18岁以下">Under 18</option>
+              <option value="18-24" data-en="18–24" data-zh="18–24">18–24</option>
+              <option value="25-34" data-en="25–34" data-zh="25–34">25–34</option>
+              <option value="35-44" data-en="35–44" data-zh="35–44">35–44</option>
+              <option value="45-54" data-en="45–54" data-zh="45–54">45–54</option>
+              <option value="55-64" data-en="55–64" data-zh="55–64">55–64</option>
+              <option value="65-plus" data-en="65 and above" data-zh="65岁以上">65 and above</option>
+            </select>
           </div>
           <div class="cf-field">
             <label for="clientPhone">
@@ -737,6 +749,10 @@
     document.querySelectorAll('[data-ph-en]').forEach(el => {
       el.placeholder = lang === 'zh' ? el.dataset.phZh : el.dataset.phEn;
     });
+    // Update <select> option labels
+    document.querySelectorAll('option[data-en]').forEach(opt => {
+      opt.textContent = lang === 'zh' ? opt.dataset.zh : opt.dataset.en;
+    });
   }
 
   // Bilingual alert helper
@@ -899,7 +915,22 @@
     form.style.boxShadow = 'none';
     undo.push(() => form.style.boxShadow = '');
 
-    // 7. Replace ALL canvas elements with <img>
+    // 7. Replace <select> with a static styled box (html2canvas can't render
+    // native dropdown chrome reliably; this guarantees the chosen value prints).
+    form.querySelectorAll('select').forEach(sel => {
+      const box = document.createElement('div');
+      const chosen = sel.options[sel.selectedIndex];
+      box.textContent = chosen ? chosen.textContent : '';
+      box.style.cssText =
+        'padding:10px 14px;border:1.5px solid rgba(201,169,110,.3);' +
+        'border-radius:8px;font-size:.92rem;color:#2C1A22;' +
+        'background:#fafafa;font-family:inherit;min-height:1.2em;';
+      const parent = sel.parentNode;
+      parent.replaceChild(box, sel);
+      undo.push(() => parent.replaceChild(sel, box));
+    });
+
+    // 8. Replace ALL canvas elements with <img>
     form.querySelectorAll('canvas').forEach(canvas => {
       const img = document.createElement('img');
       if (canvas.width > 0 && canvas.height > 0) {

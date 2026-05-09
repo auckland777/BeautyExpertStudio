@@ -215,22 +215,18 @@
     <h3 class="category-heading" data-i18n="why.tag">Why Choose Us</h3>
     <div class="why-grid">
       <div class="why-card fade-up">
-        <div class="why-icon">🔬</div>
         <h4 data-i18n="why1.h4">Top-Tier Device</h4>
         <p data-i18n="why1.p">Korea's Q Facial — the pinnacle of beauty tech. The only cleansing device that penetrates the dermis, hailed as the "anti-aging ceiling." Celebrity favourite.</p>
       </div>
       <div class="why-card fade-up" style="transition-delay:.1s">
-        <div class="why-icon">💎</div>
         <h4 data-i18n="why2.h4">Clinic-Grade Products</h4>
         <p data-i18n="why2.p">Authentic clinic-exclusive skincare, fully traceable through authorised channels. Gentle formulas with zero unnecessary additives — safe even for sensitive skin.</p>
       </div>
       <div class="why-card fade-up" style="transition-delay:.2s">
-        <div class="why-icon">🏥</div>
         <h4 data-i18n="why3.h4">Senior Beautician</h4>
         <p data-i18n="why3.p">Dual China–NZ qualified, 30-year senior beautician performs every treatment personally. A rare calibre in the industry — one-on-one bespoke plans for truly effective skincare.</p>
       </div>
       <div class="why-card fade-up" style="transition-delay:.3s">
-        <div class="why-icon">🛡️</div>
         <h4 data-i18n="why4.h4">Medical-Grade Sterilisation</h4>
         <p data-i18n="why4.p">Rigorous sterilisation protocols. Instruments and accessories freshly sanitised for every client — a safe, private treatment space.</p>
       </div>
@@ -262,6 +258,7 @@
             <div class="service-overlay">
               <h3 data-i18n="qf1.h3">Purifying Glow Treatment</h3>
               <div class="price-tag">$188 <span class="duration" data-i18n="qf1.dur">/ 45 min</span></div>
+              <div class="price-package" data-i18n="qf1.pkg">10-session pack $1280</div>
             </div>
           </div>
           <div class="service-body">
@@ -281,7 +278,8 @@
             <img class="service-photo" src="images/qfacial2.jpg" alt="Intensive Repair Infusion" loading="lazy" />
             <div class="service-overlay">
               <h3 data-i18n="qf2.h3">Intensive Repair Infusion</h3>
-              <div class="price-tag">$228 <span class="duration" data-i18n="qf2.dur">/ 60 min</span></div>
+              <div class="price-tag">$228 <span class="duration" data-i18n="qf2.dur">/ 50 min</span></div>
+              <div class="price-package" data-i18n="qf2.pkg">10-session pack $1680</div>
             </div>
           </div>
           <div class="service-body">
@@ -295,23 +293,45 @@
           </div>
         </div>
 
+        <!-- Hydra Repair Treatment -->
+        <div class="service-card" onclick="prefillService('Hydra Repair Treatment')">
+          <div class="service-header">
+            <img class="service-photo" src="images/qfacial3.jpg" alt="Hydra Repair Treatment" loading="lazy" />
+            <div class="service-overlay">
+              <h3 data-i18n="qf3.h3">Hydra Repair Treatment</h3>
+              <div class="price-tag">$258 <span class="duration" data-i18n="qf3.dur">/ 60 min</span></div>
+              <div class="price-package" data-i18n="qf3.pkg">10-session pack $1980</div>
+            </div>
+          </div>
+          <div class="service-body">
+            <ul>
+              <li data-i18n="qf3.f1">Includes complete Purifying Glow Treatment cleansing, combined with medical-grade dual-frequency precision ultrasound therapy</li>
+              <li data-i18n="qf3.f2">10MHz high-frequency ultrasound acts on the epidermis to strengthen the skin barrier, reduce redness and sensitivity, and refine pores for a smoother complexion</li>
+              <li data-i18n="qf3.f3">3MHz deep-frequency ultrasound penetrates the dermis to stimulate collagen and elastin synthesis, repair broken fibers, improve fine lines, and restore skin elasticity</li>
+              <li data-i18n="qf3.f4">Dual-frequency synergy boosts microcirculation and accelerates skin renewal, delivering anti-aging and soothing effects for visibly firmer, more even-toned skin</li>
+            </ul>
+            <button class="service-book-btn" data-i18n="qf3.btn">Book This Treatment &rarr;</button>
+          </div>
+        </div>
+
         <!-- Multi-Dimensional Sculpting Treatment -->
         <div class="service-card" onclick="prefillService('Multi-Dimensional Sculpting Treatment')">
           <div class="service-header">
             <img class="service-photo" src="images/qfacial3.jpg" alt="Multi-Dimensional Sculpting Treatment" loading="lazy" />
             <div class="service-overlay">
-              <h3 data-i18n="qf3.h3">Multi-Dimensional Sculpting Treatment</h3>
-              <div class="price-tag">$288 <span class="duration" data-i18n="qf3.dur">/ 75 min</span></div>
+              <h3 data-i18n="qf4.h3">Multi-Dimensional Sculpting Treatment</h3>
+              <div class="price-tag">$288 <span class="duration" data-i18n="qf4.dur">/ 75 min</span></div>
+              <div class="price-package" data-i18n="qf4.pkg">10-session pack $2080</div>
             </div>
           </div>
           <div class="service-body">
             <ul>
-              <li data-i18n="qf3.f1">Combines Intensive Repair Infusion with dual-frequency precision ultrasound</li>
-              <li data-i18n="qf3.f2">10MHz + 3MHz delivers ampoule ingredients into the dermis</li>
-              <li data-i18n="qf3.f3">Stimulates collagen production for firmer, younger-looking skin</li>
-              <li data-i18n="qf3.f4">Tightens and lifts skin contours for visible sculpting results</li>
+              <li data-i18n="qf4.f1">All-in-one premium treatment combining Purifying Glow Cleansing + Intensive Repair Infusion + Dual-Frequency Lifting Ultrasound</li>
+              <li data-i18n="qf4.f2">Deep cleansing opens skin absorption channels, followed by concentrated ampoule infusion, then ultrasound deep penetration</li>
+              <li data-i18n="qf4.f3">Three-step synergy amplifies results beyond individual standalone treatments</li>
+              <li data-i18n="qf4.f4">Delivers comprehensive benefits of deep cleansing, intensive repair, collagen anti-aging, and lifting rejuvenation</li>
             </ul>
-            <button class="service-book-btn" data-i18n="qf3.btn">Book This Treatment &rarr;</button>
+            <button class="service-book-btn" data-i18n="qf4.btn">Book This Treatment &rarr;</button>
           </div>
         </div>
 
@@ -346,7 +366,7 @@
           <img class="service-photo" src="images/led-therapy.jpg" alt="LED Light Therapy" loading="lazy" />
           <div class="service-overlay">
             <h3 data-i18n="s2.h3">LED Light Therapy</h3>
-            <div class="price-tag">$49 <span class="duration" data-i18n="s2.dur">/ 30 min</span></div>
+            <div class="price-tag">$60 <span class="duration" data-i18n="s2.dur">/ 30 min</span></div>
           </div>
         </div>
         <div class="service-body">
@@ -354,6 +374,7 @@
             <li data-i18n="s2.f1">Boosts dermal blood flow, stimulating collagen & elastin production</li>
             <li data-i18n="s2.f2">Speeds wound healing and eases pain (backed by global studies)</li>
             <li data-i18n="s2.f3">Blue LED targets acne-causing bacteria deep under the skin</li>
+            <li data-i18n="s2.f4">Brightens and evens skin tone, fades dullness and redness, stabilises skin condition</li>
           </ul>
           <button class="service-book-btn" data-i18n="s2.btn">Book This Treatment →</button>
         </div>
@@ -390,11 +411,10 @@
         </div>
         <div class="service-body">
           <ul>
-            <li data-i18n="s4.f1">Aromatherapy infusion — premium essential oils enhance relaxation and skin vitality</li>
-            <li data-i18n="s4.f2">Meridian activation — stimulates facial acupoints to restore internal balance</li>
-            <li data-i18n="s4.f3">Circulation boost — relieves stagnation through targeted meridian kneading</li>
-            <li data-i18n="s4.f4">Detox & sculpt — jade gua sha reduces turbidity, puffiness, and sagging</li>
-            <li data-i18n="s4.f5">Natural revitalisation — supports the flow of qi and blood for holistic rejuvenation</li>
+            <li data-i18n="s4.f1">Premium essential oils absorb through the skin into the bloodstream — clearing waste and toxins, soothing the nerves, and relaxing body and mind</li>
+            <li data-i18n="s4.f2">Opens facial acupoints linked to visceral reflex points — unblocking meridians, awakening qi-blood circulation, and regulating internal organ function</li>
+            <li data-i18n="s4.f3">Exclusive jade meridian kneading deeply releases fascial stagnation and nodules — lifting facial contours and improving facial qi-blood circulation</li>
+            <li data-i18n="s4.f4">Exclusive jade gua-sha metabolises subcutaneous impurities and eases facial puffiness — fading dullness, harmonising qi and blood, healing body and mind</li>
           </ul>
           <button class="service-book-btn" data-i18n="s4.btn">Book This Treatment →</button>
         </div>
@@ -411,10 +431,10 @@
         </div>
         <div class="service-body">
           <ul>
-            <li data-i18n="s5.f1">Root-targeting — destroys the virus at its source</li>
-            <li data-i18n="s5.f2">Gentler than freezing — no blisters or scarring</li>
-            <li data-i18n="s5.f3">More complete removal versus lasers and topicals</li>
-            <li data-i18n="s5.f4">1-session solution with minimal downtime</li>
+            <li data-i18n="s5.f1">Root-targeted treatment precisely acts on wart hyperplastic tissue for deep and thorough removal</li>
+            <li data-i18n="s5.f2">Gentle and non-invasive, less likely to cause blisters or scarring than cryotherapy</li>
+            <li data-i18n="s5.f3">Delivers more thorough removal and cleaner skin results than laser or topical treatments</li>
+            <li data-i18n="s5.f4">Fast recovery with visible results after one session, no disruption to daily life</li>
           </ul>
           <button class="service-book-btn" data-i18n="s5.btn">Book This Treatment →</button>
         </div>
@@ -431,8 +451,10 @@
         </div>
         <div class="service-body">
           <ul>
-            <li data-i18n="s7.f1">Smoother Texture — Gently exfoliates dead skin cells and removes fine peach fuzz for instantly softer, smoother skin</li>
-            <li data-i18n="s7.f2">Enhanced Absorption — Eliminates surface barriers so serums, moisturizers and treatments penetrate deeper and perform more effectively</li>
+            <li data-i18n="s7.f1">Smoother Texture — Gently removes dead skin cells and fine facial fuzz for instantly soft, smooth skin</li>
+            <li data-i18n="s7.f2">Better Product Absorption — Exfoliates surface buildup to allow serums and moisturizers to work more effectively</li>
+            <li data-i18n="s7.f3">Healthy Radiance — Improves dullness to reveal an even, fresh, and glowing complexion</li>
+            <li data-i18n="s7.f4">Gentle for All Skin — Non-invasive and suitable for every skin type, perfect alongside other facial treatments</li>
           </ul>
           <button class="service-book-btn" data-i18n="s7.btn">Book This Treatment →</button>
         </div>
@@ -659,12 +681,13 @@
               <option value="" data-i18n-opt="bk.opt-sel">— Select a treatment —</option>
               <optgroup label="Q Facial Skin Renewal Series" data-i18n-label="bk.og-qf">
                 <option value="Purifying Glow Treatment" data-i18n-opt="bk.t-qf1">Purifying Glow Treatment — $188 / 45'</option>
-                <option value="Intensive Repair Infusion" data-i18n-opt="bk.t-qf2">Intensive Repair Infusion — $228 / 60'</option>
-                <option value="Multi-Dimensional Sculpting Treatment" data-i18n-opt="bk.t-qf3">Multi-Dimensional Sculpting Treatment — $288 / 75'</option>
+                <option value="Intensive Repair Infusion" data-i18n-opt="bk.t-qf2">Intensive Repair Infusion — $228 / 50'</option>
+                <option value="Hydra Repair Treatment" data-i18n-opt="bk.t-qf3">Hydra Repair Treatment — $258 / 60'</option>
+                <option value="Multi-Dimensional Sculpting Treatment" data-i18n-opt="bk.t-qf4">Multi-Dimensional Sculpting Treatment — $288 / 75'</option>
               </optgroup>
               <optgroup label="More Facial Treatments" data-i18n-label="bk.og-facial">
               <option value="Classic Pore Purifying Treatment" data-i18n-opt="bk.t-s1">Classic Pore Purifying Treatment — $89 / 60'</option>
-              <option value="LED Light Therapy" data-i18n-opt="bk.t-s2">LED Light Therapy — $49 / 30'</option>
+              <option value="LED Light Therapy" data-i18n-opt="bk.t-s2">LED Light Therapy — $60 / 30'</option>
               <option value="Enhanced Microneedling with Mesolinfu" data-i18n-opt="bk.t-s3">Enhanced Microneedling with Mesolinfu — $269 / 30'</option>
               <option value="Aromatherapy Facial Meridian Kneading" data-i18n-opt="bk.t-s4">Aromatherapy Facial Meridian Kneading — $128 / 60'</option>
               <option value="Professional Electrolysis Wart Removal" data-i18n-opt="bk.t-s5">Electrolysis Wart Removal — $10-15</option>
