@@ -598,7 +598,7 @@ nav.scrolled { box-shadow: 0 2px 20px rgba(44,26,34,.10); }
   font-weight: 800;
   letter-spacing: .1em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--mid);
   margin-bottom: 10px;
 }
 .cause-section ul {
