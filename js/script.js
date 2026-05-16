@@ -84,39 +84,77 @@ function prefillService(name) {
   document.getElementById('booking').scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-// ── Concern chips
-window.concernData = {
-  dullness:    { title: 'For Dullness', text: 'We recommend the Classic Pore Purifying Treatment ($89), Dermaplaning ($59), or the Purifying Glow Treatment ($148) to restore radiance, even tone, and instant brightness. Aromatherapy Facial Meridian Kneading ($129) also enhances circulation for a natural, lasting glow.', service: 'Classic Pore Purifying Treatment' },
-  sensitivity: { title: 'For Sensitivity', text: 'LED Light Therapy ($69) is ideal for sensitive skin — it calms inflammation and supports the skin barrier without irritation.', service: 'LED Light Therapy' },
-  acne:        { title: 'For Acne & Breakouts', text: 'Blue LED Light Therapy ($69) targets acne-causing bacteria. The Classic Pore Purifying Treatment ($89) unclogs pores and reduces excess oil. Enhanced Microneedling with Mesolinfu ($229) also fades acne scars and refines texture.', service: 'LED Light Therapy' },
-  pores:       { title: 'For Large Pores', text: 'The Classic Pore Purifying Treatment ($89) deep-cleans and unclogs pores. Enhanced Microneedling with Mesolinfu ($229) shrinks pores and smooths texture. The Intensive Repair Infusion ($178) offers a pore-minimizing ampoule option for visible refinement.', service: 'Classic Pore Purifying Treatment' },
-  wrinkles:    { title: 'For Wrinkles & Lines', text: 'Enhanced Microneedling with Mesolinfu ($229) deeply smooths wrinkles and fades lines. The Multi-Dimensional Sculpting Treatment ($238) uses dual-frequency ultrasound to stimulate collagen and lift contours. Aromatherapy Facial Meridian Kneading ($129) relieves stagnation and firms facial contours.', service: 'Enhanced Microneedling with Mesolinfu' },
-  aging:       { title: 'For Anti-Aging', text: 'The Multi-Dimensional Sculpting Treatment ($238) stimulates collagen production with dual-frequency ultrasound for firmer, younger-looking skin. Aromatherapy Facial Meridian Kneading ($129) provides holistic rejuvenation through meridian activation. Enhanced Microneedling with Mesolinfu ($229) reactivates collagen and smooths fine lines.', service: 'Multi-Dimensional Sculpting Treatment' },
-  glow:        { title: 'For Glow Rescue', text: 'The Classic Pore Purifying Treatment ($89) delivers an instant peeled-egg glow. Dermaplaning ($59) gives a smooth, radiant finish. Aromatherapy Facial Meridian Kneading ($129) enhances circulation for a natural, radiant complexion.', service: 'Classic Pore Purifying Treatment' },
-  warts:       { title: 'For Warts', text: 'Professional Electrolysis Wart Removal ($10-15/session) destroys the virus at its root — gentler than freezing with no blisters or scarring, and more complete than lasers or topicals. Typically resolved in a single session with minimal downtime.', service: 'Professional Electrolysis Wart Removal' },
-};
-const concernResult = document.getElementById('concernResult');
-const concernTitle  = document.getElementById('concernTitle');
-const concernText   = document.getElementById('concernText');
+// ── Concern chips → rich panel
+const concernPanel = document.getElementById('concernPanel');
 
-document.querySelectorAll('.chip').forEach(chip => {
+function escapeHtml(s) {
+  return String(s)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function renderConcern(key) {
+  const lang = localStorage.getItem('lang') || 'en';
+  const t = window.TRANSLATIONS[lang];
+  const data = window.concernsData[lang] && window.concernsData[lang][key];
+  if (!data) return;
+
+  const bullets = arr => arr.map(b => `<li>${escapeHtml(b)}</li>`).join('');
+  const recs = data.recommendations.map((r, i) => `
+    <div class="rec-card">
+      <div class="rec-card-head">
+        <div class="rec-card-name">${escapeHtml(r.name)}</div>
+        <div class="rec-card-price">${escapeHtml(r.price)}</div>
+      </div>
+      <p class="rec-card-body">${escapeHtml(r.body)}</p>
+      <button class="rec-card-btn" data-service="${escapeHtml(r.service)}">${escapeHtml(t['con.btn-book'])}</button>
+    </div>
+  `).join('');
+
+  concernPanel.classList.add('has-content');
+  concernPanel.innerHTML = `
+    <h3 class="concern-title">${escapeHtml(data.title)}</h3>
+    <p class="concern-intro">${escapeHtml(data.intro)}</p>
+    <div class="concern-causes">
+      <div class="cause-block">
+        <h4>${escapeHtml(t['con.h-internal'])}</h4>
+        <ul>${bullets(data.internal)}</ul>
+      </div>
+      <div class="cause-block">
+        <h4>${escapeHtml(t['con.h-external'])}</h4>
+        <ul>${bullets(data.external)}</ul>
+      </div>
+    </div>
+    <div class="concern-warning">${escapeHtml(data.warning)}</div>
+    <div class="concern-rec-heading">${escapeHtml(t['con.h-rec'])}</div>
+    <div class="concern-recs">${recs}</div>
+    <div class="concern-consult">
+      <h4>${escapeHtml(t['con.h-consult'])}</h4>
+      <p>${escapeHtml(data.consult)}</p>
+      <a href="#booking" class="btn">${escapeHtml(t['con.btn-consult'])}</a>
+    </div>
+  `;
+
+  concernPanel.querySelectorAll('.rec-card-btn').forEach(btn => {
+    btn.addEventListener('click', () => prefillService(btn.dataset.service));
+  });
+}
+
+// Re-render the currently selected concern (used by setLang)
+window.renderActiveConcern = function () {
+  const active = document.querySelector('#concernChips .chip.active');
+  if (active) renderConcern(active.dataset.concern);
+};
+
+document.querySelectorAll('#concernChips .chip').forEach(chip => {
   chip.addEventListener('click', () => {
-    document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+    document.querySelectorAll('#concernChips .chip').forEach(c => c.classList.remove('active'));
     chip.classList.add('active');
-    const key = chip.dataset.concern;
-    if (key === 'all') {
-      concernResult.style.display = 'none';
-    } else {
-      const d = window.concernData[key];
-      concernTitle.textContent = d.title;
-      concernText.textContent  = d.text;
-      // Also set the booking form treatment
-      document.querySelector('#concernResult a').onclick = () => {
-        prefillService(d.service);
-      };
-      concernResult.style.display = 'block';
-      concernResult.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    }
+    renderConcern(chip.dataset.concern);
+    concernPanel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   });
 });
 

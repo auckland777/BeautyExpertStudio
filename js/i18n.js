@@ -141,10 +141,14 @@ const TRANSLATIONS = {
     'bd4.btn':'Book This Treatment →',
     // Concerns
     'con.tag':'Targeted Solutions', 'con.h2':'We Treat Your<br>Specific Concerns',
-    'con.p':'Select your concern below to explore the right treatment for you.',
-    'con.chip-all':'All Treatments', 'con.chip-dull':'Dullness', 'con.chip-sens':'Sensitivity',
-    'con.chip-acne':'Acne', 'con.chip-pore':'Pores', 'con.chip-wrin':'Wrinkles', 'con.chip-age':'Anti-Aging',
-    'con.chip-glow':'Glow Rescue', 'con.chip-wart':'Warts', 'con.result-btn':'Book Recommended Treatment',
+    'con.p':'Select your concern below to explore the causes and a tailored care plan.',
+    'con.chip-sens':'Skin Sensitivity', 'con.chip-dull':'Dullness & Pigmentation',
+    'con.chip-age':'Sagging & Aging', 'con.chip-pore':'Enlarged Pores',
+    'con.chip-acne':'Acne & Oily Skin', 'con.chip-eye':'Eye Concerns',
+    'con.empty':'Pick a concern above to see causes and a recommended care plan.',
+    'con.h-internal':'Internal Causes', 'con.h-external':'External Causes',
+    'con.h-rec':'Recommended Treatments', 'con.h-consult':'Need Personal Guidance?',
+    'con.btn-book':'Book This Treatment', 'con.btn-consult':'Book a Free Consultation',
     // Promise
     'pro.tag':'Our Promise', 'pro.h2':'Expertise. Honesty. Results.',
     'pro.p':'Beauty meets truth — we only recommend what your skin genuinely needs, and we deliver results you can see and feel.',
@@ -331,7 +335,7 @@ const TRANSLATIONS = {
     'qf1.f3':'增强肌肤吸收能力，实现温和焕肤',
     'qf1.f4':'适合所有肤质的日常维护',
     'qf1.btn':'立即预约此疗程 →',
-    'qf2.h3':'肌底修护肤', 'qf2.dur':'/ 50分钟', 'qf2.pkg':'10次套餐 $1580',
+    'qf2.h3':'肌底修复护肤', 'qf2.dur':'/ 50分钟', 'qf2.pkg':'10次套餐 $1580',
     'qf2.f1':'净澈焕肤（$148）+ 专属安瓶精华导入',
     'qf2.f2':'5款对症选择：抗皱 / 美白 / 收毛孔 / 舒缓 / 提亮',
     'qf2.f3':'深层修护肌底，针对性改善肤质问题',
@@ -423,10 +427,14 @@ const TRANSLATIONS = {
     'bd4.btn':'立即预约此疗程 →',
     // Concerns
     'con.tag':'精准解决方案', 'con.h2':'针对您的<br>肌肤问题',
-    'con.p':'点击下方选择您的肌肤问题，探索最适合您的疗程。',
-    'con.chip-all':'全部疗程', 'con.chip-dull':'暗沉', 'con.chip-sens':'敏感',
-    'con.chip-acne':'痘痘', 'con.chip-pore':'毛孔', 'con.chip-wrin':'皱纹', 'con.chip-age':'抗衰老',
-    'con.chip-glow':'提亮急救', 'con.chip-wart':'疣体', 'con.result-btn':'预约推荐疗程',
+    'con.p':'点击下方选择您的肌肤问题，了解成因解析与专属护理建议。',
+    'con.chip-sens':'肌肤敏感', 'con.chip-dull':'肤色暗沉',
+    'con.chip-age':'肌肤松弛', 'con.chip-pore':'毛孔粗大',
+    'con.chip-acne':'肌肤油腻', 'con.chip-eye':'眼周专护',
+    'con.empty':'点击上方任一肌肤问题，查看成因解析与专属护理建议。',
+    'con.h-internal':'内源性因素', 'con.h-external':'外源性因素',
+    'con.h-rec':'推荐项目', 'con.h-consult':'不确定护理方案？',
+    'con.btn-book':'预约此项目', 'con.btn-consult':'免费预约面诊',
     // Promise
     'pro.tag':'我们的承诺', 'pro.h2':'专业·诚信·效果',
     'pro.p':'美丽与真诚并行——我们只推荐肌肤真正需要的，并呈现您看得见、感受得到的实际效果。',
@@ -443,7 +451,7 @@ const TRANSLATIONS = {
     'bk.lbl-tr':'护理项目 *', 'bk.opt-sel':'— 请选择疗程 —',
     'bk.og-qf':'Q Facial 肌肤焕新系列', 'bk.og-facial':'更多面部护理', 'bk.og-body':'身体护理',
     'bk.t-qf1':'净澈焕肤 — $148 / 45分钟',
-    'bk.t-qf2':'肌底修护肤 — $178 / 50分钟',
+    'bk.t-qf2':'肌底修复护肤 — $178 / 50分钟',
     'bk.t-qf3':'水滴修复 — $208 / 60分钟',
     'bk.t-qf4':'多维塑颜焕肤 — $238 / 75分钟',
     'bk.t-s1':'经典毛孔净化护理 — $89 / 60分钟',
@@ -570,27 +578,485 @@ const TRANSLATIONS = {
   }
 };
 
-const concernDataI18n = {
+const concernsData = {
   en: {
-    dullness:    { title: 'For Dullness',         text: 'We recommend the Classic Pore Purifying Treatment ($89), Dermaplaning ($59), or the Purifying Glow Treatment ($148) to restore radiance, even tone, and instant brightness. Aromatherapy Facial Meridian Kneading ($129) also enhances circulation for a natural, lasting glow.', service: 'Classic Pore Purifying Treatment' },
-    sensitivity: { title: 'For Sensitivity',      text: 'LED Light Therapy ($69) is ideal for sensitive skin — it calms inflammation and supports the skin barrier without irritation.', service: 'LED Light Therapy' },
-    acne:        { title: 'For Acne & Breakouts', text: 'Blue LED Light Therapy ($69) targets acne-causing bacteria. The Classic Pore Purifying Treatment ($89) unclogs pores and reduces excess oil. Enhanced Microneedling with Mesolinfu ($229) also fades acne scars and refines texture.', service: 'LED Light Therapy' },
-    pores:       { title: 'For Large Pores',      text: 'The Classic Pore Purifying Treatment ($89) deep-cleans and unclogs pores. Enhanced Microneedling with Mesolinfu ($229) shrinks pores and smooths texture. The Intensive Repair Infusion ($178) offers a pore-minimizing ampoule option for visible refinement.', service: 'Classic Pore Purifying Treatment' },
-    wrinkles:    { title: 'For Wrinkles & Lines',  text: 'Enhanced Microneedling with Mesolinfu ($229) deeply smooths wrinkles and fades lines. The Multi-Dimensional Sculpting Treatment ($238) uses dual-frequency ultrasound to stimulate collagen and lift contours. Aromatherapy Facial Meridian Kneading ($129) relieves stagnation and firms facial contours.', service: 'Enhanced Microneedling with Mesolinfu' },
-    aging:       { title: 'For Anti-Aging',       text: 'The Multi-Dimensional Sculpting Treatment ($238) stimulates collagen production with dual-frequency ultrasound for firmer, younger-looking skin. Aromatherapy Facial Meridian Kneading ($129) provides holistic rejuvenation through meridian activation. Enhanced Microneedling with Mesolinfu ($229) reactivates collagen and smooths fine lines.', service: 'Multi-Dimensional Sculpting Treatment' },
-    glow:        { title: 'For Glow Rescue',      text: 'The Classic Pore Purifying Treatment ($89) delivers an instant peeled-egg glow. Dermaplaning ($59) gives a smooth, radiant finish. Aromatherapy Facial Meridian Kneading ($129) enhances circulation for a natural, radiant complexion.', service: 'Classic Pore Purifying Treatment' },
-    warts:       { title: 'For Warts',      text: 'Professional Electrolysis Wart Removal ($10-15/session) destroys the virus at its root — gentler than freezing with no blisters or scarring, and more complete than lasers or topicals. Typically resolved in a single session with minimal downtime.', service: 'Professional Electrolysis Wart Removal' },
+    sensitivity: {
+      title: 'Skin Sensitivity',
+      intro: 'Redness, stinging, dryness and a compromised barrier — caused by a combination of inherent traits and external triggers.',
+      internal: [
+        'Naturally thin stratum corneum and low sebum production weaken moisture retention and barrier defence',
+        'Hyper-reactive nerve endings cause burning and stinging at the slightest stimulus',
+        'Weak self-repair ability allows sensitivity to recur',
+      ],
+      external: [
+        'Seasonal temperature shifts, UV exposure and air pollution damage the skin',
+        'Over-cleansing and frequent acid peels destroy the natural protective barrier',
+        'Improper aftercare following high-intensity aesthetic treatments deepens fragility',
+        'Late nights and stress trigger inflammation, worsening redness and reactivity',
+      ],
+      warning: 'Without consistent professional care, surface discomfort progresses to persistent sensitivity and visible capillaries.',
+      recommendations: [
+        {
+          name: 'Q-Facial Multi-Dimensional Sculpting Treatment',
+          price: '$238',
+          body: 'After purifying cleansing, the dedicated SKIN BOOSTER COOL+ soothing ampoule is infused to rapidly calm heat and redness, comfort the damaged base layer, ease dryness and stinging, and strengthen the corneum — reducing recurring sensitivity at its source. Paired with Korea-patented high-density dual-frequency ultrasound to drive nutrients deep into the dermis for layered, gentle repair.',
+          service: 'Multi-Dimensional Sculpting Treatment',
+        },
+        {
+          name: 'LED Spectrum Recovery Therapy',
+          price: '$69',
+          body: 'Gently repairs the barrier, calms inflammation, accelerates skin metabolism and fades redness and heat. Non-invasive with no downtime — ideal for post-procedure recovery and daily maintenance.',
+          service: 'LED Light Therapy',
+        },
+      ],
+      consult: 'Not sure which plan is right for you? Book a complimentary one-on-one consultation with our 30-year senior beautician for a bespoke programme to strengthen your barrier, soothe redness and repair sensitive skin from within.',
+    },
+    dullness: {
+      title: 'Dullness & Pigmentation',
+      intro: 'Uneven tone, lacklustre skin and pigment deposits forming various spots — driven by internal metabolic imbalance and external triggers.',
+      internal: [
+        'With age and hormonal fluctuation, melanin metabolism slows and pigments easily accumulate into spots',
+        'Glycation produces AGEs that damage collagen, robbing skin of clarity and leaving it rough and aged',
+        'Sluggish facial microcirculation traps metabolic waste, deepening cloudiness and dullness',
+      ],
+      external: [
+        'Long-term UV exposure activates tyrosinase, accelerating melanin production and triggering spots and photo-pigmentation',
+        'Poor wound healing easily forms acne marks and stubborn post-inflammatory pigmentation',
+        'Improper cleansing and over-exfoliation weaken the barrier, allowing pigment to deposit and resist metabolism',
+        'Environmental free radicals continuously oxidise the skin, intensifying dullness and loss of glow',
+        'Improper aftercare following high-intensity aesthetic treatments can trigger thermal-stress inflammation and pigment rebound',
+      ],
+      warning: 'Without ongoing professional care, surface pigment darkens into connected patches, forming stubborn spots and persistent dullness.',
+      recommendations: [
+        {
+          name: 'Q-Facial Multi-Dimensional Sculpting Treatment',
+          price: '$238',
+          body: 'After purifying cleansing, the dedicated SKIN BOOSTER DULL FADE IN patented brightening ampoule is infused to inhibit tyrosinase activity, neutralise free radicals, block pigment formation, accelerate metabolism of deposited pigment, fade spots and acne marks, and visibly enhance clarity and luminosity. Paired with Korea-patented high-density dual-frequency ultrasound to disperse settled pigment and unify skin tone.',
+          service: 'Multi-Dimensional Sculpting Treatment',
+        },
+        {
+          name: 'Brightening Serum Infusion (Microneedling)',
+          price: '$229',
+          body: 'Microneedles open absorption channels and deliver a high-concentration brightening serum to the base layer, targeting the source of melanin to fade stubborn spots, acne marks and deep pigmentation.',
+          service: 'Enhanced Microneedling with Mesolinfu',
+        },
+        {
+          name: 'LED Spectrum Brightening Therapy',
+          price: '$69',
+          body: 'Professional light wavelengths suppress melanin activity and repair photo-aging damage, improving overall dullness. Non-invasive with no downtime — suitable for daily maintenance on all skin types.',
+          service: 'LED Light Therapy',
+        },
+        {
+          name: 'Aromatherapy Facial Meridian Kneading',
+          price: '$129',
+          body: 'Clears facial lymph and microcirculation, metabolises old waste and dead keratin, improves circulation-related dullness and awakens delicate, translucent skin from within.',
+          service: 'Aromatherapy Facial Meridian Kneading',
+        },
+      ],
+      consult: 'Not sure which plan is right for you? Book a complimentary one-on-one consultation with our 30-year senior beautician for a bespoke brightening programme — evening tone, dissolving pigment and restoring your skin\'s translucent native clarity.',
+    },
+    aging: {
+      title: 'Sagging & Aging',
+      intro: 'Loose skin and deepening lines — driven by internal natural aging and external environmental stress.',
+      internal: [
+        'Collagen loss accelerates with age (~1% per year), fibroblast activity drops, and synthesis of collagen and elastin slows',
+        'Thinning subcutaneous fat and loss of hyaluronic acid weaken support and hydration, leaving contours slack and dry lines visible',
+      ],
+      external: [
+        'Photo-aging: UV destroys collagen fibres, accelerating sagging and line formation',
+        'Oxidative stress: free radicals from the environment and daily metabolism attack cell structures, accelerating aging',
+        'Glycation: excess sugar binds with collagen to form AGEs, making collagen brittle and inelastic',
+        'Lifestyle: late nights, high-sugar diet and stress amplify sagging and lines',
+        'Improper aftercare following high-intensity aesthetic treatments damages skin function and speeds up aging',
+      ],
+      warning: 'Without consistent professional care, fine dry lines deepen into static wrinkles and contours continue to sag.',
+      recommendations: [
+        {
+          name: 'Q-Facial Multi-Dimensional Sculpting Treatment',
+          price: '$238',
+          body: 'After purifying cleansing, the dedicated SKIN BOOSTER REJUVENILE FILI patented anti-aging ampoule is infused to replenish collagen nutrients, fade dry lines, restore elasticity and support, and revitalise tired, dull skin — visibly lifting sagging contours for taut, plump, silky-smooth skin. Paired with Korea-patented high-density dual-frequency ultrasound for layered activation and repair.',
+          service: 'Multi-Dimensional Sculpting Treatment',
+        },
+        {
+          name: 'Anti-Aging Serum Infusion (Microneedling)',
+          price: '$229',
+          body: 'Microneedles open absorption channels and deliver a high-concentration anti-aging serum to the base layer, activating fibroblasts, inducing new collagen and elastin, smoothing deep static lines and improving slackness.',
+          service: 'Enhanced Microneedling with Mesolinfu',
+        },
+        {
+          name: 'LED Spectrum Anti-Aging Therapy',
+          price: '$69',
+          body: 'Professional light wavelengths activate fibroblasts, boost collagen synthesis, repair photo-aging damage, fade fine lines and tighten skin texture. Non-invasive with no downtime — suitable for daily anti-aging on all skin types.',
+          service: 'LED Light Therapy',
+        },
+        {
+          name: 'Aromatherapy Facial Meridian Kneading',
+          price: '$129',
+          body: 'Professional techniques lift facial contours, clear lymphatic circulation and relieve muscular tension and puffiness — creating taut, uplifted, youthful skin.',
+          service: 'Aromatherapy Facial Meridian Kneading',
+        },
+      ],
+      consult: 'Not sure which plan is right for you? Book a complimentary one-on-one consultation with our 30-year senior beautician for a bespoke anti-aging and firming programme — reinforcing collagen support, softening lines and restoring your skin\'s elastic vitality.',
+    },
+    pores: {
+      title: 'Enlarged Pores',
+      intro: 'Coarse, oily skin with enlarged pores prone to clogging and breakouts — driven by internal oil imbalance and external damage.',
+      internal: [
+        'Collagen and elastin loss with age weakens support around pores, creating slack, enlarged pores',
+        'Overactive sebaceous glands flood pores with oil, stretching them and triggering blockages and closed comedones',
+        'Slow metabolism causes dead keratin to accumulate, widening pore openings and roughening texture',
+      ],
+      external: [
+        'UV photo-aging destroys collagen around pores, worsening sagging-type pore enlargement',
+        'Improper cleansing, over-exfoliation and frequent squeezing damage pore walls, causing irreversible enlargement',
+        'Improper aftercare following high-intensity aesthetic treatments worsens inflammation and pore roughness',
+        'Late nights, high-fat/high-sugar diet and pollution stimulate oil production and intensify clogging',
+      ],
+      warning: 'Without consistent professional care, coarse pores continue to widen, skin becomes increasingly uneven, and closed comedones and breakouts recur.',
+      recommendations: [
+        {
+          name: 'Q-Facial Multi-Dimensional Sculpting Treatment',
+          price: '$238',
+          body: 'After purifying cleansing, the dedicated SKIN BOOSTER PORE CARE patented refining ampoule is infused to balance sebum, clear pore blockages, tighten enlarged pores and smooth rough texture — reinforcing collagen support around pores to address recurring enlargement at the source. Paired with Korea-patented high-density dual-frequency ultrasound for layered refinement and repair.',
+          service: 'Multi-Dimensional Sculpting Treatment',
+        },
+        {
+          name: 'Refining Serum Infusion (Microneedling)',
+          price: '$229',
+          body: 'Microneedles open absorption channels and deliver a high-concentration refining serum to the base layer, repairing pore walls, restoring collagen support, tightening slack pores and smoothing uneven texture.',
+          service: 'Enhanced Microneedling with Mesolinfu',
+        },
+        {
+          name: 'LED Spectrum Refining Therapy',
+          price: '$69',
+          body: 'Professional light wavelengths balance oil, calm inflammation, repair pore damage and refine texture. Non-invasive with no downtime — ideal for daily maintenance of oily, acne-prone and enlarged-pore skin.',
+          service: 'LED Light Therapy',
+        },
+        {
+          name: 'Aromatherapy Facial Meridian Kneading',
+          price: '$129',
+          body: 'Clears facial lymph and circulation, metabolises old keratin and oil build-up, relieves puffiness and creates a refined, smooth, clear complexion.',
+          service: 'Aromatherapy Facial Meridian Kneading',
+        },
+      ],
+      consult: 'Not sure which plan is right for you? Book a complimentary one-on-one consultation with our 30-year senior beautician for a bespoke pore-refining programme — balancing oil, tightening pores and restoring your skin\'s smooth native texture.',
+    },
+    acne: {
+      title: 'Acne & Oily Skin',
+      intro: 'Recurring breakouts, oily shine, inflammatory redness and frequent closed comedones — driven by internal oil imbalance and external triggers.',
+      internal: [
+        'Overactive sebaceous glands clog pores with excess oil, forming comedones, blackheads and inflammatory acne',
+        'Disrupted metabolism causes abnormal keratin build-up, recurring pore blockages and acne that\'s slow to clear',
+        'Weak self-repair and anti-inflammatory ability leaves acne to heal slowly, leaving marks, scars and pigmentation',
+      ],
+      external: [
+        'UV exposure intensifies inflammation, deepening redness and acne marks',
+        'Improper cleansing, over-care and frequent exfoliation damage the barrier and worsen oil-water imbalance',
+        'Makeup residue, pollution and incomplete pore cleansing trigger clogging and inflammatory acne',
+        'Late nights, high-sugar/high-fat diet and stress drive oil surges and recurring breakouts',
+        'Improper aftercare following high-intensity aesthetic treatments triggers inflammatory breakouts and deeper marks',
+      ],
+      warning: 'Without consistent professional care, inflammatory acne recurs and easily leaves permanent marks, scars and rough, fragile skin.',
+      recommendations: [
+        {
+          name: 'Q-Facial Multi-Dimensional Sculpting Treatment',
+          price: '$238',
+          body: 'After purifying cleansing, the dedicated SKIN BOOSTER ACNE CONTROL patented clarifying ampoule is infused to balance sebum, unclog pores, calm inflammation, reduce red swollen pimples, address closed comedones and fade new acne marks — strengthening the barrier to prevent recurring breakouts. Paired with Korea-patented high-density dual-frequency ultrasound for layered clarifying repair and restored, fresh skin.',
+          service: 'Multi-Dimensional Sculpting Treatment',
+        },
+        {
+          name: 'Clarifying Serum Infusion (Microneedling)',
+          price: '$229',
+          body: 'Microneedles open absorption channels and deliver a high-concentration clarifying serum to the base layer, suppressing inflammation, unclogging pores, repairing acne damage, fading marks and reducing recurring breakouts.',
+          service: 'Enhanced Microneedling with Mesolinfu',
+        },
+        {
+          name: 'LED Spectrum Clarifying Therapy',
+          price: '$69',
+          body: 'Professional light wavelengths calm inflammation, suppress acne bacteria, balance oil, repair the acne-prone barrier and reduce red swollen pimples. Non-invasive with no downtime — ideal for daily maintenance of oily, acne-prone skin.',
+          service: 'LED Light Therapy',
+        },
+        {
+          name: 'Aromatherapy Facial Meridian Kneading',
+          price: '$129',
+          body: 'Clears facial lymph circulation, metabolises oil build-up and dead keratin, calms inflammatory puffiness and creates fresh, smooth, healthy skin.',
+          service: 'Aromatherapy Facial Meridian Kneading',
+        },
+      ],
+      consult: 'Not sure which plan is right for you? Book a complimentary one-on-one consultation with our 30-year senior beautician for a bespoke acne and oil-control programme — balancing hydration and oil, calming breakouts and restoring your skin\'s fresh, clear native texture.',
+    },
+    eyes: {
+      title: 'Dark Circles, Eye Bags & Fine Lines',
+      intro: 'Dull dark circles, puffy bags, dry fine lines and sagging around the eyes — driven by internal circulatory slowdown and external aging damage.',
+      internal: [
+        'Eye-area skin is delicate and thin, with extremely low collagen and elastin, weak support, and easily develops dry lines, slackness and fine lines',
+        'Late nights and overuse of the eyes cause poor microcirculation, accumulating metabolic waste and forming vascular and pigment dark circles',
+        'Poor lymphatic flow around the eyes traps water and waste, triggering persistent bags, puffiness and sagging',
+        'With age, collagen around the eyes is rapidly lost; surface dry lines deepen into static lines and contours grow slack',
+      ],
+      external: [
+        'UV photo-aging destroys collagen around the eyes, worsening fine lines, slackness, dark circles and pigmentation',
+        'Frequent blinking, expression movement and improper tugging accelerate eye-area lines and slackness',
+        'Dry environments and free-radical oxidation worsen dehydration, dryness, dullness and roughness',
+        'Improper aftercare following high-intensity aesthetic treatments worsens fragility, redness, dullness and deepening lines',
+      ],
+      warning: 'Without consistent professional care, eye-area dry lines deepen, dark circles and bags grow stubborn, and the face looks tired and aged overall.',
+      recommendations: [
+        {
+          name: 'Q-Facial Multi-Dimensional Eye-Area Treatment',
+          price: '$238',
+          body: 'After purifying eye-area cleansing, the matched functional ampoule is infused to deeply hydrate and lock in moisture, fade dry lines and fine lines, improve pigment-type dark circles, ease eye fatigue, strengthen collagen support, tighten slack bags and contours, and smooth and refine the eye area. Paired with Korea-patented high-density dual-frequency ultrasound for precision delivery and layered activation — gentle, non-invasive and suitable for every skin type.',
+          service: 'Multi-Dimensional Sculpting Treatment',
+        },
+        {
+          name: 'Aromatherapy Eye-Area Meridian Kneading',
+          price: '$129',
+          body: 'Gentle professional techniques clear eye-area lymph and microcirculation, metabolise trapped waste and excess fluid, improve puffy bags, fade dark circles and lift contours — creating smooth, taut, bright, youthful eyes.',
+          service: 'Aromatherapy Facial Meridian Kneading',
+        },
+      ],
+      consult: 'Not sure which plan is right for you? Book a complimentary one-on-one consultation with our 30-year senior beautician for a bespoke eye-area programme — softening lines, fading dark circles, addressing bags and repairing the eye base for taut, bright, youthful eyes.',
+    },
   },
   zh: {
-    dullness:    { title: '针对暗沉问题',       text: '推荐经典毛孔净化护理（$89）、面部除绒护理（$59）或净透焕肤护理（$148），即刻恢复光泽，均匀肤色，重焕亮采。芳香疗法面部拨筋（$129）亦可通过促进循环带来持久自然光泽。', service: 'Classic Pore Purifying Treatment' },
-    sensitivity: { title: '针对敏感肌肤',       text: 'LED光疗（$69）专为敏感肌设计——有效平复炎症，修护皮肤屏障，全程无刺激。', service: 'LED Light Therapy' },
-    acne:        { title: '针对痘痘与爆痘',     text: '蓝光LED光疗（$69）精准靶向痤疮细菌；经典毛孔净化护理（$89）有效疏通毛孔、减少多余油脂；中胚层导入微针（$229）还可淡化痘疤、细腻肤质。', service: 'LED Light Therapy' },
-    pores:       { title: '针对毛孔粗大',       text: '经典毛孔净化护理（$89）深层清洁疏通毛孔；中胚层导入微针（$229）收缩毛孔、平滑肤质；精华密集修护导入（$178）提供缩毛孔安瓶选项，呈现显著细腻效果。', service: 'Classic Pore Purifying Treatment' },
-    wrinkles:    { title: '针对皱纹与细纹',     text: '中胚层导入微针（$229）深度抚平皱纹、淡化细纹；多维紧塑焕颜护理（$238）运用双频超声技术刺激胶原生成，提拉面部轮廓；芳香疗法面部拨筋（$129）疏通淤堵，紧致面部轮廓。', service: 'Enhanced Microneedling with Mesolinfu' },
-    aging:       { title: '针对肌肤抗衰',       text: '多维紧塑焕颜护理（$238）运用双频超声技术刺激胶原蛋白生成，令肌肤更紧致年轻；芳香疗法面部拨筋（$129）通过经络激活实现全面焕颜；中胚层导入微针（$229）激活胶原、抚平细纹。', service: 'Multi-Dimensional Sculpting Treatment' },
-    glow:        { title: '针对急速提亮',       text: '经典毛孔净化护理（$89）带来即刻如剥壳鸡蛋般的嫩滑光泽；面部除绒护理（$59）令肌肤光滑亮丽；芳香疗法面部拨筋（$129）通过促进循环带来自然亮丽肤色。', service: 'Classic Pore Purifying Treatment' },
-    warts:       { title: '针对疣体',    text: '专业电解疣体去除（$10-15/次）从根源消灭病毒——比冷冻治疗更温和，无水泡、无疤痕，比激光及外用药物更彻底。通常单次即可见效，恢复期极短。', service: 'Professional Electrolysis Wart Removal' },
-  }
+    sensitivity: {
+      title: '肌肤敏感',
+      intro: '肌肤敏感泛红、刺痛干痒、屏障脆弱，由先天与后天因素共同导致。',
+      internal: [
+        '先天角质层薄，皮脂分泌不足，锁水防御能力弱',
+        '神经末梢敏感，受刺激易出现灼热、刺痛不适感',
+        '自身修护力薄弱，肌肤敏感问题容易反复',
+      ],
+      external: [
+        '换季温差、紫外线、空气污染等外界刺激损伤肌肤',
+        '过度清洁、频繁刷酸，直接破坏肌肤天然保护屏障',
+        '各类高能量医美项目术后养护不当，加重肌肤脆弱',
+        '熬夜、精神压力大，诱发肌肤炎症，加重泛红敏感',
+      ],
+      warning: '长期疏于专业护理，浅层不适会发展为持续性敏感、红血丝明显。',
+      recommendations: [
+        {
+          name: 'Q-Facial 多维塑颜焕肤',
+          price: '$238',
+          body: '净澈焕肤后，针对敏感脆弱肌，导入专属 SKIN BOOSTER COOL+ 舒敏修护安瓶，快速镇静降温、舒缓燥热泛红，安抚受损肌底、缓解干痒刺痛，强韧角质屏障，从根源减少敏感反复问题。搭配韩国专利高密度双频超声波，助推营养成分深层渗透肌底，分层舒缓修护，唤醒肌肤原生修复力。',
+          service: 'Multi-Dimensional Sculpting Treatment',
+        },
+        {
+          name: 'LED 光谱修护光疗',
+          price: '$69',
+          body: '温和修护屏障、舒缓炎症，加速代谢，淡化泛红灼热。非侵入、无恢复期，适合术后修护与日常维稳。',
+          service: 'LED Light Therapy',
+        },
+      ],
+      consult: '不确定护理方案？可免费预约 30 年高级美容师一对一精准面诊，定制专属维稳方案，强韧屏障、舒缓泛红、修护脆弱肌底。',
+    },
+    dullness: {
+      title: '肤色暗沉',
+      intro: '肤色不均、暗沉无光、色素沉积形成色斑，由内源性代谢失衡与外源性刺激共同诱发。',
+      internal: [
+        '年龄增长与内分泌波动，黑色素代谢减慢，色素易堆积形成各类色斑',
+        '体内糖化反应生成 AGEs，破坏胶原质感，肌肤失去通透度，肤质粗糙老化',
+        '面部微循环滞缓，代谢废物淤积，加重肤色浑浊、暗沉无光',
+      ],
+      external: [
+        '紫外线长期照射激活酪氨酸酶，加速黑色素生成，诱发色斑与光损伤色沉',
+        '肌肤炎症愈合不当，易形成痘印与顽固性炎症后色素沉着',
+        '不当清洁、过度刷酸削弱肌肤屏障，色素更易沉积且难以代谢',
+        '环境自由基持续氧化肌肤，加剧肌肤暗沉、失去光泽',
+        '各类高能量医美项目术后养护不当，易引发热应激炎症，进而诱发色素反黑与肤色不均',
+      ],
+      warning: '长期疏于专业护理，浅层色素会逐步加深连片，形成顽固色斑与持续性暗沉。',
+      recommendations: [
+        {
+          name: 'Q-Facial 多维塑颜焕肤',
+          price: '$238',
+          body: '净澈焕肤后，针对色素暗沉肌，导入专属 SKIN BOOSTER DULL FADE IN 专利焕白安瓶，抑制酪氨酸酶活性、中和自由基、阻断色素生成，加速代谢色素沉积，淡化色斑与痘印，提升肌肤通透亮泽度。搭配韩国专利高密度双频超声波，助推营养成分深层渗透，打散沉积色素，匀净焕亮肤质。',
+          service: 'Multi-Dimensional Sculpting Treatment',
+        },
+        {
+          name: '美白原液导入护理（微针）',
+          price: '$229',
+          body: '微针打开肌肤吸收通道，将高浓度美白原液输送至肌底，直击黑色素生成源头，淡化顽固色斑、痘印与深层色沉。',
+          service: 'Enhanced Microneedling with Mesolinfu',
+        },
+        {
+          name: 'LED 光谱美白光疗',
+          price: '$69',
+          body: '以专业光调作用抑制黑素活性、修护光老化损伤，改善全域暗沉，非侵入、无恢复期，适合全肤质日常维稳。',
+          service: 'LED Light Therapy',
+        },
+        {
+          name: '芳香疗法面部拨筋',
+          price: '$129',
+          body: '疏通面部淋巴与微循环，代谢老旧废物与角质，改善循环型肤色浑浊，由内唤醒肌肤细腻透亮质感。',
+          service: 'Aromatherapy Facial Meridian Kneading',
+        },
+      ],
+      consult: '不确定护理方案？可免费预约 30 年高级美容师一对一精准面诊，定制专属焕白淡斑方案，匀净提亮、分解色素、修复肌底，还原肌肤通透匀净的原生质感。',
+    },
+    aging: {
+      title: '肌肤松弛',
+      intro: '肌肤松弛、纹路加深，由内源性自然老化与外源性环境刺激共同引发。',
+      internal: [
+        '年龄增长，胶原蛋白每年流失约 1%，成纤维细胞活性下降，胶原与弹力纤维合成减少',
+        '皮下脂肪层变薄、透明质酸流失，肌肤支撑力与锁水力下降，轮廓松垮、干纹出现',
+      ],
+      external: [
+        '光老化损伤：紫外线破坏胶原纤维，加速松弛与纹路形成',
+        '氧化应激：环境与肌肤日常代谢时刻产生自由基，攻击细胞结构，加速肌肤老化',
+        '糖化反应：多余糖分与胶原生成 AGEs，使胶原变脆、失去弹性',
+        '不良习惯：熬夜、高糖饮食等，加重松弛与纹路',
+        '各类高能量医美项目术后养护不当，易引发肌肤机能受损，加速松弛老化',
+      ],
+      warning: '长期疏于专业护理，干纹细纹会发展为深层静态纹，轮廓持续松弛下垂。',
+      recommendations: [
+        {
+          name: 'Q-Facial 多维塑颜焕肤',
+          price: '$238',
+          body: '净澈焕肤后，针对松弛老化肌，导入专属 SKIN BOOSTER REJUVENILE FILI 专利抗衰安瓶，补充胶原养分、淡化干纹细纹，提升肌肤弹性与支撑力，焕活疲惫暗沉肌质，改善面部松弛下垂，令肌肤紧致饱满、细腻柔滑。搭配韩国专利高密度双频超声波，助推营养成分深层渗透肌底，分层修护激活、唤醒肌肤原生修复力。',
+          service: 'Multi-Dimensional Sculpting Treatment',
+        },
+        {
+          name: '抗衰原液导入护理（微针）',
+          price: '$229',
+          body: '微针打开肌肤吸收通道，将高浓度抗衰精华输送至肌底，激活成纤维细胞活性，诱导胶原与弹力纤维新生，淡化深层静态纹、改善轮廓松垮。',
+          service: 'Enhanced Microneedling with Mesolinfu',
+        },
+        {
+          name: 'LED 光谱抗衰光疗',
+          price: '$69',
+          body: '以专业光调作用激活成纤维细胞活性，促进胶原合成，修护光老化损伤，淡化细纹、紧致肤质。非侵入、无恢复期，适合全肤质日常抗衰维稳。',
+          service: 'LED Light Therapy',
+        },
+        {
+          name: '芳香疗法面部拨筋',
+          price: '$129',
+          body: '专业手法提拉面部轮廓、疏通淋巴循环，缓解肌肉紧张与浮肿，打造紧致上扬的年轻肤质。',
+          service: 'Aromatherapy Facial Meridian Kneading',
+        },
+      ],
+      consult: '不确定护理方案？可免费预约 30 年高级美容师一对一精准面诊，定制专属抗衰紧致方案，强韧胶原支撑、淡化纹路、修复肌底，还原肌肤紧致弹性。',
+    },
+    pores: {
+      title: '毛孔粗大',
+      intro: '肌肤毛孔粗大、粗糙油腻、易堵塞长痘，由内源性油脂失衡与外源性损伤共同引发。',
+      internal: [
+        '年龄增长，胶原与弹力纤维流失，毛孔周围支撑力不足，出现松弛型粗大毛孔',
+        '皮脂腺分泌旺盛，油脂过量堆积，撑大毛孔、诱发堵塞与闭口',
+        '肌肤代谢循环减慢，老废角质堆积，毛孔开口变粗、肤质粗糙不平',
+      ],
+      external: [
+        '紫外线光老化损伤，破坏毛孔周围胶原结构，加剧毛孔松弛下垂',
+        '不当清洁、过度去角质、频繁挤压，损伤毛孔壁，导致毛孔不可逆粗大',
+        '各类高能量医美项目术后养护不当，加重肌肤炎症与毛孔粗糙问题',
+        '熬夜、高油高糖饮食、环境污染，刺激油脂分泌，加重毛孔堵塞与粗大',
+      ],
+      warning: '长期疏于专业护理，粗糙毛孔会持续扩大，肤质愈发凹凸不平，易反复出现闭口、痘痘问题。',
+      recommendations: [
+        {
+          name: 'Q-Facial 多维塑颜焕肤',
+          price: '$238',
+          body: '净澈焕肤后，针对粗毛孔油腻肌，导入专属 SKIN BOOSTER PORE CARE 专利细肤安瓶，平衡油脂分泌、清理毛孔堵塞，收敛粗大毛孔、平滑粗糙肤质，强韧毛孔周围胶原支撑，从根源改善毛孔粗大反复问题。搭配韩国专利高密度双频超声波，助推营养成分深层渗透肌底，分层细肤修护、唤醒肌肤原生修复力，还原细腻平滑肤质。',
+          service: 'Multi-Dimensional Sculpting Treatment',
+        },
+        {
+          name: '细肤原液导入护理（微针）',
+          price: '$229',
+          body: '微针打开肌肤吸收通道，将高浓度细肤精华输送至肌底，修护毛孔壁、补充胶原支撑，收敛松弛型粗大毛孔，改善肤质凹凸粗糙。',
+          service: 'Enhanced Microneedling with Mesolinfu',
+        },
+        {
+          name: 'LED 光谱细肤光疗',
+          price: '$69',
+          body: '以专业光调作用平衡油脂、舒缓炎症，修护毛孔损伤，细腻肤质、收敛毛孔。非侵入、无恢复期，适合油痘肌、粗毛孔肌日常维稳。',
+          service: 'LED Light Therapy',
+        },
+        {
+          name: '芳香疗法面部拨筋',
+          price: '$129',
+          body: '疏通面部淋巴与循环，代谢老废角质与油脂堆积，缓解肌肤浮肿油腻，打造细腻平滑的净透肤质。',
+          service: 'Aromatherapy Facial Meridian Kneading',
+        },
+      ],
+      consult: '不确定护理方案？可免费预约 30 年高级美容师一对一精准面诊，定制专属细肤收孔方案，平衡油脂、收敛毛孔、修复肌底，还原肌肤细腻平滑的原生质感。',
+    },
+    acne: {
+      title: '肌肤油腻',
+      intro: '肌肤反复长痘、油腻泛光、炎症泛红、闭口频发，由内源性油脂失衡与外源性刺激共同引发。',
+      internal: [
+        '皮脂腺分泌旺盛，油脂过量堵塞毛孔，形成闭口、粉刺与炎性痘痘',
+        '肌肤代谢紊乱，老废角质堆积异常，毛孔堵塞反复，痘痘难以消退',
+        '自身抗炎修护力弱，痘痘愈合慢，易留下痘印、痘坑与色素沉着',
+      ],
+      external: [
+        '紫外线照射刺激炎症加重，诱发痘痘泛红、痘印色素加深',
+        '不当清洁、过度护肤、频繁去角质，破坏肌肤屏障，加重水油失衡',
+        '化妆品残留、环境污染、毛孔清洁不到位，诱发堵塞与炎性痘痘',
+        '熬夜、高糖高油饮食、精神压力，刺激油脂爆发，加重痘痘反复',
+        '各类高能量医美项目术后养护不当，诱发炎症爆痘、痘印加重',
+      ],
+      warning: '长期疏于专业护理，炎性痘痘会反复爆发，易留下永久性痘印、痘坑，肤质粗糙脆弱。',
+      recommendations: [
+        {
+          name: 'Q-Facial 多维塑颜焕肤',
+          price: '$238',
+          body: '净澈焕肤后，针对油痘炎症肌，导入专属 SKIN BOOSTER ACNE CONTROL 专利净痘安瓶，平衡油脂分泌、疏通毛孔堵塞，舒缓炎症泛红、消退红肿痘痘，改善闭口粉刺、淡化新生痘印，强韧屏障减少反复爆痘。搭配韩国专利高密度双频超声波，助推营养成分深层渗透肌底，分层净痘修护、唤醒肌肤原生修复力，还原清爽净透肤质。',
+          service: 'Multi-Dimensional Sculpting Treatment',
+        },
+        {
+          name: '净痘原液导入护理（微针）',
+          price: '$229',
+          body: '微针打开肌肤吸收通道，将高浓度净痘精华输送至肌底，抑制炎症、疏通堵塞毛孔，修护痘肌损伤，淡化痘印、改善反复爆痘问题。',
+          service: 'Enhanced Microneedling with Mesolinfu',
+        },
+        {
+          name: 'LED 光谱净痘光疗',
+          price: '$69',
+          body: '以专业光调作用舒缓炎症、抑制痤疮杆菌，平衡油脂分泌，修护痘肌屏障，消退红肿痘痘。非侵入、无恢复期，适合油痘肌日常维稳修护。',
+          service: 'LED Light Therapy',
+        },
+        {
+          name: '芳香疗法面部拨筋',
+          price: '$129',
+          body: '疏通面部淋巴循环，代谢油脂堆积与老废角质，缓解肌肤炎症浮肿，打造清爽平滑的健康肤质。',
+          service: 'Aromatherapy Facial Meridian Kneading',
+        },
+      ],
+      consult: '不确定护理方案？可免费预约 30 年高级美容师一对一精准面诊，定制专属净痘控油方案，平衡水油、消退痘痘、修复肌底，还原肌肤清爽净透的原生质感。',
+    },
+    eyes: {
+      title: '黑眼圈 · 眼袋 · 细纹',
+      intro: '眼周暗沉黑眼圈、浮肿眼袋、干纹细纹、松弛下垂，由内源性代谢循环减弱与外源性老化损伤共同引发。',
+      internal: [
+        '眼周肌肤薄嫩脆弱，胶原与弹力纤维含量极低，支撑力薄弱，极易出现干纹、松弛与细纹',
+        '熬夜、过度用眼导致眼周微循环不畅，代谢废物淤积，形成血管型与色素型黑眼圈',
+        '眼周淋巴循环不畅，水分与废物堆积，诱发持续性眼袋、浮肿与松弛下垂',
+        '年龄增长，眼周胶原加速流失，浅层干纹会逐步加深为静态细纹，轮廓愈发松垮',
+      ],
+      external: [
+        '紫外线光老化损伤，破坏眼周胶原结构，加剧细纹、松弛、黑眼圈与色沉问题',
+        '日常频繁眨眼、表情牵动、不当拉扯眼部肌肤，加速眼周纹路生成与松弛',
+        '环境干燥、自由基氧化，加重眼周缺水干纹、暗沉疲惫与粗糙感',
+        '各类高能量医美项目术后养护不当，易加重眼周脆弱、泛红、暗沉与纹路加深',
+      ],
+      warning: '长期疏于专业护理，眼周干纹会持续加深，黑眼圈与眼袋愈发顽固，整体面容显疲惫、显老态。',
+      recommendations: [
+        {
+          name: 'Q-Facial 多维眼周焕肤',
+          price: '$238',
+          body: '净澈柔肤眼周后，针对眼周脆弱肤质，按需搭配对应功效安瓶导入，深层补水锁水、淡化眼周干纹细纹，改善色素型黑眼圈，舒缓眼部疲惫，强韧眼周胶原支撑力，收紧松弛眼袋与眼周轮廓，平滑细腻眼周肤质。搭配韩国专利高密度双频超声波，精准助推营养成分深层渗透眼周肌底，分层激活修护、唤醒眼周原生修复力，温和无创、全肤质眼周适配。',
+          service: 'Multi-Dimensional Sculpting Treatment',
+        },
+        {
+          name: '芳香疗法眼周专属拨筋',
+          price: '$129',
+          body: '专业轻柔手法疏通眼周淋巴与微循环，代谢淤积废物与多余水分，改善眼袋浮肿、淡化黑眼圈，提拉紧致眼周轮廓，打造平滑紧致、透亮有神的年轻眼周状态。',
+          service: 'Aromatherapy Facial Meridian Kneading',
+        },
+      ],
+      consult: '不确定护理方案？可免费预约 30 年高级美容师一对一精准面诊，定制专属眼周专护方案，淡纹紧致、淡化黑眼圈、改善眼袋、修护眼周肌底，还原紧致透亮的年轻眼周质感。',
+    },
+  },
 };
 
 /**
@@ -636,8 +1102,10 @@ function setLang(lang) {
   // Save preference
   localStorage.setItem('lang', lang);
 
-  // Rebuild concern data for current language
-  Object.assign(window.concernData, concernDataI18n[lang]);
+  // Re-render the active concern panel in the new language
+  if (typeof window.renderActiveConcern === 'function') {
+    window.renderActiveConcern();
+  }
 }
 
 /**
@@ -650,5 +1118,6 @@ function initLang() {
 
 // Export for use in main script
 window.TRANSLATIONS = TRANSLATIONS;
+window.concernsData = concernsData;
 window.setLang = setLang;
 window.initLang = initLang;
