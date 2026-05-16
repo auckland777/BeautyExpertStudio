@@ -117,13 +117,13 @@ function renderConcern(key) {
   concernPanel.classList.add('has-content');
   concernPanel.innerHTML = `
     <h3 class="concern-title">${escapeHtml(data.title)}</h3>
-    <p class="concern-intro">${escapeHtml(data.intro)}</p>
     <div class="concern-causes">
-      <div class="cause-block">
+      <p class="concern-intro">${escapeHtml(data.intro)}</p>
+      <div class="cause-section">
         <h4>${escapeHtml(t['con.h-internal'])}</h4>
         <ul>${bullets(data.internal)}</ul>
       </div>
-      <div class="cause-block">
+      <div class="cause-section">
         <h4>${escapeHtml(t['con.h-external'])}</h4>
         <ul>${bullets(data.external)}</ul>
       </div>
@@ -132,15 +132,16 @@ function renderConcern(key) {
     <div class="concern-rec-heading">${escapeHtml(t['con.h-rec'])}</div>
     <div class="concern-recs">${recs}</div>
     <div class="concern-consult">
-      <h4>${escapeHtml(t['con.h-consult'])}</h4>
       <p>${escapeHtml(data.consult)}</p>
-      <a href="#booking" class="btn">${escapeHtml(t['con.btn-consult'])}</a>
+      <button type="button" class="btn concern-consult-btn">${escapeHtml(t['con.btn-consult'])}</button>
     </div>
   `;
 
   concernPanel.querySelectorAll('.rec-card-btn').forEach(btn => {
     btn.addEventListener('click', () => prefillService(btn.dataset.service));
   });
+  const consultBtn = concernPanel.querySelector('.concern-consult-btn');
+  if (consultBtn) consultBtn.addEventListener('click', () => prefillService('Free Consultation'));
 }
 
 // Re-render the currently selected concern (used by setLang)

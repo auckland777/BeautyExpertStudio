@@ -147,7 +147,7 @@ const TRANSLATIONS = {
     'con.chip-acne':'Acne & Oily Skin', 'con.chip-eye':'Eye Concerns',
     'con.empty':'Pick a concern above to see causes and a recommended care plan.',
     'con.h-internal':'Internal Causes', 'con.h-external':'External Causes',
-    'con.h-rec':'Recommended Treatments', 'con.h-consult':'Need Personal Guidance?',
+    'con.h-rec':'Recommended Treatments',
     'con.btn-book':'Book This Treatment', 'con.btn-consult':'Book a Free Consultation',
     // Promise
     'pro.tag':'Our Promise', 'pro.h2':'Expertise. Honesty. Results.',
@@ -163,6 +163,7 @@ const TRANSLATIONS = {
     'bk.lbl-ln':'Last Name *', 'bk.ph-ln':'Smith',
     'bk.lbl-ph':'Phone *', 'bk.lbl-em':'Email', 'bk.ph-em':'jane@email.com',
     'bk.lbl-tr':'Treatment *', 'bk.opt-sel':'— Select a treatment —',
+    'bk.t-consult':'Free Consultation — 30 min',
     'bk.og-qf':'Q Facial Skin Renewal Series', 'bk.og-facial':'More Facial Treatments', 'bk.og-body':'Body Treatments',
     'bk.t-qf1':'Purifying Glow Treatment — $148 / 45\'',
     'bk.t-qf2':'Intensive Repair Infusion — $178 / 50\'',
@@ -433,7 +434,7 @@ const TRANSLATIONS = {
     'con.chip-acne':'肌肤油腻', 'con.chip-eye':'眼周专护',
     'con.empty':'点击上方任一肌肤问题，查看成因解析与专属护理建议。',
     'con.h-internal':'内源性因素', 'con.h-external':'外源性因素',
-    'con.h-rec':'推荐项目', 'con.h-consult':'不确定护理方案？',
+    'con.h-rec':'推荐项目',
     'con.btn-book':'预约此项目', 'con.btn-consult':'免费预约面诊',
     // Promise
     'pro.tag':'我们的承诺', 'pro.h2':'专业·诚信·效果',
@@ -449,6 +450,7 @@ const TRANSLATIONS = {
     'bk.lbl-ln':'姓氏 *', 'bk.ph-ln':'如：王',
     'bk.lbl-ph':'电话 *', 'bk.lbl-em':'电子邮箱', 'bk.ph-em':'example@email.com',
     'bk.lbl-tr':'护理项目 *', 'bk.opt-sel':'— 请选择疗程 —',
+    'bk.t-consult':'免费咨询 — 30分钟',
     'bk.og-qf':'Q Facial 肌肤焕新系列', 'bk.og-facial':'更多面部护理', 'bk.og-body':'身体护理',
     'bk.t-qf1':'净澈焕肤 — $148 / 45分钟',
     'bk.t-qf2':'肌底修复护肤 — $178 / 50分钟',
