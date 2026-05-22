@@ -85,7 +85,7 @@
         <a class="nav-dropdown-toggle"><span data-i18n="nav.studio-menu">Our Studio</span> <svg class="dd-chevron" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><polyline points="1,1 5,5 9,1"/></svg></a>
         <ul class="nav-dropdown-menu">
           <li><a href="studio.html" data-i18n="nav.studio">Studio Gallery</a></li>
-          <li><a href="qfacial.html" data-i18n="nav.qfacial">Q Facial Device</a></li>
+          <li><a href="qfacial.html" data-i18n="nav.qfacial">Q-Facial</a></li>
           <li><a href="consent.html" target="_blank" data-i18n="nav.consent">Consent Form</a></li>
         </ul>
       </li>
@@ -122,7 +122,7 @@
       <li><a href="#why-us" class="mobile-link" data-i18n="nav.why">Why Us</a></li>
       <li><a href="#services" class="mobile-link" data-i18n="nav.services">Services</a></li>
       <li><a href="studio.html" class="mobile-link" data-i18n="nav.studio">Studio</a></li>
-      <li><a href="qfacial.html" class="mobile-link" data-i18n="nav.qfacial">Q Facial</a></li>
+      <li><a href="qfacial.html" class="mobile-link" data-i18n="nav.qfacial">Q-Facial</a></li>
       <li><a href="consent.html" target="_blank" class="mobile-link" data-i18n="nav.consent">Consent Form</a></li>
       <li><a href="#concerns" class="mobile-link" data-i18n="nav.concerns">Concerns</a></li>
       <li><a href="#booking" class="mobile-link" data-i18n="mob.book">Book Appointment</a></li>
@@ -141,29 +141,20 @@
 <section class="hero" id="home">
   <div class="container hero-inner">
     <div class="hero-content fade-up">
-      <div class="hero-badge" data-i18n="hero.badge">30 Years · Certified Senior Beautician</div>
-      <h1 data-i18n-html="hero.h1">Where <em>Science</em> Meets<br>Beauty</h1>
-      <p data-i18n="hero.p">Every bespoke treatment is designed to repair your skin barrier and nurture a radiant glow, while helping you shed fatigue and anxiety, and listen to your body's inner voice. With gentle force, we guard your inner core and anchor you to life's true essence.</p>
-      <div class="hero-actions">
-        <a href="#booking" class="btn btn-primary" data-i18n="hero.cta1">Book Appointment</a>
-        <a href="#services" class="btn btn-outline" data-i18n="hero.cta2">Explore Treatments</a>
-      </div>
+      <article class="hero-letter">
+        <p class="hero-letter-greeting" data-i18n="letter.greeting">A note from Hannah</p>
+        <p class="hero-letter-body" data-i18n="quote.hook">Life is like a battery — draining from the moment you're born. If you don't want to be left behind by time, begin the journey of self-renewal — amidst the flood of beauty standards and life's chaos, rebuild your steady order, inside and out.</p>
+        <p class="hero-letter-body hero-letter-body--close" data-i18n="quote.close">Every treatment is a gentle recalibration of body and mind. Skincare has nothing to do with age — it's about loving yourself well, at every stage of life.</p>
+        <div class="hero-letter-sign">
+          <img src="images/hannah_sig.png" alt="Hannah" class="hero-letter-sig-img" />
+          <span class="hero-letter-sig-caption" data-i18n="letter.sigcaption">Senior Beauty Specialist · 30 Years</span>
+        </div>
+      </article>
     </div>
     <div class="hero-visual fade-up" style="transition-delay:.15s">
 
-      <!-- Slide 1: Hannah's Motto -->
+      <!-- Slide 1: Most Popular Treatment -->
       <div class="hero-slide active">
-        <div class="hero-quote">
-          <blockquote>
-            <p class="quote-hook" data-i18n="quote.hook">Life is like a battery — draining from the moment you're born. If you don't want to be left behind by time, begin the journey of self-renewal — amidst the flood of beauty standards and life's chaos, rebuild your steady order, inside and out.</p>
-            <p class="quote-close" data-i18n="quote.close">Every treatment is a gentle recalibration of body and mind. Skincare has nothing to do with age — it's about loving yourself well, at every stage of life.</p>
-          </blockquote>
-          <div class="quote-sig">— Hannah</div>
-        </div>
-      </div>
-
-      <!-- Slide 2: Most Popular Treatment -->
-      <div class="hero-slide">
         <div class="hero-photo">
           <img src="images/hero.jpg" alt="Professional beauty treatment" loading="eager" />
         </div>
@@ -175,21 +166,21 @@
         </div>
       </div>
 
-      <!-- Slide 3: Q-Facial Water Shining System -->
+      <!-- Slide 2: Q-Facial Water Shining System -->
       <div class="hero-slide">
         <div class="hero-photo hero-photo--contain">
           <img src="images/carousel1.jpg" alt="Q-Facial Water Shining System" loading="lazy" />
         </div>
       </div>
 
-      <!-- Slide 4: Ultrasonic Dual Wavelength -->
+      <!-- Slide 3: Ultrasonic Dual Wavelength -->
       <div class="hero-slide">
         <div class="hero-photo hero-photo--contain">
           <img src="images/carousel2.jpg" alt="Ultrasonic dual wavelength technology" loading="lazy" />
         </div>
       </div>
 
-      <!-- Slide 5: ASTERASYS Q-Facial Device -->
+      <!-- Slide 4: ASTERASYS Q-Facial Device -->
       <div class="hero-slide">
         <div class="hero-photo hero-photo--contain">
           <img src="images/carousel3.jpg" alt="ASTERASYS Q-Facial device" loading="lazy" />
@@ -202,7 +193,6 @@
         <button class="hero-dot" data-slide="1" aria-label="Slide 2"></button>
         <button class="hero-dot" data-slide="2" aria-label="Slide 3"></button>
         <button class="hero-dot" data-slide="3" aria-label="Slide 4"></button>
-        <button class="hero-dot" data-slide="4" aria-label="Slide 5"></button>
       </div>
 
     </div>
@@ -263,10 +253,10 @@
           </div>
           <div class="service-body">
             <ul>
-              <li data-i18n="qf1.f1">Three professional-grade solutions (Formula A repair, B purification, C soothing)</li>
-              <li data-i18n="qf1.f2">Deeply cleanses skin and repairs the skin barrier</li>
-              <li data-i18n="qf1.f3">Enhances absorption and achieves gentle rejuvenation</li>
-              <li data-i18n="qf1.f4">Ideal for daily maintenance of all skin types</li>
+              <li data-i18n="qf1.f1">Sterile single-use probe: replaced for every client and discarded after use — fully sterile throughout the treatment.</li>
+              <li data-i18n="qf1.f2">Patented dual-vortex hydro technology: pressurised solution penetrates deep into pores, dissolves impurities, then gently suctions them into the waste reservoir. The sebum film, stratum corneum, collagen-elastin fibres and capillaries stay intact — avoiding the thinning barrier, enlarged pores and skin laxity caused by harsh cleansing.</li>
+              <li data-i18n="qf1.f3">Korea-original ampoules matched to the device: clinic-grade high-activity formulas precisely tuned to the machine for deeper penetration and stronger results, conditioning the skin from within for continuously improving condition.</li>
+              <li data-i18n="qf1.f4">Alcohol-free, non-irritating: safe for sensitive skin and post-procedure recovery — suitable for long-term care across all skin types.</li>
             </ul>
             <button class="service-book-btn" data-i18n="qf1.btn">Book This Treatment &rarr;</button>
           </div>
@@ -317,7 +307,7 @@
         <!-- Multi-Dimensional Sculpting Treatment -->
         <div class="service-card" onclick="prefillService('Multi-Dimensional Sculpting Treatment')">
           <div class="service-header">
-            <img class="service-photo" src="images/qfacial3.jpg" alt="Multi-Dimensional Sculpting Treatment" loading="lazy" />
+            <img class="service-photo" src="images/qfacial4.jpg" alt="Multi-Dimensional Sculpting Treatment" loading="lazy" />
             <div class="service-overlay">
               <h3 data-i18n="qf4.h3">Multi-Dimensional Sculpting Treatment</h3>
               <div class="price-tag">$238 <span class="duration" data-i18n="qf4.dur">/ 75 min</span></div>
